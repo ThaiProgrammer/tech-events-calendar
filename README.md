@@ -1,6 +1,7 @@
 # tech-events-th
 A list of tech events relevant to tech people in Thailand, starting 2018.
 
+
 ## January 2018
 
 ### 13: Code with Cat Meetup (meetup) :construction:
@@ -11,7 +12,7 @@ A list of tech events relevant to tech people in Thailand, starting 2018.
 >
 > - [Facebook group](https://www.facebook.com/groups/1637939269560892/)
 
-### 25~27: JSConf.Asia 2018 (conference)
+### 25 ~ 27: JSConf.Asia 2018 (conference)
 
 :round_pushpin: Singapore
 
@@ -21,6 +22,16 @@ A list of tech events relevant to tech people in Thailand, starting 2018.
 > - [Website](https://2018.jsconf.asia/)
 > - [Tickets](https://events.pouchnation.com/event/jsconfasia2018)
 > - [Facebook event](https://www.facebook.com/events/111499759572747/)
+
+
+## Symbol Legend
+
+| Symbol | Meaning |
+|:---:| --- |
+| :construction: | Tentative (not confirmed) |
+| :round_pushpin: | Place |
+| :watch: | Time |
+
 
 ## Contributing
 
