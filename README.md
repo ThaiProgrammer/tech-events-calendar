@@ -1,5 +1,5 @@
 # tech-events-th
-A list of tech events relevant to developers in Thailand, starting 2018.
+A list of tech events relevant to tech people in Thailand, starting 2018.
 
 ## January 2018
 
