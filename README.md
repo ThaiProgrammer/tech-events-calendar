@@ -3,6 +3,14 @@ A list of tech events relevant to tech people in Thailand, starting 2018.
 
 ## January 2018
 
+### 13: Code with Cat Meetup (meetup) :construction:
+
+:round_pushpin: Pronto Tools
+
+> Meetup about Category Theory and Dependent Type Theory.
+>
+> - [Facebook group](https://www.facebook.com/groups/1637939269560892/)
+
 ### 25~27: JSConf.Asia 2018 (conference)
 
 :round_pushpin: Singapore
