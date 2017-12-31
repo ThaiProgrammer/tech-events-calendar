@@ -7,11 +7,11 @@ Feel free to send pull requests!
 
 ## January 2018
 
-### 13 (Sat): Workshop on Formal Verification using Dependent Type Theory in Thai (workshop, meetup)
+### 13 (Sat): Workshop on Formal Verification using Dependent Type Theory in Thai
 
 | | | |
 | --- | --- | --- |
-| 🏷 | Workshop, Meetup |
+| 🏷 | Workshop, Meetup | Formal verification |
 | 📍 | Pronto Tools |
 | ⌚️ | 09:00~16:00 | Lecture/Tutorial |
 | ⌚️ | 16:00~17:00++ | Meetup |
@@ -21,10 +21,11 @@ Feel free to send pull requests!
 >
 > In this workshop, I would like to walk though dependent type theory by first, describe it as a functional programming, then how can we use this functional programming to do some logical reasoning. No background knowledge is required (apart from simple maths skill in secondary school), so everyone is welcome to attend. We will speak in Thai but every written material will be in English. There will be no registration fee, but please bring your food.
 
-### 25 ~ 27 (Thu ~ Sat): JSConf.Asia 2018 (conference)
+### 25 ~ 27 (Thu ~ Sat): JSConf.Asia 2018
 
 | | | |
 | --- | --- | --- |
+| 🏷 | Conference | JavaScript |
 | 📍 | Singapore | Capitol Theatre; Shangri-La Rasa Sentosa Hotel |
 | 🏠 | [2018.jsconf.asia](https://2018.jsconf.asia/) |
 | 🎟 | [Buy tickets](https://events.pouchnation.com/event/jsconfasia2018) | 1090 SGD |
@@ -36,12 +37,13 @@ Feel free to send pull requests!
 
 ## Symbol Legend
 
-| Symbol | Meaning |
+| 🔣 | Meaning |
 | --- | --- |
-| 📍 Round Pushpin | Place |
-| ⌚️ Watch | Time |
+| 🏷 Label | Type of event | Topics |
+| 📍 Round Pushpin | Place | Further information about that place |
+| ⌚️ Watch | Time | Agenda |
 | 🏠 House | Website |
-| 🎟 Admission Tickets | Get tickets |
+| 🎟 Admission Tickets | Get tickets | Price |
 | ✅ White Heavy Check Mark | RSVP |
 
 
