@@ -37,14 +37,14 @@ Feel free to send pull requests!
 
 ## Symbol Legend
 
-| 🔣 | Meaning |
-| --- | --- |
-| 🏷 Label | Type of event | Topics |
-| 📍 Round Pushpin | Place | Further information about that place |
-| ⌚️ Watch | Time | Agenda |
-| 🏠 House | Website |
-| 🎟 Admission Tickets | Get tickets | Price |
-| ✅ White Heavy Check Mark | RSVP |
+| 🔣 | | Meaning | |
+| --- | --- | --- | --- |
+| 🏷 | Label | Type of event | Topics |
+| 📍 | Round Pushpin | Place | Further information about that place |
+| ⌚️ | Watch | Time | Agenda |
+| 🏠 | House | Website |
+| 🎟 | Admission Tickets | Get tickets | Price |
+| ✅ | White Heavy Check Mark | RSVP |
 
 
 ## Contributing
