@@ -11,10 +11,11 @@ Feel free to send pull requests!
 
 | | | |
 | --- | --- | --- |
-| :round_pushpin: | Pronto Tools |
-| :watch: | 09:00~16:00 | Lecture/Tutorial |
-| :watch: | 16:00~17:00++ | Meetup |
-| :white_check_mark: | [Facebook event](https://www.facebook.com/events/122627418535428/) | Free, bring your own food. |
+| 🏷 | Workshop, Meetup |
+| 📍 | Pronto Tools |
+| ⌚️ | 09:00~16:00 | Lecture/Tutorial |
+| ⌚️ | 16:00~17:00++ | Meetup |
+| ✅ | [Facebook event](https://www.facebook.com/events/122627418535428/) | Free, bring your own food. |
 
 > In software engineering, every application requires a certain level of correctness; most of them are "tested" against some test suites, however, this turn out not to be sufficient for some application; this is because those test suites cannot "guarantee" 100% correctness. To solve such a problem, we need to "prove" that those applications are indeed correct. One way to formally verify it is to use dependent type theory where mathematical proof and computer program are the same things.
 >
@@ -24,10 +25,10 @@ Feel free to send pull requests!
 
 | | | |
 | --- | --- | --- |
-| :round_pushpin: | Singapore | Capitol Theatre; Shangri-La Rasa Sentosa Hotel |
-| :house: | [2018.jsconf.asia](https://2018.jsconf.asia/) |
-| :ticket: | [Buy tickets](https://events.pouchnation.com/event/jsconfasia2018) | 1090 SGD |
-| :white_check_mark: | [Facebook event](https://www.facebook.com/events/111499759572747/) |
+| 📍 | Singapore | Capitol Theatre; Shangri-La Rasa Sentosa Hotel |
+| 🏠 | [2018.jsconf.asia](https://2018.jsconf.asia/) |
+| 🎟 | [Buy tickets](https://events.pouchnation.com/event/jsconfasia2018) | 1090 SGD |
+| ✅ | [Facebook event](https://www.facebook.com/events/111499759572747/) |
 
 > Southeast Asia’s largest JavaScript conference and community events.
 > Many developers (at least 20) from Thailand are going to JSConf.Asia 2018, so it’s worth mentioning here.
@@ -37,12 +38,11 @@ Feel free to send pull requests!
 
 | Symbol | Meaning |
 |:---:| --- |
-| :construction: | Tentative (not confirmed) |
-| :round_pushpin: | Place |
-| :watch: | Time |
-| :house: | Website |
-| :ticket: | Get tickets |
-| :white_check_mark: | RSVP |
+| 📍 Round Pushpin | Place |
+| ⌚️ Watch | Time |
+| 🏠 House | Website |
+| 🎟 Admission Tickets | Get tickets |
+| ✅ White Heavy Check Mark | RSVP |
 
 
 ## Contributing
