@@ -1,5 +1,8 @@
 # tech-events-th
+
 A list of tech events relevant to tech people in Thailand, starting 2018.
+
+Feel free to send pull requests!
 
 
 ## January 2018
