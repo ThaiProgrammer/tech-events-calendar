@@ -37,7 +37,7 @@ Feel free to send pull requests!
 ## Symbol Legend
 
 | Symbol | Meaning |
-|:---:| --- |
+| --- | --- |
 | 📍 Round Pushpin | Place |
 | ⌚️ Watch | Time |
 | 🏠 House | Website |
