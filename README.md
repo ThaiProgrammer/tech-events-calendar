@@ -27,6 +27,21 @@ Dependent type theory เป็นวิธีนึง ซึ่งจะได
 >
 > In this workshop, I would like to walk though dependent type theory by first, describe it as a functional programming, then how can we use this functional programming to do some logical reasoning. No background knowledge is required (apart from simple maths skill in secondary school), so everyone is welcome to attend. We will speak in Thai but every written material will be in English. There will be no registration fee, but please bring your food.
 
+### 17 (Wed): Docker in Thai Meetup
+
+| | | |
+| --- | --- | --- |
+| 🏷 | Meetup | Docker |
+| 📍 | GetLinks | Lake Rajada Office Complex 10th Floor |
+| ⌚️ | 18:30~21:00 | Talk / Networking |
+| ✅ | [Facebook event](https://www.facebook.com/events/504227713281643/) | Free (Sold out) |
+| ✅ | [Docker.com](https://events.docker.com/events/details/docker-bangkok-presents-docker-in-thai-meetup-january-2018) |
+
+พูดคุยกันเรื่อง Docker ในงาน Docker in Thai Meetup ครั้งที่สอง คราวนี้พูดถึงเรื่องการทำ Blue/Green Deployment ด้วย Docker ([คืออะไร?](http://www.somkiat.cc/blue-green-deployment/)) และเพิ่มเติมด้วยการคอนฟิก Liveness, Readiness ใน Kubernetes
+
+> - Blue/Green micro service deployment using docker by K. Supaket
+> - Liveness/Readyness with Kubernetes by K. Praparn
+
 ### 25 ~ 27 (Thu ~ Sat): JSConf.Asia 2018
 
 | | | |
