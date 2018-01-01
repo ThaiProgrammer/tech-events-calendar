@@ -1,3 +1,15 @@
+document = document_title events:event_month
+{
+  return events
+}
+
+document_title = "#" text newline newline (text newline)+ newline (text newline)+ newline newline
+
+event_month = "##" _ month:$(literal+) _ year:$(number+) newline newline events:events
+{
+  return { month, year, events }
+}
+
 events = (event:event newline { return event })+
 
 event = header:header newline content:content { return { header, content } }
@@ -92,7 +104,7 @@ en_summary = summary:(">" text:text? newline { return (text && text || "") + "\n
 
 url = $(literal / number / [/:.&=?-])+
 text = $(literal / symbol / number / _)+
-symbol = [,\/:."“”%;()\-…’[\]?]
+symbol = [,\/\\:."“”%;()\-…’[\]?!]
 literal = [a-zA-Z\u0E00-\u0E7F]
 number = [0-9]
 _ = [ \t]
