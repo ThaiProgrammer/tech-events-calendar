@@ -1,8 +1,10 @@
 # tech-events-calendar
 
+ปฏิทินงาน Tech event ต่างๆ นับจากปี 2018 \
 A list of tech events relevant to tech people in Thailand, starting 2018.
 
-Feel free to send pull requests!
+หากมีงาน Tech event ไหนที่ยังไม่ได้อยู่ในปฏิทินนี้ รบกวนช่วยส่ง Pull request มาด้วยครับ ขอบคุณครับ \
+Feel free to send pull requests for missing events, thank you!
 
 
 ## January 2018
@@ -16,6 +18,10 @@ Feel free to send pull requests!
 | ⌚️ | 09:00~16:00 | Lecture/Tutorial |
 | ⌚️ | 16:00~17:00++ | Meetup |
 | ✅ | [Facebook event](https://www.facebook.com/events/122627418535428/) | Free, bring your own food. |
+
+ในการพัฒนาโปรแกรมบางประเภท เราต้องการความมั่นใจว่าโปรแกรมทำงาน “ถูกต้อง 100%”
+ซึ่งการ “ทดสอบ” โปรแกรมเฉยๆ มันไม่พอ เราต้อง “พิสูจน์” ได้ว่าโปรแกรมทำงานถูกต้องในทุกกรณีที่เป็นไปได้
+Dependent type theory เป็นวิธีนึง ซึ่งจะได้เรียนรู้กันในเวิร์คช็อปนี้
 
 > In software engineering, every application requires a certain level of correctness; most of them are "tested" against some test suites, however, this turn out not to be sufficient for some application; this is because those test suites cannot "guarantee" 100% correctness. To solve such a problem, we need to "prove" that those applications are indeed correct. One way to formally verify it is to use dependent type theory where mathematical proof and computer program are the same things.
 >
@@ -31,9 +37,13 @@ Feel free to send pull requests!
 | 🎟 | [Buy tickets](https://events.pouchnation.com/event/jsconfasia2018) | 1090 SGD |
 | ✅ | [Facebook event](https://www.facebook.com/events/111499759572747/) |
 
-> Southeast Asia’s largest JavaScript conference and community events.
-> Many developers (at least 20) from Thailand are going to JSConf.Asia 2018, so it’s worth mentioning here.
+งาน JavaScript ที่ใหญ่ที่สุดในเอเชียตะวันออกเฉียงใต้
+จะได้เจอคนจาก Microsoft, Mozilla, … ด้วย
+งานนี้คนไทยไปเยอะ (20 กว่าคน) เลยใส่ไว้ด้วย
 
+Many developers (at least 20) from Thailand are going to JSConf.Asia 2018, so it’s worth mentioning here.
+
+> JSConf.Asia 2018 is a 3 day long celebration of the web technology and design. It is the sixth edition of Southeast Asia’s most influential community event from developers for developers with the aim to educate, inspire and entertain around open source and the web.
 
 ## Symbol Legend
 
