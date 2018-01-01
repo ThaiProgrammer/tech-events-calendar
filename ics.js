@@ -78,6 +78,7 @@ async function createIcs() {
 }
 
 createIcs().then(events => {
+  fs.writeFileSync('events.json', JSON.stringify(events.map(event => event[1])))
   events.forEach(([ics, item]) => {
     fs.writeFileSync(`${item.title}.ics`, ics)
   })
