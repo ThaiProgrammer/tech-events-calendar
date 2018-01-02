@@ -54,8 +54,8 @@ content = table_header
     website:table_website*
     ticket:table_ticket*
     rsvp:table_rsvp* newline
-    summary:th_summary newline
-    description:en_summary
+    summary:(summary newline)?
+    description:description
 {
   return {
     topic,
@@ -82,16 +82,16 @@ table_location = "|" _ event_location_icon _ "|" location:text "|" detail:(value
 {
   return { title: location.trim(), detail: detail && detail.trim() }
 }
-table_time = "|" _ event_time_icon _ "|" _ from:time "~" to:time after:(flag:"++"? { return !!flag }) _ "|" agenda:text "|" newline
+table_time = "|" _ event_time_icon _ "|" _ from:time "~" to:time after:(flag:"++"? { return !!flag }) _ "|" agenda:(agenda:text "|" { return agenda })? newline
 {
-  return { from, to, after, agenda: agenda.trim() }
+  return { from, to, after, agenda: agenda && agenda.trim() }
 }
 table_website = "|" _ event_website_icon _ "|" _ link:markdown_link _ "|" newline { return { link: link } }
-table_ticket = "|" _ event_ticket_icon _ "|" _ link:markdown_link _ "|" price:text "|" newline
+table_ticket = "|" _ event_ticket_icon _ "|" _ link:markdown_link _ "|" price:(price:text "|" { return price })? newline
 {
   return { link, price: price && price.trim() }
 }
-table_rsvp = "|" _ event_check_icon _ "|" _ link:markdown_link _ "|" detail:(text:text "|" { return text })? newline
+table_rsvp = "|" _ event_check_icon _+ "|" _ link:markdown_link _ "|" detail:(text:text "|" { return text })? newline
 {
   return { link, detail: detail && detail.trim() }
 }
@@ -107,8 +107,8 @@ event_check_icon = "\u2705"
 
 markdown_link = "[" title:$(literal / number / _ / [.])+ "](" url:url ")" { return { title, url } }
 
-th_summary = $(text newline)+
-en_summary = summary:(">" text:text? newline { return (text && text || "") + "\n" })+ { return summary.join('') }
+summary = $(text newline)+
+description = summary:(">" text:text? newline { return (text && text || "") + "\n" })+ { return summary.join('') }
 
 url = $(literal / number / [/:.&=?-])+
 text = $(literal / symbol / number / _)+
