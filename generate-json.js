@@ -1,3 +1,44 @@
+/**
+ * @flow
+ */
+
+/*::
+type Date = [number, number, number]
+type Time = { hour: number, minute: number }
+type Agenda = {
+  from: Time,
+  to: Time,
+  after: boolean,
+  agenda: string
+}
+type Link = {
+  title: string,
+  url: string,
+  type: 'website' | 'ticket' | 'rsvp',
+  price?: string,
+}
+type Event = {
+  start: Date,
+  end: Date,
+  categories: Array<string>,
+  topics: Array<string>,
+  time: Array<Agenda>,
+  title: string,
+  location: {
+    title: string,
+    detail: ?string
+  },
+  summary: string,
+  description: string,
+  links: Array<Link>
+}
+
+type Section = {
+  title: ?string,
+  startLine: number,
+  text: string
+}
+*/
 const peg = require('pegjs')
 const fs = require('fs')
 
@@ -5,6 +46,11 @@ const grammar = fs.readFileSync('./grammar.pegjs', { encoding: 'utf8' })
 const parser = peg.generate(grammar)
 
 class ParseError extends Error {
+  /*::
+  expected: any
+  found: any
+  location: any
+  */
   constructor(syntaxError) {
     const location = syntaxError.location
     const message =
@@ -19,9 +65,9 @@ class ParseError extends Error {
   }
 }
 
-function splitSections(text) {
+function splitSections(text) /*:Array<Section>*/ {
   const lines = text.split(/\r\n|\r|\n/)
-  const sections = []
+  const sections /*:Array<Section>*/ = []
   let currentSection
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i]
@@ -46,11 +92,10 @@ function splitSections(text) {
   return sections
 }
 
-/** @type {string} */
 const rawContent = fs.readFileSync('./README.md', { encoding: 'utf8' })
 
 const sectionByMonth = splitSections(rawContent)
-  .filter(section => /\w+\s*\d+/.test(section.title))
+  .filter(section => /\w+\s*\d+/.test(section.title || ''))
   .map(section => {
     try {
       return parser.parse(section.text)
@@ -59,7 +104,7 @@ const sectionByMonth = splitSections(rawContent)
     }
   })
 
-function generateJSON(document) {
+function generateJSON(document): Array<Event> {
   return document.events.map(event => {
     const header = event.header
     const content = event.content
