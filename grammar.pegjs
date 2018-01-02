@@ -98,7 +98,7 @@ table_rsvp = "|" _ event_check_icon _ "|" _ link:markdown_link _ "|" detail:(tex
   return { link, detail: detail && detail.trim() }
 }
 
-time = hour:$number+":"minute:$number+ { return { hour, minute } }
+time = hour:$number+":"minute:$number+ { return { hour: +hour, minute: +minute } }
 
 event_topic_icon = "\uD83C\uDFF7"
 event_location_icon = "\uD83D\uDCCD"
