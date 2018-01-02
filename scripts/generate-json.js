@@ -3,6 +3,7 @@ const fs = require('fs')
 const parseReadme = require('../lib/parseReadme')
 
 function main () {
+  const diagnostic = { errors: [ ] }
   try {
     const rawContent = fs.readFileSync('./README.md', { encoding: 'utf8' })
     const json = parseReadme(rawContent, 'README.md')
@@ -13,14 +14,16 @@ function main () {
     if (!e.location) {
       throw e
     }
-    require('child_process').execSync('mkdir -p tmp')
-    const path = 'tmp/readme-parse-errors.json'
-    fs.writeFileSync(path, JSON.stringify([{
+    diagnostic.errors.push({
       message: e.message,
       location: e.location
-    }], null, 2))
-    console.log('* Parse error written to', path)
+    })
     throw e
+  } finally {
+    require('child_process').execSync('mkdir -p tmp')
+    const path = 'tmp/readme-parse-diagnostic.json'
+    fs.writeFileSync(path, JSON.stringify({ }, null, 2))
+    console.log('* Diagnostic information written to', path)
   }
 }
 
