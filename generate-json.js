@@ -63,7 +63,8 @@ function generateJSON (document) {
           time: content.time,
           title: header.title,
           location: content.location,
-          description: content.th_summary + content.en_summary,
+          summary: content.summary,
+          description: content.description,
           links: [
             ...findLinks(content.website, 'website'),
             ...findLinks(content.ticket, 'ticket'),

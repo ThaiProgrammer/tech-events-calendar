@@ -17,7 +17,7 @@ month
   / "November" { return 11 }
   / "December" { return 12 }
 
-events = (event:event newline? { return event })+
+events = (event:event newline* { return event })+
 
 event = header:header newline content:content { return { header, content } }
 
@@ -56,19 +56,19 @@ content = table_header
     website:table_website*
     ticket:table_ticket*
     rsvp:table_rsvp* newline
-    th_summary:th_summary newline
-    en_summary:en_summary
+    summary:th_summary newline
+    description:en_summary
 {
   return {
-      topic,
-        location,
-        time,
-        website,
-        ticket,
-        rsvp,
-        th_summary,
-        en_summary
-    }
+    topic,
+    location,
+    time,
+    website,
+    ticket,
+    rsvp,
+    summary,
+    description
+  }
 }
 
 table_header = "|"_+"|"_+"|"_+"|" newline
