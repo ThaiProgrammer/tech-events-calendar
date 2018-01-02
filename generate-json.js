@@ -1,13 +1,44 @@
-const ics = require('ics')
 const peg = require('pegjs')
 const fs = require('fs')
 
 const grammar = fs.readFileSync('./grammar.pegjs', { encoding: 'utf8' })
 const parser = peg.generate(grammar)
 
-const content = fs.readFileSync('./README.md', { encoding: 'utf8' })
-const eventsData = content.substring(0, content.indexOf('## Symbol Legend'))
-const document = parser.parse(eventsData)
+function splitSections (text) {
+  const lines = text.split(/\r\n|\r|\n/)
+  const sections = [ ]
+  let currentSection
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i]
+    if (line.match(/^\s*##[^#]/)) {
+      currentSection = {
+        title: line.substr(2).trim(),
+        startLine: i + 1,
+        text: line
+      }
+      sections.push(currentSection)
+    } else if (!currentSection) {
+      currentSection = {
+        title: null,
+        startLine: i + 1,
+        text: line
+      }
+      sections.push(currentSection)
+    } else {
+      currentSection.text += '\n' + line
+    }
+  }
+  return sections
+}
+
+/** @type {string} */
+const rawContent = fs.readFileSync('./README.md', { encoding: 'utf8' })
+
+const sectionByMonth = splitSections(rawContent)
+  .filter(section => /\w+\s*\d+/.test(section.title))
+  .map(section => {
+    return parser.parse(section.text)
+  })
 
 const months = [
   'January',
@@ -24,8 +55,8 @@ const months = [
   'December'
 ]
 
-async function createIcs() {
-  return Promise.all(
+function generateJSON (document) {
+  return (
     document.events
       .map(event => {
         const header = event.header
@@ -34,52 +65,42 @@ async function createIcs() {
         const year = parseInt(document.year, 10)
         const month = months.indexOf(document.month) + 1
 
-        let start = [year, month, header.day.from, 0, 0]
-        let end = []
+        let start = { year, month, date: +header.day.from }
+        let end = undefined
         if (header.day.to) {
-          end = [year, month, header.day.to, 0, 0]
-        }
-        if (content.time) {
-          const firstTime = content.time[0]
-          const lastTime = content.time[content.time.length - 1]
-          start = [
-            year,
-            month,
-            header.day.from,
-            firstTime.from.hour,
-            firstTime.from.minute
-          ]
-          end = [
-            year,
-            month,
-            header.day.from,
-            lastTime.to.hour,
-            lastTime.to.minute
-          ]
+          end = { year, month, date: +header.day.to }
         }
         return {
           start,
           end,
-          categories: [content.topic.type],
+          categories: content.topic.categories,
+          topics: content.topic.topics,
+          time: content.time,
           title: header.title,
-          location: content.location && content.location.location,
-          description: content.th_summary + content.en_summary
+          location: content.location,
+          description: content.th_summary + content.en_summary,
+          links: [
+            ...findLinks(content.website, 'website'),
+            ...findLinks(content.ticket, 'ticket'),
+            ...findLinks(content.rsvp, 'rsvp')
+          ]
         }
-      })
-      .map(item => {
-        return new Promise((resolve, reject) => {
-          ics.createEvent(item, (error, value) => {
-            if (error) return reject(error)
-            resolve([value, item])
-          })
-        })
       })
   )
 }
 
-createIcs().then(events => {
-  fs.writeFileSync('events.json', JSON.stringify(events.map(event => event[1])))
-  events.forEach(([ics, item]) => {
-    fs.writeFileSync(`${item.title}.ics`, ics)
+function findLinks (linkTable, type) {
+  return (linkTable || [ ]).map(link => {
+    const result = Object.assign({ }, link, link.link, { type })
+    delete result.link
+    return result
   })
+}
+
+const jsonByMonth = sectionByMonth.map(document => {
+  return generateJSON(document)
 })
+
+const json = jsonByMonth.reduce((a, b) => [...a, b])
+
+console.log(JSON.stringify(json, null, 2))
