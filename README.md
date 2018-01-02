@@ -7,6 +7,8 @@ A list of tech events relevant to tech people in Thailand, starting 2018.
 รบกวนช่วย[แก้ไขไฟล์นี้](https://github.com/ThaiProgrammer/tech-events-calendar/edit/master/README.md) (README.md) แล้วส่ง Pull request มาด้วยครับ ขอบคุณครับ \
 Feel free to send pull requests for missing events, thank you!
 
+* Also available as [**JSON file**](https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json).
+
 ---
 
 <!-- ปฏิทิน: รูปปฏิทินของแต่ละเดือน จะถูกสร้างจากข้อมูลในไฟล์ README.md โดยอัตโนมัติ (ดูโค้ดได้ที่ generate-svg.js) -->
