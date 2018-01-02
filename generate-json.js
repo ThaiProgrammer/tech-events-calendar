@@ -51,10 +51,10 @@ class ParseError extends Error {
   found: any
   location: any
   */
-  constructor(syntaxError) {
+  constructor(section /*:Section*/, syntaxError) {
     const location = syntaxError.location
     const message =
-      `Parse error at line ${location.start.line}` +
+      `Parse error at line ${location.start.line + section.startLine}` +
       ` column ${location.start.column}.` +
       ` ${syntaxError.message}`
     super(message)
@@ -100,7 +100,7 @@ const sectionByMonth = splitSections(rawContent)
     try {
       return parser.parse(section.text)
     } catch (error) {
-      throw new ParseError(error)
+      throw new ParseError(section, error)
     }
   })
 
