@@ -4,6 +4,25 @@ const fs = require('fs')
 const grammar = fs.readFileSync('./grammar.pegjs', { encoding: 'utf8' })
 const parser = peg.generate(grammar)
 
+function main () {
+  /** @type {string} */
+  const rawContent = fs.readFileSync('./README.md', { encoding: 'utf8' })
+  const sectionByMonth = splitSections(rawContent)
+    .filter(section => /\w+\s*\d+/.test(section.title))
+    .map(section => {
+      try {
+        return parser.parse(section.text)
+      } catch (e) {
+        if (!e.location) throw e
+        throw new Error('Calendar parsing error (line ' + (e.location.start.line + section.lineOffset) + '): ' + e.message)
+      }
+    })
+  const jsonByMonth = sectionByMonth.map(document => {
+    return generateJSON(document)
+  })
+  const json = jsonByMonth.reduce((a, b) => [...a, ...b])
+  console.log(JSON.stringify(json, null, 2))
+}
 function splitSections (text) {
   const lines = text.split(/\r\n|\r|\n/)
   const sections = [ ]
@@ -13,14 +32,14 @@ function splitSections (text) {
     if (line.match(/^\s*##[^#]/)) {
       currentSection = {
         title: line.substr(2).trim(),
-        startLine: i + 1,
+        lineOffset: i,
         text: line
       }
       sections.push(currentSection)
     } else if (!currentSection) {
       currentSection = {
         title: null,
-        startLine: i + 1,
+        lineOffset: i,
         text: line
       }
       sections.push(currentSection)
@@ -30,15 +49,6 @@ function splitSections (text) {
   }
   return sections
 }
-
-/** @type {string} */
-const rawContent = fs.readFileSync('./README.md', { encoding: 'utf8' })
-
-const sectionByMonth = splitSections(rawContent)
-  .filter(section => /\w+\s*\d+/.test(section.title))
-  .map(section => {
-    return parser.parse(section.text)
-  })
 
 function generateJSON (document) {
   return (
@@ -83,10 +93,4 @@ function findLinks (linkTable, type) {
   })
 }
 
-const jsonByMonth = sectionByMonth.map(document => {
-  return generateJSON(document)
-})
-
-const json = jsonByMonth.reduce((a, b) => [...a, b])
-
-console.log(JSON.stringify(json, null, 2))
+main()
