@@ -104,7 +104,7 @@ const sectionByMonth = splitSections(rawContent)
     }
   })
 
-function generateJSON(document): Array<Event> {
+function generateJSON(document) /*: Array<Event>*/ {
   return document.events.map(event => {
     const header = event.header
     const content = event.content
