@@ -46,7 +46,6 @@ const grammar = fs.readFileSync('./grammar.pegjs', { encoding: 'utf8' })
 const parser = peg.generate(grammar)
 
 function main () {
-  /** @type {string} */
   const rawContent = fs.readFileSync('./README.md', { encoding: 'utf8' })
   const sectionByMonth = splitSections(rawContent)
     .filter(section => /\w+\s*\d+/.test(section.title))
