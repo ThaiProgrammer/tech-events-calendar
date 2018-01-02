@@ -9,6 +9,7 @@ Feel free to send pull requests for missing events, thank you!
 
 ---
 
+<!-- ปฏิทิน: รูปปฏิทินของแต่ละเดือน จะถูกสร้างจากข้อมูลในไฟล์ README.md โดยอัตโนมัติ (ดูโค้ดได้ที่ generate-svg.js) -->
 <p align="center">
   <a href="#january-2018"><img src="https://thaiprogrammer-tech-events-calendar.netlify.com/generated/calendar-images/2018-01.svg" alt="January 2018" width="200" height="185" /></a>
   <a href="#february-2018"><img src="https://thaiprogrammer-tech-events-calendar.netlify.com/generated/calendar-images/2018-02.svg" alt="February 2018" width="200" height="185" /></a>
