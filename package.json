@@ -5,6 +5,6 @@
   },
   "private": "true",
   "scripts": {
-    "build": "node generate-json.js > public/calendar.json && test -f public/calendar.json"
+    "build": "node generate-json.js > public/calendar.json && node generate-svg.js && test -f public/calendar.json"
   }
 }
