@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "pegjs": "^0.10.0"
+  }
+}
