@@ -54,7 +54,8 @@ class ParseError extends Error {
   constructor(section /*:Section*/, syntaxError) {
     const location = syntaxError.location
     const message =
-      `Parse error at line ${location.start.line + section.startLine}` +
+      `Parse error at line ${location.start.line +
+        ((section && section.startLine) || 0)}` +
       ` column ${location.start.column}.` +
       ` ${syntaxError.message}`
     super(message)
