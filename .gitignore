@@ -61,3 +61,4 @@ build/Release
 node_modules
 
 /public/calendar.json
+/public/generated/calendar-images
