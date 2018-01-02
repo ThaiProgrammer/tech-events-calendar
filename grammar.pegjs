@@ -24,10 +24,10 @@ event = header:header newline content:content { return { header, content } }
 header = "###" _ day:event_date _ date:event_week_day ":" title:text newline
 {
   return {
-      day,
-        date,
-        title: title.trim()
-    }
+    day,
+    date,
+    title: title.trim()
+  }
 }
 
 event_date = from:$(number+) to:(_+ "~" _+ to:$(number+) { return to })?
@@ -116,6 +116,6 @@ url = $(literal / number / [/:.&=?-])+
 text = $(literal / symbol / number / _)+
 symbol = [,\/\\:."“”%;()\-…’[\]?!]
 literal = [a-zA-Z\u0E00-\u0E7F]
-number = [0-9]
-_ = [ \t]
-newline = [\n]
+number "number" = [0-9]
+_ "space" = [ \t]
+newline "newline" = [\n]
