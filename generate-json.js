@@ -45,6 +45,25 @@ const fs = require('fs')
 const grammar = fs.readFileSync('./grammar.pegjs', { encoding: 'utf8' })
 const parser = peg.generate(grammar)
 
+function main () {
+  const rawContent = fs.readFileSync('./README.md', { encoding: 'utf8' })
+  const sectionByMonth = splitSections(rawContent)
+    .filter(section => /\w+\s*\d+/.test(section.title))
+    .map(section => {
+      try {
+        return parser.parse(section.text)
+      } catch (error) {
+        if (!error.location) throw error
+        throw new ParseError(section, error)
+      }
+    })
+  const jsonByMonth = sectionByMonth.map(document => {
+    return generateJSON(document)
+  })
+  const json = jsonByMonth.reduce((a, b) => [...a, ...b])
+  console.log(JSON.stringify(json, null, 2))
+}
+
 class ParseError extends Error {
   /*::
   expected: any
@@ -74,14 +93,14 @@ function splitSections(text) /*:Array<Section>*/ {
     if (line.match(/^\s*##[^#]/)) {
       currentSection = {
         title: line.substr(2).trim(),
-        startLine: i + 1,
+        lineOffset: i,
         text: line
       }
       sections.push(currentSection)
     } else if (!currentSection) {
       currentSection = {
         title: null,
-        startLine: i + 1,
+        lineOffset: i,
         text: line
       }
       sections.push(currentSection)
@@ -91,18 +110,6 @@ function splitSections(text) /*:Array<Section>*/ {
   }
   return sections
 }
-
-const rawContent = fs.readFileSync('./README.md', { encoding: 'utf8' })
-
-const sectionByMonth = splitSections(rawContent)
-  .filter(section => /\w+\s*\d+/.test(section.title || ''))
-  .map(section => {
-    try {
-      return parser.parse(section.text)
-    } catch (error) {
-      throw new ParseError(section, error)
-    }
-  })
 
 function generateJSON(document) /*: Array<Event>*/ {
   return document.events.map(event => {
@@ -144,10 +151,4 @@ function findLinks(linkTable, type) {
   })
 }
 
-const jsonByMonth = sectionByMonth.map(document => {
-  return generateJSON(document)
-})
-
-const json = jsonByMonth.reduce((a, b) => [...a, b])
-
-console.log(JSON.stringify(json, null, 2))
+main()

@@ -1,4 +1,4 @@
-event_month = "##" _ month:month _ year:$(number+) newline newline events:events
+event_month = "##" _ month:month _ year:$(number+) events:(event*) newline*
 {
   return { month, year, events }
 }
@@ -17,9 +17,7 @@ month
   / "November" { return 11 }
   / "December" { return 12 }
 
-events = (event:event newline* { return event })+
-
-event = header:header newline content:content { return { header, content } }
+event = newline+ header:header newline content:content { return { header, content } }
 
 header = "###" _ day:event_date _ date:event_week_day ":" title:text newline
 {
