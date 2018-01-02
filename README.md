@@ -3,11 +3,11 @@
 **ปฏิทินงาน Tech event ต่างๆ ตั้งแต่ปี 2018** \
 A list of tech events relevant to tech people in Thailand, starting 2018.
 
-Also available as [**JSON file**](https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json).
-
 **หากมีงาน Tech event ไหนที่ยังไม่ได้อยู่ในปฏิทินนี้** \
 รบกวนช่วย[แก้ไขไฟล์นี้](https://github.com/ThaiProgrammer/tech-events-calendar/edit/master/README.md) (README.md) แล้วส่ง Pull request มาด้วยครับ ขอบคุณครับ \
 Feel free to send pull requests for missing events, thank you!
+
+* Also available as [**JSON file**](https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json).
 
 ---
 
