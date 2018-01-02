@@ -1,6 +1,6 @@
 # tech-events-calendar
 
-ปฏิทินงาน Tech event ต่างๆ ตั้งแต่ปี 2018 \
+**ปฏิทินงาน Tech event ต่างๆ ตั้งแต่ปี 2018** \
 A list of tech events relevant to tech people in Thailand, starting 2018.
 
 **หากมีงาน Tech event ไหนที่ยังไม่ได้อยู่ในปฏิทินนี้** \
@@ -138,5 +138,4 @@ Dependent type theory เป็นวิธีนึง ซึ่งจะได
 
 ## Contributing
 
-Please help add event information to this repository.
-It should be grouped by month, and sorted by starting date (in chronological order).
+Please see [CONTRIBUTING.md] for more information about contributing to this repository.
