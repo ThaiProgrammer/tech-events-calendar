@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "flow-bin": "^0.62.0",
     "pegjs": "^0.10.0"
   },
   "private": "true",
