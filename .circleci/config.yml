@@ -21,7 +21,7 @@ jobs:
       - store_artifacts:
           path: ~/src/public
           prefix: public
-    - run:
-        name: pronto
-        command: bundle
-        when: always
+      - run:
+          name: pronto
+          command: bundle
+          when: always
