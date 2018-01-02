@@ -1,5 +1,9 @@
 {
   "dependencies": {
     "pegjs": "^0.10.0"
+  },
+  "private": "true",
+  "scripts": {
+    "build": "node generate-json.js > public/calendar.json && test -f public/calendar.json"
   }
 }
