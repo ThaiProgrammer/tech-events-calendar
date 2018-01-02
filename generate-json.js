@@ -40,21 +40,6 @@ const sectionByMonth = splitSections(rawContent)
     return parser.parse(section.text)
   })
 
-const months = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December'
-]
-
 function generateJSON (document) {
   return (
     document.events
@@ -63,7 +48,7 @@ function generateJSON (document) {
         const content = event.content
 
         const year = parseInt(document.year, 10)
-        const month = months.indexOf(document.month) + 1
+        const month = document.month
 
         let start = { year, month, date: +header.day.from }
         let end = undefined

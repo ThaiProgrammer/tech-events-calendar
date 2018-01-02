@@ -1,7 +1,21 @@
-event_month = "##" _ month:$(literal+) _ year:$(number+) newline newline events:events
+event_month = "##" _ month:month _ year:$(number+) newline newline events:events
 {
   return { month, year, events }
 }
+
+month
+  = "January" { return 1 }
+  / "February" { return 2 }
+  / "March" { return 3 }
+  / "April" { return 4 }
+  / "May" { return 5 }
+  / "June" { return 6 }
+  / "July" { return 7 }
+  / "August" { return 8 }
+  / "September" { return 9 }
+  / "October" { return 10 }
+  / "November" { return 11 }
+  / "December" { return 12 }
 
 events = (event:event newline? { return event })+
 
