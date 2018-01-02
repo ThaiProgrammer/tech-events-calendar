@@ -63,3 +63,4 @@ node_modules
 /public/calendar.json
 /public/generated/calendar-images
 /package-lock.json
+/tmp
