@@ -54,7 +54,8 @@ Dependent type theory เป็นวิธีนึง ซึ่งจะได
 | 🏷 | Meetup | Docker |
 | 📍 | GetLinks | Lake Rajada Office Complex 10th Floor |
 | ⌚️ | 18:30~21:00 | Talk / Networking |
-| ✅ | [Facebook event](https://www.facebook.com/events/504227713281643/) | Free (Sold out) |
+| 🎟 | [Event Pop](https://www.eventpop.me/e/2822) | Free (sold out) |
+| ✅ | [Facebook event](https://www.facebook.com/events/504227713281643/) |
 | ✅ | [Docker.com](https://events.docker.com/events/details/docker-bangkok-presents-docker-in-thai-meetup-january-2018) |
 
 พูดคุยกันเรื่อง Docker ในงาน Docker in Thai Meetup ครั้งที่สอง คราวนี้พูดถึงเรื่องการทำ Blue/Green Deployment ด้วย Docker ([คืออะไร?](http://www.somkiat.cc/blue-green-deployment/)) และเพิ่มเติมด้วยการคอนฟิก Liveness, Readiness ใน Kubernetes
@@ -107,8 +108,8 @@ Dependent type theory เป็นวิธีนึง ซึ่งจะได
 | 🏷 | Label | Type of event | Topics |
 | 📍 | Round Pushpin | Place | Further information about that place |
 | ⌚️ | Watch | Time | Agenda |
-| 🏠 | House | Website |
 | 🎟 | Admission Tickets | Get tickets | Price |
+| 🏠 | House | Website |
 | ✅ | White Heavy Check Mark | RSVP |
 
 
