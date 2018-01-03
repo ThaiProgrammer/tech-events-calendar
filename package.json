@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "flow-bin": "^0.62.0",
+    "icalendar": "^0.7.1",
     "pegjs": "^0.10.0"
   },
   "private": "true",
