@@ -55,7 +55,7 @@ function generateICS () {
     const result = []
     for (const event of data) {
       const genDate = new Date()
-      const vEvent = new icalendar.VEvent(guid())
+      const vEvent = new icalendar.VEvent(event.id)
       let start, end, startDate, endDate
 
       if (event.time != null) {
