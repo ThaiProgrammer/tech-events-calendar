@@ -81,8 +81,8 @@ function generateICS () {
       vEvent.setSummary(event.title)
       vEvent.setLocation(event.location.title)
       vEvent.addProperty('COMMENT', event.summary)
-      // XXX: Maybe should link back to repo, for users to discover ALL links?
-      vEvent.addProperty('URL', event.links[0].url)
+      const url = 'https://github.com/ThaiProgrammer/tech-events-calendar' + event.id
+      vEvent.addProperty('URL', url)
       vEvent.setDescription(event.description)
       vEvent.addProperty('CATEGORIES', event.categories)
       vEvent.addProperty('TRANSP', 'OPAQUE')
