@@ -92,6 +92,25 @@ Dependent type theory เป็นวิธีนึง ซึ่งจะได
 
 > Insurtech Ignite Workshop จัดขึ้นเพื่อผู้ที่สนใจจะมาร่วมฟัง เทคนิค แบบเจาะลึก และอัพเดตเทรนต์ด้าน Insurance Industry, Future of Business with Big Data, AI, Automation พร้อมกิจกรรม Networking ในวันที่ 27 มกราคม 2561 นี้
 
+### <a name="google-cloud-onboard-bangkok-2018"></a> 30 (Tue): Google Cloud OnBoard Bangkok 2018
+
+| | | |
+| --- | --- | --- |
+| 🏷 | Workshop | Google Cloud Platform |
+| 📍 | Central World | Convention Centre A2, 22nd Floor 999/99 Rama 1 Road, Pathumwan, Bangkok 10330, Thailand |
+| ⌚️ | 08.30~17:30 | 
+| 🏠 | [Google Cloud](https://cloudplatformonline.com/2018-onboard-bkk.html) | Free |
+
+ในการพัฒนาโปรแกรมบางประเภท เราต้องการความมั่นใจว่าโปรแกรมทำงาน “ถูกต้อง 100%”
+ซึ่งการ “ทดสอบ” โปรแกรมเฉยๆ มันไม่พอ เราต้อง “พิสูจน์” ได้ว่าโปรแกรมทำงานถูกต้องในทุกกรณีที่เป็นไปได้
+Dependent type theory เป็นวิธีนึง ซึ่งจะได้เรียนรู้กันในเวิร์คช็อปนี้
+
+> งานสัมมนา Google Cloud OnBoard นี้เป็นงานสัมมนาฟรีที่วิทยากรจาก Google จะมาแนะนำเทคโนโลยีของ Google Cloud Platform เบื้องต้นทั้งหมดได้แก่ Google App Engine, Datastore, Storage, Container Engine, Compute Engine and Network, Big Data และ Machine Learning โดยงานนี้จะเหมาะกับ IT Manager, Systems Engineer, Developer, Solution Architect และคนในสายธุรกิจที่สนใจเทคโนโลยี Cloud
+>
+> Cloud OnBoard is a free full-day instructor-led enablement and training event that will provide you with a step-by-step technical introduction to the Google Cloud Platform (GCP). Through a combination of instructor-led presentations and hands-on labs, you will learn how to get started with Google App Engine, Datastore, Storage, Container Engine, Compute Engine and Network, Big Data and Machine Learning.
+>
+> Cloud OnBoard has been designed for IT Managers, Systems Engineers and Operations professionals, Developers, Solution Architects and modern business leaders who are exploring cloud solutions or are new to Google Cloud Platform. Leveraging the GCP Fundamentals course, the event will provide you with the technical training you need to get started as well as access to tips and tricks, industry best-practice and questions and answers from the GCP team.
+
 ## February 2018
 
 ### <a name="insurtech-ignite-hackathon"></a> 3 ~ 4 (Sat ~ Sun): Insurtech Ignite Hackathon
