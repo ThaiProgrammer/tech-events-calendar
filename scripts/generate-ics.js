@@ -54,10 +54,9 @@ function generateICS () {
       }
       vEvent.setSummary(event.title)
       vEvent.setLocation(event.location.title)
-      vEvent.addProperty('COMMENT', event.summary)
       const url = 'https://github.com/ThaiProgrammer/tech-events-calendar#' + event.id
       vEvent.addProperty('URL', url)
-      vEvent.setDescription(event.description)
+      vEvent.setDescription(event.summary + '\r\n\r\n' + event.description + '\r\n\r\n' + url)
       vEvent.addProperty('CATEGORIES', event.categories)
       vEvent.addProperty('TRANSP', 'OPAQUE')
       result.push(vEvent)
