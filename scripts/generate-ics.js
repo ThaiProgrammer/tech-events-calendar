@@ -1,18 +1,14 @@
 // Generates ICS file from `public/calendar.json`
 
 const data = require('../public/calendar')
+const icalendar = require('icalendar')
 
 function generateICS () {
-  const ics = [
-    `BEGIN:VCALENDAR`,
-    `VERSION:2.0`,
-    `PRODID:-//Thai Programmer//NONSGML v1.0//EN`,
-    `CALSCALE:GREGORIAN`,
-    `METHOD:PUBLISH`,
-    `${renderCells()}`,
-    `END:VCALENDAR`
-  ].join('\n')
-  return ics
+  const ical = new icalendar.iCalendar()
+  for (const event of generateEvents()) {
+    ical.addComponent(event)
+  }
+  return ical.toString()
 
   function guid() {
     function s4() {
@@ -34,7 +30,7 @@ function generateICS () {
   function toISOString (date) {
     return date.getUTCFullYear() +
       pad(date.getUTCMonth() + 1) +
-      pad(date.getUTCDate()) + 'T' + 
+      pad(date.getUTCDate()) + 'T' +
       pad(date.getUTCHours()) +
       pad(date.getUTCMinutes()) +
       pad(date.getUTCSeconds()) + 'Z'
@@ -55,10 +51,11 @@ function generateICS () {
     return result
   }
 
-  function renderCells () {
+  function generateEvents () {
     const result = []
     for (const event of data) {
       const genDate = new Date()
+      const vEvent = new icalendar.VEvent(guid())
       let start, end, startDate, endDate
 
       if (event.time != null) {
@@ -69,35 +66,29 @@ function generateICS () {
         startDate.setMinutes(event.time[0].from.minute)
         endDate.setHours(event.time[total-1].to.hour)
         endDate.setMinutes(event.time[total-1].to.minute)
-        start = `DTSTART:${toISOString(startDate)}`
-        end = `DTEND:${toISOString(endDate)}`
+        vEvent.setDate(startDate, endDate)
       } else {
+        // Full day support hacked from https://github.com/tritech/node-icalendar/pull/43
         startDate = new Date(event.start.year, event.start.month - 1, event.start.date)
         endDate = new Date(event.end.year, event.end.month - 1, event.end.date + 1)
-        start = `DTSTART;VALUE=DATE:${toISODateString(startDate)}`
-        end = `DTEND;VALUE=DATE:${toISODateString(endDate)}`
+        var startProperty = vEvent.addProperty('DTSTART', startDate)
+        startProperty.setParameter('VALUE', 'DATE')
+        startProperty.type = 'DATE'
+        var endProperty = vEvent.addProperty('DTEND', endDate)
+        endProperty.setParameter('VALUE', 'DATE')
+        endProperty.type = 'DATE'
       }
-
-      const description = addNewlines(event.description.replace(/(?:\n)/g, '\\n')).trim()
-      
-      result.push([
-        `BEGIN:VEVENT\r`,
-        `UID:${guid()}`,
-        `DTSTAMP:${toISOString(genDate)}`,
-        `${start}`,
-        `${end}`,
-        `CREATED:${toISOString(genDate)}`,
-        `SUMMARY:${event.title}`,
-        `LOCATION:${event.location.title}`,
-        `DESCRIPTION:${description}`,
-        `URL:${event.links[0].url}`,
-        `SEQUENCE:0`,
-        `TRANSP:OPAQUE`,
-        `CATEGORIES:${event.categories.join(',')}`,
-        `END:VEVENT`
-      ].join('\n'))
+      vEvent.setSummary(event.title)
+      vEvent.setLocation(event.location.title)
+      vEvent.addProperty('COMMENT', event.summary)
+      // XXX: Maybe should link back to repo, for users to discover ALL links?
+      vEvent.addProperty('URL', event.links[0].url)
+      vEvent.setDescription(event.description)
+      vEvent.addProperty('CATEGORIES', event.categories)
+      vEvent.addProperty('TRANSP', 'OPAQUE')
+      result.push(vEvent)
     }
-    return result.join('\n')
+    return result
   }
 }
 
