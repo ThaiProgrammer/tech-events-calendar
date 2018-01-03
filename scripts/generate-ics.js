@@ -8,39 +8,32 @@ function generateICS () {
   for (const event of generateEvents()) {
     ical.addComponent(event)
   }
-  return ical.toString().replace('BEGIN:VEVENT', [
-    'BEGIN:VTIMEZONE',
-    'TZID:Asia/Bangkok',
-    'BEGIN:STANDARD',
-    'TZOFFSETFROM:+064204',
-    'DTSTART:19200331T235956',
-    'TZNAME:GMT+7',
-    'TZOFFSETTO:+0700',
-    'RDATE:19200331T235956',
-    'END:STANDARD',
-    'END:VTIMEZONE',
-    'BEGIN:VEVENT'
-  ].join('\r\n'))
+  return ical.toString()
 
   function generateEvents () {
     const result = []
     for (const event of data) {
       const genDate = new Date()
-      const vEvent = new icalendar.VEvent(`${event.id}@thaiprogrammer-tech-events-calendar.spacet.me`)
+      const vEvent = new icalendar.VEvent(`${event.id}@thaiprogrammer-calendar`)
       let start, end, startDate, endDate
 
       if (event.time != null) {
         const total = event.time.length
-        startDate = new Date(event.start.year, event.start.month - 1, event.start.date)
-        endDate = new Date(event.start.year, event.start.month - 1, event.start.date)
-        startDate.setHours(event.time[0].from.hour)
-        startDate.setMinutes(event.time[0].from.minute)
-        endDate.setHours(event.time[total-1].to.hour)
-        endDate.setMinutes(event.time[total-1].to.minute)
-        var startProperty = vEvent.addProperty('DTSTART', startDate)
-        startProperty.setParameter('TZID', 'Asia/Bangkok')
-        var endProperty = vEvent.addProperty('DTEND', endDate)
-        endProperty.setParameter('TZID', 'Asia/Bangkok')
+        startDate = new Date(Date.UTC(
+          event.start.year,
+          event.start.month - 1,
+          event.start.date,
+          event.time[0].from.hour - 7,
+          event.time[0].from.minute
+        ))
+        endDate = new Date(Date.UTC(
+          event.start.year,
+          event.start.month - 1,
+          event.start.date,
+          event.time[total - 1].to.hour - 7,
+          event.time[total - 1].to.minute
+        ))
+        vEvent.setDate(startDate, endDate)
       } else {
         // Full day support hacked from https://github.com/tritech/node-icalendar/pull/43
         startDate = new Date(event.start.year, event.start.month - 1, event.start.date)
@@ -56,7 +49,7 @@ function generateICS () {
       vEvent.setLocation(event.location.title)
       const url = 'https://github.com/ThaiProgrammer/tech-events-calendar#' + event.id
       vEvent.addProperty('URL', url)
-      vEvent.setDescription(event.summary + '\r\n\r\n' + event.description + '\r\n\r\n' + url)
+      vEvent.setDescription(event.summary + '\n\n' + event.description + '\n\n' + url)
       vEvent.addProperty('CATEGORIES', event.categories)
       vEvent.addProperty('TRANSP', 'OPAQUE')
       result.push(vEvent)
