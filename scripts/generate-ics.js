@@ -14,17 +14,25 @@ function generateICS () {
     const result = []
     for (const event of data) {
       const genDate = new Date()
-      const vEvent = new icalendar.VEvent(`${event.id}@thaiprogrammer-tech-events-calendar.spacet.me`)
+      const vEvent = new icalendar.VEvent(`${event.id}@thaiprogrammer-calendar`)
       let start, end, startDate, endDate
 
       if (event.time != null) {
         const total = event.time.length
-        startDate = new Date(event.start.year, event.start.month - 1, event.start.date)
-        endDate = new Date(event.start.year, event.start.month - 1, event.start.date)
-        startDate.setHours(event.time[0].from.hour)
-        startDate.setMinutes(event.time[0].from.minute)
-        endDate.setHours(event.time[total-1].to.hour)
-        endDate.setMinutes(event.time[total-1].to.minute)
+        startDate = new Date(Date.UTC(
+          event.start.year,
+          event.start.month - 1,
+          event.start.date,
+          event.time[0].from.hour - 7,
+          event.time[0].from.minute
+        ))
+        endDate = new Date(Date.UTC(
+          event.start.year,
+          event.start.month - 1,
+          event.start.date,
+          event.time[total - 1].to.hour - 7,
+          event.time[total - 1].to.minute
+        ))
         vEvent.setDate(startDate, endDate)
       } else {
         // Full day support hacked from https://github.com/tritech/node-icalendar/pull/43
@@ -39,10 +47,9 @@ function generateICS () {
       }
       vEvent.setSummary(event.title)
       vEvent.setLocation(event.location.title)
-      vEvent.addProperty('COMMENT', event.summary)
       const url = 'https://github.com/ThaiProgrammer/tech-events-calendar#' + event.id
       vEvent.addProperty('URL', url)
-      vEvent.setDescription(event.description)
+      vEvent.setDescription(event.summary + '\n\n' + event.description + '\n\n' + url)
       vEvent.addProperty('CATEGORIES', event.categories)
       vEvent.addProperty('TRANSP', 'OPAQUE')
       result.push(vEvent)
