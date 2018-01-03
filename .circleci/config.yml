@@ -10,7 +10,7 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: yarn
-          command: yarn
+          command: yarn install --frozen-lockfile
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
@@ -18,6 +18,14 @@ jobs:
       - run:
           name: build
           command: yarn build
+      - run:
+          name: diff calendar.json
+          command: |
+            curl https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json > /tmp/master-calendar.json && diff -u /tmp/master-calendar.json public/calendar.json || true
+      - run:
+          name: diff calendar.ics
+          command: |
+            curl https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.ics > /tmp/master-calendar.ics && diff -u /tmp/master-calendar.ics public/calendar.ics || true
       - store_artifacts:
           path: ~/src/public
           prefix: public
