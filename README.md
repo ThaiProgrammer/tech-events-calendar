@@ -31,7 +31,7 @@ Feel free to send pull requests for missing events, thank you!
 
 ## January 2018
 
-### 13 (Sat): Workshop on Formal Verification using Dependent Type Theory in Thai
+### <a name="dependent-type-theory-meetup-january-2018"></a> 13 (Sat): Workshop on Formal Verification using Dependent Type Theory in Thai
 
 | | | |
 | --- | --- | --- |
@@ -49,7 +49,7 @@ Dependent type theory เป็นวิธีนึง ซึ่งจะได
 >
 > In this workshop, I would like to walk though dependent type theory by first, describe it as a functional programming, then how can we use this functional programming to do some logical reasoning. No background knowledge is required (apart from simple maths skill in secondary school), so everyone is welcome to attend. We will speak in Thai but every written material will be in English. There will be no registration fee, but please bring your food.
 
-### 17 (Wed): Docker in Thai Meetup
+### <a name="docker-in-thai-meetup-january-2018"></a> 17 (Wed): Docker in Thai Meetup
 
 | | | |
 | --- | --- | --- |
@@ -65,7 +65,7 @@ Dependent type theory เป็นวิธีนึง ซึ่งจะได
 > - Blue/Green micro service deployment using docker by K. Supaket
 > - Liveness/Readyness with Kubernetes by K. Praparn
 
-### 25 ~ 27 (Thu ~ Sat): JSConf.Asia 2018
+### <a name="jsconf-asia-2018"></a> 25 ~ 27 (Thu ~ Sat): JSConf.Asia 2018
 
 | | | |
 | --- | --- | --- |
@@ -81,7 +81,7 @@ Dependent type theory เป็นวิธีนึง ซึ่งจะได
 
 > JSConf.Asia 2018 is a 3 day long celebration of the web technology and design. It is the sixth edition of Southeast Asia’s most influential community event from developers for developers with the aim to educate, inspire and entertain around open source and the web.
 
-### 27 (Sat): Insurtech Ignite Workshop
+### <a name="insurtech-ignite-workshop"></a> 27 (Sat): Insurtech Ignite Workshop
 
 | | | |
 | --- | --- | --- |
@@ -94,7 +94,7 @@ Dependent type theory เป็นวิธีนึง ซึ่งจะได
 
 ## February 2018
 
-### 3 ~ 4 (Sat ~ Sun): Insurtech Ignite Hackathon
+### <a name="insurtech-ignite-hackathon"></a> 3 ~ 4 (Sat ~ Sun): Insurtech Ignite Hackathon
 
 | | | |
 | --- | --- | --- |

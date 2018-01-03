@@ -10,52 +10,11 @@ function generateICS () {
   }
   return ical.toString()
 
-  function guid() {
-    function s4() {
-      return Math.floor((1 + Math.random()) * 0x10000)
-        .toString(16)
-        .substring(1)
-    }
-    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
-      s4() + '-' + s4() + s4() + s4()
-  }
-
-  function pad(number) {
-    if (number < 10) {
-      return '0' + number
-    }
-    return number
-  }
-
-  function toISOString (date) {
-    return date.getUTCFullYear() +
-      pad(date.getUTCMonth() + 1) +
-      pad(date.getUTCDate()) + 'T' +
-      pad(date.getUTCHours()) +
-      pad(date.getUTCMinutes()) +
-      pad(date.getUTCSeconds()) + 'Z'
-  }
-
-  function toISODateString (date) {
-    return date.getUTCFullYear() +
-      pad(date.getUTCMonth() + 1) +
-      pad(date.getUTCDate() + 1)
-  }
-
-  function addNewlines(str,octets = 30) {
-    var result = ''
-    while (str.length > 0) {
-      result += str.substring(0, octets).trim() + '\r\n '
-      str = str.substring(octets)
-    }
-    return result
-  }
-
   function generateEvents () {
     const result = []
     for (const event of data) {
       const genDate = new Date()
-      const vEvent = new icalendar.VEvent(guid())
+      const vEvent = new icalendar.VEvent(`${event.id}@thaiprogrammer-tech-events-calendar.spacet.me`)
       let start, end, startDate, endDate
 
       if (event.time != null) {
@@ -81,8 +40,8 @@ function generateICS () {
       vEvent.setSummary(event.title)
       vEvent.setLocation(event.location.title)
       vEvent.addProperty('COMMENT', event.summary)
-      // XXX: Maybe should link back to repo, for users to discover ALL links?
-      vEvent.addProperty('URL', event.links[0].url)
+      const url = 'https://github.com/ThaiProgrammer/tech-events-calendar#' + event.id
+      vEvent.addProperty('URL', url)
       vEvent.setDescription(event.description)
       vEvent.addProperty('CATEGORIES', event.categories)
       vEvent.addProperty('TRANSP', 'OPAQUE')
