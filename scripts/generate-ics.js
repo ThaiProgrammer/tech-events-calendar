@@ -8,7 +8,19 @@ function generateICS () {
   for (const event of generateEvents()) {
     ical.addComponent(event)
   }
-  return ical.toString()
+  return ical.toString().replace('BEGIN:VEVENT', [
+    'BEGIN:VTIMEZONE',
+    'TZID:Asia/Bangkok',
+    'BEGIN:STANDARD',
+    'TZOFFSETFROM:+064204',
+    'DTSTART:19200331T235956',
+    'TZNAME:GMT+7',
+    'TZOFFSETTO:+0700',
+    'RDATE:19200331T235956',
+    'END:STANDARD',
+    'END:VTIMEZONE',
+    'BEGIN:VEVENT'
+  ].join('\r\n'))
 
   function generateEvents () {
     const result = []
@@ -25,7 +37,10 @@ function generateICS () {
         startDate.setMinutes(event.time[0].from.minute)
         endDate.setHours(event.time[total-1].to.hour)
         endDate.setMinutes(event.time[total-1].to.minute)
-        vEvent.setDate(startDate, endDate)
+        var startProperty = vEvent.addProperty('DTSTART', startDate)
+        startProperty.setParameter('TZID', 'Asia/Bangkok')
+        var endProperty = vEvent.addProperty('DTEND', endDate)
+        endProperty.setParameter('TZID', 'Asia/Bangkok')
       } else {
         // Full day support hacked from https://github.com/tritech/node-icalendar/pull/43
         startDate = new Date(event.start.year, event.start.month - 1, event.start.date)
