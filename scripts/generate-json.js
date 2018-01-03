@@ -7,6 +7,7 @@ function main () {
   try {
     const rawContent = fs.readFileSync('./README.md', { encoding: 'utf8' })
     const json = parseReadme(rawContent, 'README.md')
+    validateJson(json)
     const path = 'public/calendar.json'
     fs.writeFileSync(path, JSON.stringify(json, null, 2))
     console.log('* Written calendar to', path)
@@ -25,6 +26,26 @@ function main () {
     fs.writeFileSync(path, JSON.stringify({ }, null, 2))
     console.log('* Diagnostic information written to', path)
   }
+}
+
+function validateJson (json) {
+  const usedIds = { }
+  for (const event of json) {
+    if (usedIds[event.id]) {
+      const error/*: any*/ = new Error(
+        'Validation error at ' + formatLocation(event.declared) + ': ' +
+        'Duplicate event ID "' + event.id + '" ' +
+        '(previously declared at ' + formatLocation(usedIds[event.id].declared) + ')'
+      )
+      error.location = event.declared
+      throw error
+    }
+    usedIds[event.id] = event
+  }
+}
+
+function formatLocation (location) {
+  return `${location.filename}, line ${location.line}, column ${location.column}`
 }
 
 main()
