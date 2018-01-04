@@ -92,6 +92,20 @@ Dependent type theory เป็นวิธีนึง ซึ่งจะได
 
 > Insurtech Ignite Workshop จัดขึ้นเพื่อผู้ที่สนใจจะมาร่วมฟัง เทคนิค แบบเจาะลึก และอัพเดตเทรนต์ด้าน Insurance Industry, Future of Business with Big Data, AI, Automation พร้อมกิจกรรม Networking ในวันที่ 27 มกราคม 2561 นี้
 
+### <a name="google-cloud-onboard-bangkok-2018"></a> 30 (Tue): Google Cloud OnBoard Bangkok 2018
+
+| | | |
+| --- | --- | --- |
+| 🏷 | Workshop | Google Cloud Platform |
+| 📍 | Central World | Convention Centre A2, 22nd Floor 999/99 Rama 1 Road, Pathumwan, Bangkok 10330, Thailand |
+| ⌚️ | 08:30~17:30 |
+| 🏠 | [Google Cloud](https://cloudplatformonline.com/2018-onboard-bkk.html) |
+| 🎟 | [Google Cloud](https://cloudplatformonline.com/2018-onboard-bkk.html#register) | Free |
+
+งานสัมมนา Google Cloud OnBoard นี้เป็นงานสัมมนาฟรีที่วิทยากรจาก Google จะมาแนะนำเทคโนโลยีของ Google Cloud Platform งานนี้เหมาะกับทั้ง IT Managers, Systems Engineers and Operations professionals, Developers, Solution Architects, และผู้ที่สนใจในเทคโนโลยีของ Google ทุกคน
+
+> Cloud OnBoard is a free full-day instructor-led enablement and training event that will provide you with a step-by-step technical introduction to the Google Cloud Platform (GCP). Through a combination of instructor-led presentations and hands-on labs, you will learn how to get started with Google App Engine, Datastore, Storage, Container Engine, Compute Engine and Network, Big Data and Machine Learning.
+
 ## February 2018
 
 ### <a name="insurtech-ignite-hackathon"></a> 3 ~ 4 (Sat ~ Sun): Insurtech Ignite Hackathon
