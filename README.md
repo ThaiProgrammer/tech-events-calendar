@@ -98,7 +98,7 @@ Dependent type theory เป็นวิธีนึง ซึ่งจะได
 | --- | --- | --- |
 | 🏷 | Workshop | Google Cloud Platform |
 | 📍 | Central World | Convention Centre A2, 22nd Floor 999/99 Rama 1 Road, Pathumwan, Bangkok 10330, Thailand |
-| ⌚️ | 08:30~17:30 | 
+| ⌚️ | 08:30~17:30 |
 | 🏠 | [Google Cloud](https://cloudplatformonline.com/2018-onboard-bkk.html) | Free |
 
 งานสัมมนา Google Cloud OnBoard นี้เป็นงานสัมมนาฟรีที่วิทยากรจาก Google จะมาแนะนำเทคโนโลยีของ Google Cloud Platform งานนี้เหมาะกับทั้ง IT Managers, Systems Engineers and Operations professionals, Developers, Solution Architects, และผู้ที่สนใจในเทคโนโลยีของ Google ทุกคน
