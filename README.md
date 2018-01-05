@@ -31,7 +31,7 @@ Feel free to send pull requests for missing events, thank you!
 
 ## January 2018
 
-### <a name="functional-programming-in-python-by-thaipy-jan"></a> 11 (Thu): Functional Programming in python and more by ThaiPy Bangkok Meetup
+### <a name="functional-programming-in-python-by-thaipy-jan"></a> 11 (Thu): Functional Programming in Python and more by ThaiPy Bangkok Meetup
 
 | | | |
 | --- | --- | --- |
@@ -81,6 +81,23 @@ Dependent type theory เป็นวิธีนึง ซึ่งจะได
 
 > - Blue/Green micro service deployment using docker by K. Supaket
 > - Liveness/Readyness with Kubernetes by K. Praparn
+
+### <a name="kiwi-com-talks-meetup-246060093"></a> 22 (Mon): Kiwi.com talks: Let’s talk about JavaScript beyond the web
+
+| | | |
+| --- | --- | --- |
+| 🏷 | Meetup | JavaScript |
+| 📍 | The Hive Thong Lor | Meet us at the rooftop garden |
+| ⌚️ | 17:30~20:00 |
+| ✅ | [Meetup.com](https://www.meetup.com/Kiwi-com-talks-The-age-of-JavaScript/events/246060093/) |
+
+We are group of digital nomads from Kiwi.com travelling to Bangkok in January 2018 who would be pleased to share acquired knowledge about developing JavaScript apps with the others.
+
+> JavaScript world has exceeded the limits of browser environment and it's present in backend & mobile app world as well. Come and hear what we have learned so far while using latest technologies like Next.js, GraphQL or React Native.
+>
+> - Next.js by Michal Sanger
+> - GraphQL by Martin Zlamal
+> - Building mobile app with React Native by Václav Šír
 
 ### <a name="jsconf-asia-2018"></a> 25 ~ 27 (Thu ~ Sat): JSConf.Asia 2018
 
