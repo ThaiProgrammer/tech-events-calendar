@@ -91,6 +91,8 @@ Dependent type theory เป็นวิธีนึง ซึ่งจะได
 | ⌚️ | 17:30~20:00 |
 | ✅ | [Meetup.com](https://www.meetup.com/Kiwi-com-talks-The-age-of-JavaScript/events/246060093/) |
 
+We are group of digital nomads from Kiwi.com travelling to Bangkok in January 2018 who would be pleased to share acquired knowledge about developing JavaScript apps with the others.
+
 > JavaScript world has exceeded the limits of browser environment and it's present in backend & mobile app world as well. Come and hear what we have learned so far while using latest technologies like Next.js, GraphQL or React Native.
 >
 > - Next.js by Michal Sanger
