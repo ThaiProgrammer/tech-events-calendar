@@ -82,7 +82,7 @@ Dependent type theory เป็นวิธีนึง ซึ่งจะได
 > - Blue/Green micro service deployment using docker by K. Supaket
 > - Liveness/Readyness with Kubernetes by K. Praparn
 
-### <a name="kiwi-com-talks-meetup-246060093"></a> 22 (Mon): Kiwi.com talks: Let's talk about JavaScript beyond the web
+### <a name="kiwi-com-talks-meetup-246060093"></a> 22 (Mon): Kiwi.com talks: Let’s talk about JavaScript beyond the web
 
 | | | |
 | --- | --- | --- |
@@ -91,6 +91,8 @@ Dependent type theory เป็นวิธีนึง ซึ่งจะได
 | ⌚️ | 17:30~20:00 |
 | ✅ | [Meetup.com](https://www.meetup.com/Kiwi-com-talks-The-age-of-JavaScript/events/246060093/) |
 
+> JavaScript world has exceeded the limits of browser environment and it's present in backend & mobile app world as well. Come and hear what we have learned so far while using latest technologies like Next.js, GraphQL or React Native.
+>
 > - Next.js by Michal Sanger
 > - GraphQL by Martin Zlamal
 > - Building mobile app with React Native by Václav Šír
