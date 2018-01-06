@@ -31,7 +31,7 @@ Feel free to send pull requests for missing events, thank you!
 
 ## January 2018
 
-### <a name="functional-programming-in-python-by-thaipy-jan"></a> 11 (Thu): Functional Programming in Python and more by ThaiPy Bangkok Meetup
+### <a name="functional-programming-in-python-by-thaipy-jan"></a> 11 (Thu): Functional Programming in Python and Panel on Women in Thai Tech by ThaiPy Bangkok Meetup
 
 | | | |
 | --- | --- | --- |
@@ -42,9 +42,9 @@ Feel free to send pull requests for missing events, thank you!
 
 Meetup รายเดือนจากกลุ่ม ThaiPy - Bangkok Python Meetup สำหรับผู้ที่สนใจในภาษา Python ภายในงานจะมีการพูดคุยพบปะในบรรยากาศเป็นกันเอง เพื่อแลกเปลี่ยนความรู้และประสบการณ์ โดยหัวข้อที่จะพูดถึงจะเริ่มตั้งแต่ระดับ Beginner ไปจนถึง Advance
 
-> 1 - "Every language needs its underscore: FP in python" - Alexander Schepanovski.
->
-> 2 - "TBA" - Emails the event organizer to become a speaker.
+> - "Every language needs its underscore: FP in Python" - Alexander Schepanovski.
+> - "Panel Discussion: What it's like to a female in Thai tech" - To help support the upcoming [Django Girls one day workshop 10 March 2018](https://djangogirls.org/bangkok/).
+> - Short talks and lightning talks
 >
 > Monthly meetup for those using python, learning python of just py-curious. Python is one of more popular programming languages in the word and rising further, being used in fields such as web, science, big data, dev-ops and digital entertainment. We to have talks from beginners to advance and provide a friendly atmosphere to meet and network with your fellow pythonistas.
 
@@ -155,6 +155,22 @@ We are group of digital nomads from Kiwi.com travelling to Bangkok in January 20
 > InsurTech Ignite Hackthon ครั้งแรกของบริษัทประกันภัยชั้นนำ  ของประเทศ ที่รวมตัวกันภายใต้ สมาคมประกันวินาศภัยไทย จัด Hackathon ให้สตาร์ทอัพและผู้ประกอบการรุ่นใหม่เข้ามามีส่วนร่วมในการพัฒนานวัตกรรมที่เกี่ยวข้องกับการประกันภัย ชิงรางวัลรวมมูลค่า 100,000 บาท พร้อมรับการบ่มเพาะเป็นระยะเวลา 2 เดือน และมีโอกาสได้พัฒนานวัตกรรมร่วมกับบริษัทประกันภัยชั้นนำของประเทศ
 
 ## March 2018
+
+### <a name="django-girls-bangkok-march-2018"></a> 10 (Sat): Django Girls Bangkok
+
+| | | |
+| --- | --- | --- |
+| 🏷 | Workshop | Django |
+| 📍 | Bangkok | TBA |
+| 🏠 | [Django Girls Bangkok](https://djangogirls.org/bangkok/) |
+
+If you are a woman and want to learn how to make websites, we have good news for you: we are holding a one-day workshop for beginners!
+
+> We believe the IT industry will greatly benefit from bringing more women into technology. We want to give you an opportunity to learn how to program and become one of us – women programmers!
+>
+> If you are a woman, know English and have a laptop, you can apply for our event! Don't worry, you don't need to know any technical stuff – our workshop is for people who are new to programming.
+>
+> As a workshop attendee you will attend a **one-day Django workshop** during which you will create your first website!
 
 ## April 2018
 
