@@ -108,7 +108,7 @@
     <ul>
       <li><a href="https://github.com/ThaiProgrammer/tech-events-calendar"><strong>tech-events-calendar</strong></a> project on GitHub — contains all events data</li>
       <li><a href="https://github.com/ThaiProgrammer/tech-events-calendar/blob/master/CONTRIBUTING.md"><strong>Contributing</strong></a> — how to submit missing event / fix incorrect data</li>
-      <li><a href="calendar.json"><strong>calendar.json</strong></a> — for consumption by other developers</li>
+      <li><a href="https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json"><strong>calendar.json</strong></a> — for consumption by other developers</li>
     </ul>
   </div>
 
@@ -170,7 +170,7 @@
       },
       hooks: {
         mounted: function () {
-          fetch('calendar.json')
+          fetch('https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json')
             .then(function (response) { return response.json() })
             .then(function (result) {
               list.set('data', result)
