@@ -6,8 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>ThaiProgrammer/tech-events-calendar</title>
   <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
     body {
       text-align: center;
+      background: #fff;
       color: #333;
       font-size: 17px;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -29,6 +34,7 @@
     .container {
       margin: 0 auto;
       max-width: 700px;
+      padding: 0 8px;
       text-align: left;
     }
     .text {
@@ -38,14 +44,58 @@
       font-weight: 600;
     }
     a {
-      color: #38c;
+      color: #36a;
       text-decoration: none;
     }
     h2 {
       margin: 1.5em 0 0;
     }
     .cal {
-      margin-top: 2em;
+      margin-top: 1em;
+    }
+    .cal iframe {
+      max-width: 100%;
+      max-height: 100vw;
+    }
+
+    #list {
+      margin: 1em 0;
+    }
+    #list .loading {
+      padding: 20px;
+      color: #999;
+    }
+    #list .table-container {
+      overflow: hidden;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 4px;
+    }
+    #list table {
+      border-collapse: collapse;
+      width: 100%;
+      text-align: left;
+      font-size: 17px;
+    }
+    #list td, #list th {
+      border: 1px solid #ccc;
+      padding: 8px;
+      white-space: nowrap;
+    }
+    #list th {
+      background: #eee;
+    }
+    #list td {
+      background: #fff;
+    }
+    #list td.date {
+      font-variant-numeric: tabular-nums;
+    }
+    #list .num {
+      font-variant-numeric: tabular-nums;
+    }
+    #list td.event-name {
+      font-feature-settings: "ss06" on, "ss07" on;
     }
   </style>
 </head>
@@ -62,8 +112,73 @@
     </ul>
   </div>
 
+  <h2>Google Calendar</h2>
   <div class="cal">
     <iframe src="https://calendar.google.com/calendar/embed?title=ThaiProgrammer%20Tech%20Event%20Calendar&amp;showTitle=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=j5i0o6v2ihfboe19upl9lhonbci6ankr%40import.calendar.google.com&amp;color=%23333333&amp;ctz=Asia%2FBangkok" style="border-width:0;max-width:100%" width="800" height="600" frameborder="0" scrolling="no"></iframe>
   </div>
+
+  <h2>Event index</h2>
+  <div id="list">
+    <div m-if="loading" class="loading">Loading event data...</div>
+    <div m-if="!loading" class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Event name</th>
+            <th>Edit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr m-for="item in data">
+            <td class="date">{{formatDate(item)}}</td>
+            <td class="event-name"><a href="{{link(item)}}"><strong>{{item.title}}</strong></a></td>
+            <td class="edit"><a href="{{editLink(item)}}">{{item.declared.filename}}#L<span class="num">{{item.declared.line}}</span></a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Some event is missing? Please <a href="https://github.com/ThaiProgrammer/tech-events-calendar/blob/master/CONTRIBUTING.md"><strong>send us a PR</strong></a>, thanks!
+      </p>
+    </div>
+  </div>
+  <script src="https://unpkg.com/moonjs/dist/moon.js"></script>
+  <script>
+    var list = new Moon({
+      el: "#list",
+      data: {
+        loading: true,
+        data: null
+      },
+      methods: {
+        formatDate: function (item) {
+          function pad (x) { return (x < 10 ? '0' : '') + x }
+          return item.start.year + '-' +
+            pad(item.start.month) + '-' +
+            pad(item.start.date) +
+            (item.start.date !== item.end.date ? '~' + pad(item.end.date) : '')
+        },
+        link: function (item) {
+          var file = item.declared.filename === 'README.md' ? '' : '/tree/master/' + item.declared.filename
+          var slug = item.id
+          return 'https://github.com/ThaiProgrammer/tech-events-calendar' + file + '#' + slug
+        },
+        editLink: function (item) {
+          var file = '/edit/master/' + item.declared.filename
+          return 'https://github.com/ThaiProgrammer/tech-events-calendar' + file + '#L' + item.declared.line
+        }
+      },
+      hooks: {
+        mounted: function () {
+          fetch('calendar.json')
+            .then(function (response) { return response.json() })
+            .then(function (result) {
+              list.set('data', result)
+              list.set('loading', false)
+            })
+        }
+      }
+    })
+  </script>
 </body>
 </html>
