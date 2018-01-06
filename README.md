@@ -36,7 +36,7 @@ Feel free to send pull requests for missing events, thank you!
 | | | |
 | --- | --- | --- |
 | 🏷 | Meetup | Python, Functional Programming |
-| 📍 | ![Bhiraj Tower](https://www.google.com/maps/place/BHIRAJ+TOWER+at+EmQuartier/@13.7314622,100.5672243,17z/data=!3m1!4b1!4m5!3m4!1s0x30e29f01858d150f:0xbc0e87a22c16ae1c!8m2!3d13.731457!4d100.569413) | aCommerce HQ, 33rd floor |
+| 📍 | [Bhiraj Tower](https://www.google.com/maps/place/BHIRAJ+TOWER+at+EmQuartier/@13.7314622,100.5672243,17z/data=!3m1!4b1!4m5!3m4!1s0x30e29f01858d150f:0xbc0e87a22c16ae1c!8m2!3d13.731457!4d100.569413) | aCommerce HQ, 33rd floor |
 | ⌚️ | 18:30~20:30++ | Meetup |
 | ✅ | [Meetup.com](https://www.meetup.com/ThaiPy-Bangkok-Python-Meetup/events/245135592/) | Free, Snacks and Drinks provided |
 
