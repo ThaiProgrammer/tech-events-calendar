@@ -99,6 +99,22 @@ We are group of digital nomads from Kiwi.com travelling to Bangkok in January 20
 > - GraphQL by Martin Zlamal
 > - Building mobile app with React Native by Václav Šír
 
+### <a name="bkkhack-243386059"></a> 25 (Thu): BKK/hack Hack Night
+
+| | | |
+| --- | --- | --- |
+| 🏷 | Codefest | Hack Night |
+| 📍 | Enginex |
+| ✅ | [Meetup.com](https://www.meetup.com/bkkhack/events/243386059/) | Free |
+
+ไม่ว่าคุณอยากจะเขียนภาษาอะไร Python, Ruby, JavaScript, Scala, PHP, Prolog คุณมาได้เลย อยากทำ Arduino ก็ขนมาได้ ถ้าอยากหาทีมสำหรับทำโปรเจค open source หรือหาคนช่วยโปรเจคงานอดิเรกของคุณจัดมาเลย! จะเขียนภาษาไหน ระดับใดก็ได้ มีกฎข้อเดียวคือคุณต้องเอาเครื่องมาเอง
+
+> An event for all the coding/maker community. Any language, any level. The only rule is you must bring a laptop.
+>
+> We seek to foster a welcoming cross-cultural community of hackers in and around BKK. Share your knowledge and learn from others, in a relaxed but hands-on setting.
+>
+> This Meetup group focuses on participatory events—hacking is doing, not listening to presentations. Bring your own hobby projects, contribute to open source together, ask questions you encounter in your work.
+
 ### <a name="jsconf-asia-2018"></a> 25 ~ 27 (Thu ~ Sat): JSConf.Asia 2018
 
 | | | |
