@@ -20,6 +20,7 @@ jobs:
           command: yarn build
       - run:
           name: generate CI comment
+          when: always
           command: |
             mkdir -p tmp && node scripts/generate-ci-comment.js | tee tmp/ci-comment.txt
       - store_artifacts:
