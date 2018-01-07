@@ -36,7 +36,7 @@ Feel free to send pull requests for missing events, thank you!
 | | | |
 | --- | --- | --- |
 | 🏷 | Meetup | Python, Functional Programming |
-| 📍 | Bhiraj Tower | EmQuartier, Sukhumvit Road, Klongton Nua, Wattana, Bangkok |
+| 📍 | [Bhiraj Tower](https://www.google.com/maps/place/BHIRAJ+TOWER+at+EmQuartier/@13.7314622,100.5672243,17z/data=!3m1!4b1!4m5!3m4!1s0x30e29f01858d150f:0xbc0e87a22c16ae1c!8m2!3d13.731457!4d100.569413) | aCommerce HQ, 33rd floor |
 | ⌚️ | 18:30~20:30++ | Meetup |
 | ✅ | [Meetup.com](https://www.meetup.com/ThaiPy-Bangkok-Python-Meetup/events/245135592/) | Free, Snacks and Drinks provided |
 
@@ -53,7 +53,7 @@ Meetup รายเดือนจากกลุ่ม ThaiPy - Bangkok Python 
 | | | |
 | --- | --- | --- |
 | 🏷 | Workshop, Meetup | Formal verification |
-| 📍 | Pronto Tools |
+| 📍 | [Pronto Tools](https://www.google.com/maps/place/Pronto+Tools/@13.7922283,100.5425157,17z/data=!3m1!4b1!4m5!3m4!1s0x30e29c10914e96d5:0x8e78f9849ffdbea8!8m2!3d13.7922231!4d100.5447044) |
 | ⌚️ | 09:00~16:00 | Lecture/Tutorial |
 | ⌚️ | 16:00~17:00++ | Meetup |
 | ✅ | [Facebook event](https://www.facebook.com/events/122627418535428/) | Free, bring your own food. |
@@ -71,7 +71,7 @@ Dependent type theory เป็นวิธีนึง ซึ่งจะได
 | | | |
 | --- | --- | --- |
 | 🏷 | Meetup | Docker |
-| 📍 | GetLinks | Lake Rajada Office Complex 10th Floor |
+| 📍 | [GetLinks (Thailand)](https://www.google.com/maps/place/GetLinks+(Thailand)/@13.7315052,100.5581013,17z/data=!3m1!4b1!4m5!3m4!1s0x30e29eddc5e7b307:0x969a71171a67b46a!8m2!3d13.7315!4d100.56029) | Lake Rajada Office Complex 10th Floor |
 | ⌚️ | 18:30~21:00 | Talk / Networking |
 | 🎟 | [Event Pop](https://www.eventpop.me/e/2822) | Free (sold out) |
 | ✅ | [Facebook event](https://www.facebook.com/events/504227713281643/) |
@@ -87,7 +87,7 @@ Dependent type theory เป็นวิธีนึง ซึ่งจะได
 | | | |
 | --- | --- | --- |
 | 🏷 | Meetup | JavaScript |
-| 📍 | The Hive Thong Lor | Meet us at the rooftop garden |
+| 📍 | [The Hive Thonglor](https://www.google.com/maps/place/The+Hive+Thonglor/@13.7320056,100.574429,17z/data=!3m1!4b1!4m5!3m4!1s0x30e29e55a95f6f93:0xf9a8634f35bf33a6!8m2!3d13.7320004!4d100.5766177) | Meet us at the rooftop garden |
 | ⌚️ | 17:30~20:00 |
 | ✅ | [Meetup.com](https://www.meetup.com/Kiwi-com-talks-The-age-of-JavaScript/events/246060093/) |
 
@@ -104,7 +104,7 @@ We are group of digital nomads from Kiwi.com travelling to Bangkok in January 20
 | | | |
 | --- | --- | --- |
 | 🏷 | Codefest | Hack Night |
-| 📍 | Enginex |
+| 📍 | [อาคาร 100 ปี วิศวฯ จุฬาฯ](https://www.google.com/maps/place/%E0%B8%AD%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%A3+100+%E0%B8%9B%E0%B8%B5+%E0%B8%A7%E0%B8%B4%E0%B8%A8%E0%B8%A7%E0%B8%AF+%E0%B8%88%E0%B8%B8%E0%B8%AC%E0%B8%B2%E0%B8%AF/@13.7373391,100.5308892,17z/data=!4m8!1m2!2m1!1z4Lit4Liy4LiE4Liy4LijIDEwMCDguJvguLUg4Lin4Li04Lio4Lin4LivIOC4iOC4uOC4rOC4suC4rw!3m4!1s0x30e29ed5c73c4281:0x1d308f75b16d208f!8m2!3d13.736365!4d100.5339478) | [Enginex: Coworking Space of CU Intania](https://www.facebook.com/pages/Enginex-Coworking-Space-of-CU-Intania/1145859865449291), 6th floor |
 | ✅ | [Meetup.com](https://www.meetup.com/bkkhack/events/243386059/) | Free |
 
 ไม่ว่าคุณอยากจะเขียนภาษาอะไร Python, Ruby, JavaScript, Scala, PHP, Prolog คุณมาได้เลย อยากทำ Arduino ก็ขนมาได้ ถ้าอยากหาทีมสำหรับทำโปรเจค open source หรือหาคนช่วยโปรเจคงานอดิเรกของคุณจัดมาเลย! จะเขียนภาษาไหน ระดับใดก็ได้ มีกฎข้อเดียวคือคุณต้องเอาเครื่องมาเอง
@@ -120,7 +120,7 @@ We are group of digital nomads from Kiwi.com travelling to Bangkok in January 20
 | | | |
 | --- | --- | --- |
 | 🏷 | Conference | JavaScript |
-| 📍 | Singapore | Capitol Theatre; Shangri-La Rasa Sentosa Hotel |
+| 📍 | Singapore | [Capitol Theatre](https://www.google.com/maps/place/Capitol+Theatre/@1.2935154,103.8491291,17z/data=!3m2!4b1!5s0x31da19a6aee41b9b:0xdd2c699900dbf180!4m5!3m4!1s0x31da19a41e0fc24d:0x6ede36ccc2300a68!8m2!3d1.29351!4d103.8513178); [Shangri-La Rasa Sentosa Hotel](https://www.google.com/maps/place/Shangri-La's+Rasa+Sentosa+Resort+%26+Spa,+Singapore/@1.2577265,103.80783,17z/data=!4m16!1m10!4m9!1m0!1m6!1m2!1s0x31da1bf0985ea1ed:0xb36c305d75a03941!2s101+Siloso+Road,+Shangri-La's+Rasa+Sentosa+Resort+%26+Spa,+Singapore,+Singapore+098970!2m2!1d103.8100187!2d1.2577211!3e0!3m4!1s0x31da1bf0985ea1ed:0xb36c305d75a03941!8m2!3d1.2577211!4d103.8100187) |
 | 🏠 | [2018.jsconf.asia](https://2018.jsconf.asia/) |
 | 🎟 | [Buy tickets](https://events.pouchnation.com/event/jsconfasia2018) | 1090 SGD |
 | ✅ | [Facebook event](https://www.facebook.com/events/111499759572747/) |
@@ -136,7 +136,7 @@ We are group of digital nomads from Kiwi.com travelling to Bangkok in January 20
 | | | |
 | --- | --- | --- |
 | 🏷 | Workshop | Insurtech |
-| 📍 | CU Innovation Hub |
+| 📍 | [CU Innovation Hub](https://www.google.com/maps/place/CU+Innovation+Hub/@13.7426771,100.5257938,17z/data=!3m1!4b1!4m5!3m4!1s0x30e2992ce63a9795:0x30d3c8c1558d1354!8m2!3d13.7426719!4d100.5279825) |
 | ⌚️ | 09:30~18:30 |
 | 🎟 | [Devcamp](https://dev.wi.th/event/insurtech-ignite-workshop) |
 
@@ -147,7 +147,7 @@ We are group of digital nomads from Kiwi.com travelling to Bangkok in January 20
 | | | |
 | --- | --- | --- |
 | 🏷 | Workshop | Google Cloud Platform |
-| 📍 | Central World | Convention Centre A2, 22nd Floor 999/99 Rama 1 Road, Pathumwan, Bangkok 10330, Thailand |
+| 📍 | [Centara Grand at CentralWorld](https://www.google.com/maps/place/Centara+Grand+at+CentralWorld/@13.7477222,100.5365583,17z/data=!3m1!4b1!4m5!3m4!1s0x30e2992f7809567f:0xccc050cff0e7d234!8m2!3d13.747717!4d100.538747) | Convention Centre B2, 22nd Floor |
 | ⌚️ | 08:30~17:30 |
 | 🏠 | [Google Cloud](https://cloudplatformonline.com/2018-onboard-bkk.html) |
 | 🎟 | [Google Cloud](https://cloudplatformonline.com/2018-onboard-bkk.html#register) | Free |
@@ -163,7 +163,7 @@ We are group of digital nomads from Kiwi.com travelling to Bangkok in January 20
 | | | |
 | --- | --- | --- |
 | 🏷 | Hackathon | Insurtech |
-| 📍 | CU Innovation Hub |
+| 📍 | [CU Innovation Hub](https://www.google.com/maps/place/CU+Innovation+Hub/@13.7426771,100.5257938,17z/data=!3m1!4b1!4m5!3m4!1s0x30e2992ce63a9795:0x30d3c8c1558d1354!8m2!3d13.7426719!4d100.5279825) |
 | 🎟 | [Devcamp](https://dev.wi.th/event/insurtech-ignite-hackathon) |
 
 การแข่งขันพัฒนาซอฟต์แวร์ และเทคโนโลยีที่ท้าทายที่สุดครั้งหนึ่งของประเทศไทย พร้อมโอกาสในการพัฒนาธุรกิจ และนวัตกรรมร่วมกับ บริษัทประกันภัยชั้นนำของประเทศ ชิงรางวัลกว่า 100,000 บาท ในวันที่ 3 กุมภาพันธ์ - 4 กุมภาพันธ์ 2561
