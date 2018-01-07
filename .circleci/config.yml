@@ -22,7 +22,7 @@ jobs:
           name: generate CI comment
           when: always
           command: |
-            mkdir -p tmp && node scripts/generate-ci-comment.js | tee tmp/ci-comment.txt
+            mkdir -p tmp && node scripts/generate-ci-comment.js | tee tmp/ci-comment.txt && node scripts/post-ci-comment.js
       - store_artifacts:
           path: ~/src/public
           prefix: public
