@@ -19,13 +19,9 @@ jobs:
           name: build
           command: yarn build
       - run:
-          name: diff calendar.json
+          name: generate CI comment
           command: |
-            curl https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json > /tmp/master-calendar.json && diff -u /tmp/master-calendar.json public/calendar.json || true
-      - run:
-          name: diff calendar.ics
-          command: |
-            curl https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.ics > /tmp/master-calendar.ics && diff -u /tmp/master-calendar.ics public/calendar.ics || true
+            mkdir -p tmp && node scripts/generate-ci-comment.js | tee tmp/ci-comment.txt
       - store_artifacts:
           path: ~/src/public
           prefix: public
