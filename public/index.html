@@ -19,7 +19,7 @@
     }
     @media (min-width: 480px) {
       body {
-        font-size: 20px;
+        font-size: 19px;
       }
     }
     h1 {
@@ -33,7 +33,7 @@
     }
     .container {
       margin: 0 auto;
-      max-width: 700px;
+      max-width: 800px;
       padding: 0 8px;
       text-align: left;
     }
@@ -97,6 +97,23 @@
     #list td.event-name {
       font-feature-settings: "ss06" on, "ss07" on;
     }
+    .item-list {
+      padding: 0;
+      list-style: none;
+    }
+    .item-list > li {
+      margin: 0.5em 0 0;
+      padding: 0.75em;
+      border-radius: 0.75em;
+      border: 1px solid #ddd;
+      background: #fff;
+    }
+    .item-list > li > a {
+      font-size: 1.25em;
+    }
+    .item-list > li > p {
+      margin: 0.5em 0 0;
+    }
   </style>
 </head>
 <body>
@@ -105,10 +122,19 @@
 
   <h2>Official links</h2>
   <div class="container text">
-    <ul>
-      <li><a href="https://github.com/ThaiProgrammer/tech-events-calendar"><strong>tech-events-calendar</strong></a> project on GitHub — contains all events data</li>
-      <li><a href="https://github.com/ThaiProgrammer/tech-events-calendar/blob/master/CONTRIBUTING.md"><strong>Contributing</strong></a> — how to submit missing event / fix incorrect data</li>
-      <li><a href="https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json"><strong>calendar.json</strong></a> — for consumption by other developers</li>
+    <ul class="item-list">
+      <li>
+        <a href="https://github.com/ThaiProgrammer/tech-events-calendar">GitHub Project</a>
+        <p>All event data and infrastructure code lives on GitHub. Check it out!</p>
+      </li>
+      <li>
+        <a href="https://github.com/ThaiProgrammer/tech-events-calendar/blob/master/CONTRIBUTING.md">Contributing guide</a>
+        <p>If there are any missing events or incorrect information, please contribute!</p>
+      </li>
+      <li>
+        <a href="https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json">calendar.json</a>
+        <p>Other developers can use this JSON file. If you’ve built something cool, please let us know by <a href="https://github.com/ThaiProgrammer/tech-events-calendar/issues">opening an issue!</a></p>
+      </li>
     </ul>
   </div>
 
