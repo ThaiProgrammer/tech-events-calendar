@@ -82,6 +82,19 @@ Dependent type theory เป็นวิธีนึง ซึ่งจะได
 > - Blue/Green micro service deployment using docker by K. Supaket
 > - Liveness/Readyness with Kubernetes by K. Praparn
 
+### <a name="7peaks-meetup-246084420"></a> 17 (Wed): 7 Peaks Tech Events Bangkok: Scale your web application from local to global with Azure cloud
+
+| | | |
+| --- | --- | --- |
+| 🏷 | Meetup | Azure, Cloud |
+| 📍 | [7 Peaks Software](https://www.google.com/maps/place/7+Peaks+Software/@13.739292,100.5552093,17z/data=!3m1!4b1!4m5!3m4!1s0x30e29edcf8a9dcf5:0xcf0d1a437c55d078!8m2!3d13.739292!4d100.557398) | Dhammalert Building, 2nd floor |
+| ⌚️ | 19:00~21:00 |
+| ✅ | [Meetup.com](https://www.meetup.com/7Peaks-Tech-Events-Bangkok/events/246084420/) |
+
+How to scale your web application from local market to global audience? Scalability, Performance, Availability, Security, Resiliency.
+
+> Raphael will present, through a simple case study, what are the best practices to scale globally your web application. Using AppServices, Auto-Scaling, DNS, CDN, Traffic Manager, Application Gateway, Blob Storage, Cosmos DB, SQL, Tables, Queues, Functions etc., we will reflect together how to design/scale our webapp to deliver the best performances.
+
 ### <a name="kiwi-com-talks-meetup-246060093"></a> 22 (Mon): Kiwi.com talks: Let’s talk about JavaScript beyond the web
 
 | | | |
@@ -146,7 +159,7 @@ We are group of digital nomads from Kiwi.com travelling to Bangkok in January 20
 
 | | | |
 | --- | --- | --- |
-| 🏷 | Workshop | Google Cloud Platform |
+| 🏷 | Workshop | Google Cloud Platform, Cloud |
 | 📍 | [Centara Grand at CentralWorld](https://www.google.com/maps/place/Centara+Grand+at+CentralWorld/@13.7477222,100.5365583,17z/data=!3m1!4b1!4m5!3m4!1s0x30e2992f7809567f:0xccc050cff0e7d234!8m2!3d13.747717!4d100.538747) | Convention Centre B2, 22nd Floor |
 | ⌚️ | 08:30~17:30 |
 | 🏠 | [Google Cloud](https://cloudplatformonline.com/2018-onboard-bkk.html) |
