@@ -3,6 +3,7 @@
     "axios": "^0.17.1",
     "escape-html": "^1.0.3",
     "flow-bin": "^0.62.0",
+    "format-json": "^1.0.3",
     "icalendar": "^0.7.1",
     "pegjs": "^0.10.0"
   },
