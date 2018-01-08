@@ -39,8 +39,8 @@ if (fs.existsSync('public/calendar.json')) {
   try {
     console.error('# Now diffing calendar.json file.')
     execSync('curl https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json > /tmp/master-calendar.json', { timeout: 10000 })
-    const diffResult = execSync('diff -u /tmp/master-calendar public/calendar || true', { timeout: 2000 })
-    if (diffResult.toString().trim()) {
+    const diffResult = execSync('diff -u /tmp/master-calendar.json public/calendar.json || true', { timeout: 2000 }).toString()
+    if (diffResult.trim()) {
       console.log(':bulb: **ข้อมูลปฏิทินมีการเปลี่ยนแปลง (Calendar data has been changed):**')
       console.log('```diff')
       console.log(diffResult)
