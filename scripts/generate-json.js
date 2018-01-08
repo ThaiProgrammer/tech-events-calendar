@@ -9,7 +9,7 @@ function main () {
     const json = parseReadme(rawContent, 'README.md')
     validateJson(json)
     const path = 'public/calendar.json'
-    fs.writeFileSync(path, JSON.stringify(json, null, 2))
+    fs.writeFileSync(path, require('format-json').diffy(json))
     console.log('* Written calendar to', path)
   } catch (e) {
     if (!e.location) {
