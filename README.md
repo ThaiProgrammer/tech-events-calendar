@@ -66,6 +66,20 @@ Dependent type theory เป็นวิธีนึง ซึ่งจะได
 >
 > In this workshop, I would like to walk though dependent type theory by first, describe it as a functional programming, then how can we use this functional programming to do some logical reasoning. No background knowledge is required (apart from simple maths skill in secondary school), so everyone is welcome to attend. We will speak in Thai but every written material will be in English. There will be no registration fee, but please bring your food.
 
+### <a name="bkk-web-101-angular-2-4-5-oh-my-41515114826"></a> 16 (Tue): BKK WEB 101 - Angular 2, 4, 5, Oh My
+
+| | | |
+| --- | --- | --- |
+| 🏷 | Meetup | Angular |
+| 📍 | [Launchpad](https://www.google.com/maps/place/Launchpad+Co.,+Ltd/@13.7212933,100.5236788,19z/data=!3m1!4b1!4m5!3m4!1s0x30e298cdd6e8270d:0x7e9aa39655924697!8m2!3d13.721292!4d100.524226?hl=en) |
+| ⌚️ | 19:00~22:00 |
+| 🎟 | [Eventbrite](https://www.eventbrite.com/e/bkk-web-101-angular-2-4-5-oh-my-tickets-41515114826) | Free |
+| ✅ | [Facebook event](https://www.facebook.com/events/1781210951888915/) |
+
+> This talk will cover all of the topics in the bulleted list by show casing an app to keep track of your favorite movies and discover new ones. This app will include the ability to login in and persist your movie list using Firebase. I will walk through the methods I used to create the app starting with the Angular CLI and how to best structure your code to make it scalable.
+>
+> Jesse will cover the following topics: CLI, TypeScript, Modules, Components, Templates, Directives, Lifecycle hooks, Services, Routing, Observables, Forms, Pipes, HTTP Requests, Animations
+
 ### <a name="docker-in-thai-meetup-january-2018"></a> 17 (Wed): Docker in Thai Meetup
 
 | | | |
