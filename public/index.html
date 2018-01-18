@@ -80,7 +80,6 @@
     #list td, #list th {
       border: 1px solid #ccc;
       padding: 8px;
-      white-space: nowrap;
     }
     #list th {
       background: #eee;
@@ -90,12 +89,23 @@
     }
     #list td.date {
       font-variant-numeric: tabular-nums;
-    }
-    #list .num {
-      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
     }
     #list td.event-name {
       font-feature-settings: "ss06" on, "ss07" on;
+      min-width: calc(100vw - 32px);
+    }
+    @media (min-width: 432px) {
+      #list td.event-name {
+        font-feature-settings: "ss06" on, "ss07" on;
+        min-width: calc(400px);
+      }
+    }
+    #list td.edit {
+      white-space: nowrap;
+    }
+    #list .num {
+      font-variant-numeric: tabular-nums;
     }
     .item-list {
       padding: 0;
