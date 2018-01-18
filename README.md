@@ -197,6 +197,20 @@ We are group of digital nomads from Kiwi.com travelling to Bangkok in January 20
 
 > InsurTech Ignite Hackthon ครั้งแรกของบริษัทประกันภัยชั้นนำ  ของประเทศ ที่รวมตัวกันภายใต้ สมาคมประกันวินาศภัยไทย จัด Hackathon ให้สตาร์ทอัพและผู้ประกอบการรุ่นใหม่เข้ามามีส่วนร่วมในการพัฒนานวัตกรรมที่เกี่ยวข้องกับการประกันภัย ชิงรางวัลรวมมูลค่า 100,000 บาท พร้อมรับการบ่มเพาะเป็นระยะเวลา 2 เดือน และมีโอกาสได้พัฒนานวัตกรรมร่วมกับบริษัทประกันภัยชั้นนำของประเทศ
 
+### <a name="7peaks-meetup-246897327"></a> 22 (Thu): 7 Peaks Tech Events Bangkok: Let's Build a Decentralised Blockchain App on Ethereum
+
+| | | |
+| --- | --- | --- |
+| 🏷 | Meetup | Blockchain, Ethereum |
+| 📍 | [7 Peaks Software](https://www.google.com/maps/place/7+Peaks+Software/@13.739292,100.5552093,17z/data=!3m1!4b1!4m5!3m4!1s0x30e29edcf8a9dcf5:0xcf0d1a437c55d078!8m2!3d13.739292!4d100.557398) | Dhammalert Building, 2nd floor |
+| ⌚️ | 19:00~21:00 |
+| ✅ | [Meetup.com](https://www.meetup.com/7Peaks-Tech-Events-Bangkok/events/246897327/) |
+| ✅ | [Facebook Event](https://www.facebook.com/events/2025335341040804/) |
+
+On this workshop, we'll build together a very simple decentralised application, on top of Ethereum.
+
+> We'll demystify all the complexity nowadays surrounding the Blockchain topic, and in a short time, with simple tools, we'll build a Blockchain application on top of the Ethereum test network.
+
 ## March 2018
 
 ### <a name="django-girls-bangkok-march-2018"></a> 10 (Sat): Django Girls Bangkok
