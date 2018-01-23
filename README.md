@@ -201,7 +201,7 @@ We are group of digital nomads from Kiwi.com travelling to Bangkok in January 20
 
 | | | |
 | --- | --- | --- |
-| 🏷 | Conference | Wordpress |
+| 🏷 | Conference | WordPress |
 | 📍 | [มหาวิทยาลัยสยาม](https://www.google.co.th/maps/place/Siam+University/@13.7182852,100.450954,17z/data=!3m1!4b1!4m5!3m4!1s0x30e2983b3ccda6b9:0x7160b277b60e7199!8m2!3d13.71828!4d100.453148) |  |
 | ⌚️ | 08:00~17:00 |
 | 🏠 | [2018.bangkok.wordcamp.org](https://2018.bangkok.wordcamp.org/) |
