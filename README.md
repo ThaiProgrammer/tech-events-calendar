@@ -208,6 +208,7 @@ We are group of digital nomads from Kiwi.com travelling to Bangkok in January 20
 Monthly Meetup from Agoda, One of Fanciest Tech Company in Thailand. We was thinking a lot about how to start a new year and what topic to choose. So, finally... First topic of 2018 year is Metaprogramming. Tada! We gonna focus on Roslyn and Scalameta:
 
 > [Roslyn](https://github.com/dotnet/roslyn) "Getting started with Roslyn analyzers" by Krisztian Bodrogi, Senior Software Engineer at Agoda. Introduction to Roslyn (.NET Compiler Platform) and Roslyn diagnostic analyzers to build static analyzers for your project. Krisztian will explain how the platform works and show some examples for Roslyn API.
+>
 > [Scalameta](http://scalameta.org/) Senior Software Developer at Agoda, Bartosz Bąbol (Bartek) will share his experience in Metaprogramming: "Magic at Compile Time. Metaprogramming in Scala". You can also check out his impressive blog to find some cool stuff about fun with Scalameta (http://www.bbartosz.com/)
 
 ### <a name="wordcamp-bangkok-2018"></a> 17 ~ 18 (Sat ~ Sun): WordCamp Bangkok 2018
