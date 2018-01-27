@@ -201,7 +201,7 @@ We are group of digital nomads from Kiwi.com travelling to Bangkok in January 20
 
 | | | |
 | --- | --- | --- |
-| 🏷 | Meetup | .Net, Scala |
+| 🏷 | Meetup | .NET, Scala |
 | 📍 | [The Offices at Centralworld](https://www.google.com/maps/place/The+Offices+At+Central+World/@13.7461805,100.5388239,17z/data=!3m1!5s0x30e29ecfc46acedb:0xdb78b1e7e3812c1!4m8!1m2!2m1!1sBangkok,+The+Offices+At+Central+World,+Bangkok,+meetup1,+th!3m4!1s0x30e29ecfd2620337:0xe3abefcb26228c94!8m2!3d13.7457892!4d100.5380479) |
 | 🎟 | [Meetup.com](https://www.meetup.com/TechAtAgoda/events/246665015/) |
 
