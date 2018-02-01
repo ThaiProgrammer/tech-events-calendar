@@ -249,7 +249,7 @@ On this workshop, we'll build together a very simple decentralised application, 
 | | | |
 | --- | --- | --- |
 | 🏷 | Meetup | Web, Mobile, JavaScript |
-| 📍 | ![Launchpad Co., Ltd](https://www.google.com/maps/place/Launchpad+Co.,+Ltd/@13.721292,100.5220373,17z/data=!3m1!4b1!4m5!3m4!1s0x30e298cdd6e8270d:0x7e9aa39655924697!8m2!3d13.721292!4d100.524226) |
+| 📍 | [Launchpad Co., Ltd](https://www.google.com/maps/place/Launchpad+Co.,+Ltd/@13.721292,100.5220373,17z/data=!3m1!4b1!4m5!3m4!1s0x30e298cdd6e8270d:0x7e9aa39655924697!8m2!3d13.721292!4d100.524226) |
 | ⌚️ | 19:00~22:00 |
 | 🎟 | [eventbrite.com](https://www.eventbrite.com/e/progressive-web-apps-pwa-mobile-apps-future-tickets-42703818270) | FREE |
 | ✅ | [Facebook Event](https://www.facebook.com/events/195556101180309/) |
