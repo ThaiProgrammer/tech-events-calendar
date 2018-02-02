@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>tech-events-calendar Redirector Service</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      text-align: center;
+      background: #fff;
+      color: #333;
+      font-size: 24px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+    #status {
+      margin: 1em;
+    }
+    a {
+      color: #36a;
+      text-decoration-skip: ink;
+      text-decoration-skip-ink: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="status">Loading app…</div>
+  <script>
+    function setStatus (text) {
+      document.querySelector('#status').textContent = text
+    }
+    function handleError (e) {
+      setStatus('Error: ' + e)
+      throw e
+    }
+    function redirect (events, id, f) {
+      var found = events.filter(function (event) {
+        return event.id === id
+      })[0]
+      if (!found) {
+        setStatus('Event not found: ' + id)
+      }
+      var target = f(found)
+      setStatus('')
+      var a = document.createElement('a')
+      a.href = target
+      a.textContent = 'Redirecting…'
+      document.querySelector('#status').appendChild(a)
+      location.replace(target)
+    }
+    function view (event) {
+      var file = event.declared.filename === 'README.md' ? '' : '/tree/master/' + event.declared.filename
+      var slug = event.id
+      return 'https://github.com/ThaiProgrammer/tech-events-calendar' + file + '#' + slug
+    }
+    function edit (event) {
+      var file = '/edit/master/' + event.declared.filename
+      return 'https://github.com/ThaiProgrammer/tech-events-calendar' + file + '#L' + event.declared.line
+    }
+    try {
+      setStatus('Loading data…')
+      fetch('https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json')
+        .then(function (response) { return response.json() })
+        .then(function (result) {
+          setStatus('Loading data…')
+          var search = location.search
+          var m
+          m = search.match(/^\?view=([^&]+)$/)
+          if (m) {
+            return redirect(result, m[1], view)
+          }
+          m = search.match(/^\?edit=([^&]+)$/)
+          if (m) {
+            return redirect(result, m[1], edit)
+          }
+          setStatus('Unrecognized URL')
+        })
+        .catch(handleError)
+    } catch (e) {
+      handleError(e)
+    }
+  </script>
+</body>
+</html>
