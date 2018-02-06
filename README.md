@@ -31,14 +31,14 @@ Feel free to send pull requests for missing events, thank you!
 
 ## January 2018
 
-### <a name="functional-programming-in-python-by-thaipy-jan"></a> 11 (Thu): Functional Programming in Python and Panel on Women in Thai Tech by ThaiPy Bangkok Meetup
+### <a name="functional-programming-in-python-by-thaipy-jan"></a> 11 (Thu): ThaiPy Bangkok Meetup — Functional Programming in Python and Panel on Women in Thai Tech
 
 | | | |
 | --- | --- | --- |
 | 🏷 | Meetup | Python, Functional Programming |
 | 📍 | [Bhiraj Tower](https://www.google.com/maps/place/BHIRAJ+TOWER+at+EmQuartier/@13.7314622,100.5672243,17z/data=!3m1!4b1!4m5!3m4!1s0x30e29f01858d150f:0xbc0e87a22c16ae1c!8m2!3d13.731457!4d100.569413) | aCommerce HQ, 33rd floor |
 | ⌚️ | 18:30~20:30++ | Meetup |
-| ✅ | [Meetup.com](https://www.meetup.com/ThaiPy-Bangkok-Python-Meetup/events/245135592/) | Free, Snacks and Drinks provided |
+| ✅ | [Meetup.com](https://www.meetup.com/ThaiPy-Bangkok-Python-Meetup/events/245135592/) | Free, snacks and prinks provided |
 
 Meetup รายเดือนจากกลุ่ม ThaiPy - Bangkok Python Meetup สำหรับผู้ที่สนใจในภาษา Python ภายในงานจะมีการพูดคุยพบปะในบรรยากาศเป็นกันเอง เพื่อแลกเปลี่ยนความรู้และประสบการณ์ โดยหัวข้อที่จะพูดถึงจะเริ่มตั้งแต่ระดับ Beginner ไปจนถึง Advance
 
@@ -96,7 +96,7 @@ Dependent type theory เป็นวิธีนึง ซึ่งจะได
 > - Blue/Green micro service deployment using docker by K. Supaket
 > - Liveness/Readyness with Kubernetes by K. Praparn
 
-### <a name="7peaks-meetup-246084420"></a> 17 (Wed): 7 Peaks Tech Events Bangkok: Scale your web application from local to global with Azure cloud
+### <a name="7peaks-meetup-246084420"></a> 17 (Wed): 7 Peaks Tech Events Bangkok — Scale your web application from local to global with Azure cloud
 
 | | | |
 | --- | --- | --- |
@@ -109,7 +109,7 @@ How to scale your web application from local market to global audience? Scalabil
 
 > Raphael will present, through a simple case study, what are the best practices to scale globally your web application. Using AppServices, Auto-Scaling, DNS, CDN, Traffic Manager, Application Gateway, Blob Storage, Cosmos DB, SQL, Tables, Queues, Functions etc., we will reflect together how to design/scale our webapp to deliver the best performances.
 
-### <a name="kiwi-com-talks-meetup-246060093"></a> 22 (Mon): Kiwi.com talks: Let’s talk about JavaScript beyond the web
+### <a name="kiwi-com-talks-meetup-246060093"></a> 22 (Mon): Kiwi.com talks — Let’s talk about JavaScript beyond the web
 
 | | | |
 | --- | --- | --- |
@@ -197,6 +197,20 @@ We are group of digital nomads from Kiwi.com travelling to Bangkok in January 20
 
 > InsurTech Ignite Hackthon ครั้งแรกของบริษัทประกันภัยชั้นนำ  ของประเทศ ที่รวมตัวกันภายใต้ สมาคมประกันวินาศภัยไทย จัด Hackathon ให้สตาร์ทอัพและผู้ประกอบการรุ่นใหม่เข้ามามีส่วนร่วมในการพัฒนานวัตกรรมที่เกี่ยวข้องกับการประกันภัย ชิงรางวัลรวมมูลค่า 100,000 บาท พร้อมรับการบ่มเพาะเป็นระยะเวลา 2 เดือน และมีโอกาสได้พัฒนานวัตกรรมร่วมกับบริษัทประกันภัยชั้นนำของประเทศ
 
+### <a name="thaipy-feb-2018"></a> 8 (Thu): ThaiPy Bangkok Meetup: Ruby for Python Devs + Insecure Things to Avoid in Python
+
+| | | |
+| --- | --- | --- |
+| 🏷 | Meetup | Ruby, Python |
+| 📍 | [Bhiraj Tower](https://www.google.com/maps/place/BHIRAJ+TOWER+at+EmQuartier/@13.7314622,100.5672243,17z/data=!3m1!4b1!4m5!3m4!1s0x30e29f01858d150f:0xbc0e87a22c16ae1c!8m2!3d13.731457!4d100.569413) | aCommerce HQ, 33rd floor |
+| ⌚️ | 18:30~20:30++ |
+| ✅ | [Meetup.com](https://www.meetup.com/ThaiPy-Bangkok-Python-Meetup/events/246228255/) | Free, snacks and drinks provided |
+
+This is for anyone who likes beauty and productivity with their code.
+
+> - "Ruby for python developers" - Dan Itsara (Glazziq)
+> - "Some insecure things to avoid in python" - Dominik 'Disconnect3d' Czarnota (Collective Sense)
+
 ### <a name="tech-at-agoda-19-metaprogramming"></a> 10 (Sat): TechAtAgoda - Metaprogramming
 
 | | | |
@@ -228,7 +242,7 @@ WordCamp เป็นงานสัมมนาของ WordPress ที่เ
 > 
 > 18 กุมภาพันธ์ - Conference Day เข้าร่วมฟังหัวข้อการบรรยายต่างๆที่เกี่ยวข้องกับ WordPress ครอบคลุมตั้งแต่ ผู้เริ่มต้นใช้งาน, บล็อกเกอร์, นักพัฒนา, นักออกแบบ และคนที่ทำธุรกิจ รวมไปถึงกิจกรรมต่างๆ ที่จะช่วยให้คุณได้พบกับเพื่อนใหม่ๆ
 
-### <a name="7peaks-meetup-246897327"></a> 22 (Thu): 7 Peaks Tech Events Bangkok: Let's Build a Decentralised Blockchain App on Ethereum
+### <a name="7peaks-meetup-246897327"></a> 22 (Thu): 7 Peaks Tech Events Bangkok — Let's Build a Decentralised Blockchain App on Ethereum
 
 | | | |
 | --- | --- | --- |
@@ -244,7 +258,7 @@ On this workshop, we'll build together a very simple decentralised application, 
 
 ## March 2018
 
-### <a name="bkk-web-pwa-meetup-42703818270"></a> 6 (Tue): BKK Web Meetup: Progressive Web Apps (PWA) — Mobile app's future
+### <a name="bkk-web-pwa-meetup-42703818270"></a> 6 (Tue): BKK Web Meetup — Progressive Web Apps (PWA) — Mobile app's future
 
 | | | |
 | --- | --- | --- |
