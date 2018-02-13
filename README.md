@@ -242,7 +242,7 @@ WordCamp เป็นงานสัมมนาของ WordPress ที่เ
 > 
 > 18 กุมภาพันธ์ - Conference Day เข้าร่วมฟังหัวข้อการบรรยายต่างๆที่เกี่ยวข้องกับ WordPress ครอบคลุมตั้งแต่ ผู้เริ่มต้นใช้งาน, บล็อกเกอร์, นักพัฒนา, นักออกแบบ และคนที่ทำธุรกิจ รวมไปถึงกิจกรรมต่างๆ ที่จะช่วยให้คุณได้พบกับเพื่อนใหม่ๆ
 
-### <a name="thoughtworks-ux-vs-ba-2981"></a> ลั่นกลองรบ : ศึกระหว่าง User Experience กับ Business Analyst
+### <a name="thoughtworks-ux-vs-ba-2981"></a> 21 (Wed): ลั่นกลองรบ : ศึกระหว่าง User Experience กับ Business Analyst
 
 | | | |
 | --- | --- | --- |
