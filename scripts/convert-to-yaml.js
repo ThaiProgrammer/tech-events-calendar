@@ -2,13 +2,19 @@
 
 const data = require('../public/calendar')
 const yaml = require('js-yaml')
+const path = require('path')
+const mkdirp = require('mkdirp')
+const fs = require('fs')
 
 for (const event of data) {
-  dumpEvent(event)
+  const md = dumpEvent(event)
+  const targetPath = `data/${event.start.year}-${String(event.start.month).padStart(2, '0')}/${event.id}.md`
+  mkdirp.sync(path.dirname(targetPath))
+  fs.writeFileSync(targetPath, md)
+  console.log(targetPath)
 }
 
 function dumpEvent (event) {
-  const filename = `data/${event.start.year}-${String(event.start.month).padStart(2, '0')}/${event.id}`
   const attributes = {
     id: event.id,
     title: event.title,
@@ -30,7 +36,7 @@ function dumpEvent (event) {
       summary: event.summary
     })
   }
-  console.log('---\n' + yaml.safeDump(attributes) + '---\n' + event.description)
+  return '---\n' + yaml.safeDump(attributes) + '---\n' + event.description + '\n'
 }
 
 function dumpDate (event) {
