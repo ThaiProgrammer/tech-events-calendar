@@ -1,6 +1,5 @@
 ---
 id: jsconf-asia-2018
-title: JSConf.Asia 2018
 date: 2018-01-25 ~ 2018-01-27
 location:
   title: Singapore
@@ -23,10 +22,11 @@ links:
   - type: rsvp
     url: 'https://www.facebook.com/events/111499759572747/'
     title: Facebook event
-summary: |+
-  งาน JavaScript ที่ใหญ่ที่สุดในเอเชียตะวันออกเฉียงใต้
-  จะได้เจอคนจาก Microsoft, Mozilla, … ด้วย
-  งานนี้คนไทยไปเยอะ (30 กว่าคน) เลยใส่ไว้ในปฏิทินนี้ด้วย
-
 ---
+# JSConf.Asia 2018
+
+> งาน JavaScript ที่ใหญ่ที่สุดในเอเชียตะวันออกเฉียงใต้
+> จะได้เจอคนจาก Microsoft, Mozilla, … ด้วย
+> งานนี้คนไทยไปเยอะ (30 กว่าคน) เลยใส่ไว้ในปฏิทินนี้ด้วย
+
 JSConf.Asia 2018 is a 3 day long celebration of the web technology and design. It is the sixth edition of Southeast Asia’s most influential community event from developers for developers with the aim to educate, inspire and entertain around open source and the web.

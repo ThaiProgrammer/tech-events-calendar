@@ -1,6 +1,5 @@
 ---
 id: docker-in-thai-meetup-january-2018
-title: Docker in Thai Meetup
 date: '2018-01-17'
 time: '18:30 ~ 21:00 (Talk / Networking)'
 location:
@@ -23,12 +22,10 @@ links:
     url: >-
       https://events.docker.com/events/details/docker-bangkok-presents-docker-in-thai-meetup-january-2018
     title: Docker.com
-summary: >+
-  พูดคุยกันเรื่อง Docker ในงาน Docker in Thai Meetup ครั้งที่สอง
-  คราวนี้พูดถึงเรื่องการทำ Blue/Green Deployment ด้วย Docker
-  ([คืออะไร?](http://www.somkiat.cc/blue-green-deployment/))
-  และเพิ่มเติมด้วยการคอนฟิก Liveness, Readiness ใน Kubernetes
-
 ---
+# Docker in Thai Meetup
+
+> พูดคุยกันเรื่อง Docker ในงาน Docker in Thai Meetup ครั้งที่สอง คราวนี้พูดถึงเรื่องการทำ Blue/Green Deployment ด้วย Docker ([คืออะไร?](http://www.somkiat.cc/blue-green-deployment/)) และเพิ่มเติมด้วยการคอนฟิก Liveness, Readiness ใน Kubernetes
+
 - Blue/Green micro service deployment using docker by K. Supaket
 - Liveness/Readyness with Kubernetes by K. Praparn

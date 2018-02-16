@@ -1,6 +1,5 @@
 ---
 id: google-cloud-onboard-bangkok-2018
-title: Google Cloud OnBoard Bangkok 2018
 date: '2018-01-30'
 time: '08:30 ~ 17:30'
 location:
@@ -20,11 +19,9 @@ links:
   - type: ticket
     url: 'https://cloudplatformonline.com/2018-onboard-bkk.html#register'
     title: Google Cloud
-summary: >+
-  งานสัมมนา Google Cloud OnBoard นี้เป็นงานสัมมนาฟรีที่วิทยากรจาก Google
-  จะมาแนะนำเทคโนโลยีของ Google Cloud Platform งานนี้เหมาะกับทั้ง IT Managers,
-  Systems Engineers and Operations professionals, Developers, Solution
-  Architects, และผู้ที่สนใจในเทคโนโลยีของ Google ทุกคน
-
 ---
+# Google Cloud OnBoard Bangkok 2018
+
+> งานสัมมนา Google Cloud OnBoard นี้เป็นงานสัมมนาฟรีที่วิทยากรจาก Google จะมาแนะนำเทคโนโลยีของ Google Cloud Platform งานนี้เหมาะกับทั้ง IT Managers, Systems Engineers and Operations professionals, Developers, Solution Architects, และผู้ที่สนใจในเทคโนโลยีของ Google ทุกคน
+
 Cloud OnBoard is a free full-day instructor-led enablement and training event that will provide you with a step-by-step technical introduction to the Google Cloud Platform (GCP). Through a combination of instructor-led presentations and hands-on labs, you will learn how to get started with Google App Engine, Datastore, Storage, Container Engine, Compute Engine and Network, Big Data and Machine Learning.

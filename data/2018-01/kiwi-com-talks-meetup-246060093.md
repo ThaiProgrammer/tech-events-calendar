@@ -1,6 +1,5 @@
 ---
 id: kiwi-com-talks-meetup-246060093
-title: Kiwi.com talks — Let’s talk about JavaScript beyond the web
 date: '2018-01-22'
 time: '17:30 ~ 20:00'
 location:
@@ -17,12 +16,11 @@ links:
     url: >-
       https://www.meetup.com/Kiwi-com-talks-The-age-of-JavaScript/events/246060093/
     title: Meetup.com
-summary: >+
-  We are group of digital nomads from Kiwi.com travelling to Bangkok in January
-  2018 who would be pleased to share acquired knowledge about developing
-  JavaScript apps with the others.
-
 ---
+# Kiwi.com talks — Let’s talk about JavaScript beyond the web
+
+> We are group of digital nomads from Kiwi.com travelling to Bangkok in January 2018 who would be pleased to share acquired knowledge about developing JavaScript apps with the others.
+
 JavaScript world has exceeded the limits of browser environment and it's present in backend & mobile app world as well. Come and hear what we have learned so far while using latest technologies like Next.js, GraphQL or React Native.
 
 - Next.js by Michal Sanger

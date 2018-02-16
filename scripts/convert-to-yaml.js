@@ -17,7 +17,6 @@ for (const event of data) {
 function dumpEvent (event) {
   const attributes = {
     id: event.id,
-    title: event.title,
     date: dumpDate(event),
   }
   if (event.time) {
@@ -31,12 +30,16 @@ function dumpEvent (event) {
     topics: event.topics,
     links: event.links.map(dumpLink)
   })
-  if (event.summary) {
-    Object.assign(attributes, {
-      summary: event.summary
-    })
-  }
-  return '---\n' + yaml.safeDump(attributes) + '---\n' + event.description + '\n'
+  const summary = event.summary ? (
+    event.summary
+      .trim()
+      .split(/\r\n|\r|\n/)
+      .map(l => `> ${l}`)
+      .join('\n') + '\n\n'
+  ) : ''
+  return '---\n' + yaml.safeDump(attributes) + '---\n' +
+    `# ${event.title}\n\n` +
+    summary + event.description + '\n'
 }
 
 function dumpDate (event) {

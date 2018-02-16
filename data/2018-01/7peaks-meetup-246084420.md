@@ -1,8 +1,5 @@
 ---
 id: 7peaks-meetup-246084420
-title: >-
-  7 Peaks Tech Events Bangkok — Scale your web application from local to global
-  with Azure cloud
 date: '2018-01-17'
 time: '19:00 ~ 21:00'
 location:
@@ -19,9 +16,9 @@ links:
   - type: rsvp
     url: 'https://www.meetup.com/7Peaks-Tech-Events-Bangkok/events/246084420/'
     title: Meetup.com
-summary: >+
-  How to scale your web application from local market to global audience?
-  Scalability, Performance, Availability, Security, Resiliency.
-
 ---
+# 7 Peaks Tech Events Bangkok — Scale your web application from local to global with Azure cloud
+
+> How to scale your web application from local market to global audience? Scalability, Performance, Availability, Security, Resiliency.
+
 Raphael will present, through a simple case study, what are the best practices to scale globally your web application. Using AppServices, Auto-Scaling, DNS, CDN, Traffic Manager, Application Gateway, Blob Storage, Cosmos DB, SQL, Tables, Queues, Functions etc., we will reflect together how to design/scale our webapp to deliver the best performances.
