@@ -15,6 +15,7 @@ links:
   - type: ticket
     url: 'https://www.eventpop.me/e/2822'
     title: Event Pop
+    price: Free (sold out)
   - type: rsvp
     url: 'https://www.facebook.com/events/504227713281643/'
     title: Facebook event

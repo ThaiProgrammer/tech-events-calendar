@@ -19,6 +19,7 @@ links:
   - type: ticket
     url: 'https://cloudplatformonline.com/2018-onboard-bkk.html#register'
     title: Google Cloud
+    price: Free
 ---
 # Google Cloud OnBoard Bangkok 2018
 

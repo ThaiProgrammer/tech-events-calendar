@@ -18,6 +18,7 @@ links:
     url: >-
       https://www.eventbrite.com/e/progressive-web-apps-pwa-mobile-apps-future-tickets-42703818270
     title: eventbrite.com
+    price: FREE
   - type: rsvp
     url: 'https://www.facebook.com/events/195556101180309/'
     title: Facebook Event

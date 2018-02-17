@@ -67,5 +67,6 @@ function dumpLink (link) {
   if (link.url) out.url = link.url
   if (link.title) out.title = link.title
   if (link.detail) out.detail = link.detail
+  if (link.price) out.price = link.price
   return out
 }

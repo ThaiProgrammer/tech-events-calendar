@@ -16,6 +16,7 @@ links:
   - type: ticket
     url: 'https://www.eventpop.me/e/2981'
     title: Event Pop
+    price: FREE
 ---
 # ลั่นกลองรบ : ศึกระหว่าง User Experience กับ Business Analyst
 

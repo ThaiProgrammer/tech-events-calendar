@@ -19,6 +19,7 @@ links:
   - type: ticket
     url: 'https://events.pouchnation.com/event/jsconfasia2018'
     title: Buy tickets
+    price: 1090 SGD
   - type: rsvp
     url: 'https://www.facebook.com/events/111499759572747/'
     title: Facebook event
