@@ -1,10 +1,12 @@
 {
   "dependencies": {
     "axios": "^0.17.1",
+    "common-tags": "^1.7.2",
     "escape-html": "^1.0.3",
     "flow-bin": "^0.62.0",
     "format-json": "^1.0.3",
     "front-matter": "^2.3.0",
+    "glob": "^7.1.2",
     "icalendar": "^0.7.1",
     "js-yaml": "^3.10.0",
     "mkdirp": "^0.5.1",
@@ -13,5 +15,9 @@
   "private": "true",
   "scripts": {
     "build": "node scripts/generate-json.js && node scripts/generate-svg.js && node scripts/generate-ics.js"
+  },
+  "devDependencies": {
+    "jest": "^22.3.0",
+    "pretty-format": "^22.1.0"
   }
 }

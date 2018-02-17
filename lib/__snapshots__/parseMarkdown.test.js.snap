@@ -1,0 +1,303 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parses a valid markdown file successfully 1`] = `
+Object {
+  "checks": Array [
+    Object {
+      "children": Array [
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "is present",
+          "type": "check",
+        },
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "is a string",
+          "type": "check",
+        },
+      ],
+      "title": "\`id\`",
+      "type": "item",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "is present",
+          "type": "check",
+        },
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "is a string",
+          "type": "check",
+        },
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "is in form of \\"YYYY-MM-DD\\" or \\"YYYY-MM-DD ~ YYYY-MM-DD\\"",
+          "type": "check",
+        },
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "start date is valid",
+          "type": "check",
+        },
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "end date is valid",
+          "type": "check",
+        },
+      ],
+      "title": "\`date\`",
+      "type": "item",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "is present",
+          "type": "check",
+        },
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "is an array",
+          "type": "check",
+        },
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "item 0 is valid",
+          "type": "check",
+        },
+      ],
+      "title": "\`categories\`",
+      "type": "item",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "is present",
+          "type": "check",
+        },
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "is an array",
+          "type": "check",
+        },
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "item 0 is valid",
+          "type": "check",
+        },
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "item 1 is valid",
+          "type": "check",
+        },
+      ],
+      "title": "\`topics\`",
+      "type": "item",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "is an array of time strings",
+          "type": "check",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "is a string",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "is in form \\"HH:MM ~ HH:MM[++][ (agenda)]\\"",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "start time is valid",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "end time is valid",
+              "type": "check",
+            },
+          ],
+          "title": "item 0",
+          "type": "item",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "is a string",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "is in form \\"HH:MM ~ HH:MM[++][ (agenda)]\\"",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "start time is valid",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "end time is valid",
+              "type": "check",
+            },
+          ],
+          "title": "item 1",
+          "type": "item",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "is a string",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "is in form \\"HH:MM ~ HH:MM[++][ (agenda)]\\"",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "start time is valid",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "end time is valid",
+              "type": "check",
+            },
+          ],
+          "title": "item 2",
+          "type": "item",
+        },
+      ],
+      "title": "time",
+      "type": "item",
+    },
+  ],
+  "event": Object {
+    "categories": Array [
+      "Workshop",
+    ],
+    "end": Object {
+      "date": 30,
+      "month": 1,
+      "year": 2018,
+    },
+    "id": "google-cloud-onboard-bangkok-2018",
+    "start": Object {
+      "date": 30,
+      "month": 1,
+      "year": 2018,
+    },
+    "time": Array [
+      Object {
+        "after": false,
+        "agenda": null,
+        "from": Object {
+          "hour": 8,
+          "minute": 30,
+        },
+        "to": Object {
+          "hour": 12,
+          "minute": 0,
+        },
+      },
+      Object {
+        "after": false,
+        "agenda": "break lol",
+        "from": Object {
+          "hour": 12,
+          "minute": 0,
+        },
+        "to": Object {
+          "hour": 13,
+          "minute": 0,
+        },
+      },
+      Object {
+        "after": true,
+        "agenda": null,
+        "from": Object {
+          "hour": 13,
+          "minute": 0,
+        },
+        "to": Object {
+          "hour": 17,
+          "minute": 30,
+        },
+      },
+    ],
+    "topics": Array [
+      "Google Cloud Platform",
+      "Cloud",
+    ],
+  },
+}
+`;
