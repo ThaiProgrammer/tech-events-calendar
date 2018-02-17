@@ -240,6 +240,181 @@ Object {
       "title": "time",
       "type": "item",
     },
+    Object {
+      "children": Array [
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "markdown body is valid",
+          "type": "check",
+        },
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "title is present",
+          "type": "check",
+        },
+      ],
+      "title": "title",
+      "type": "item",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "is present",
+          "type": "check",
+        },
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "\`title\` is a string",
+          "type": "check",
+        },
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "\`url\` is an optional Google Maps URL",
+          "type": "check",
+        },
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "\`detail\` is an optional string",
+          "type": "check",
+        },
+      ],
+      "title": "\`location\`",
+      "type": "item",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "summary",
+          "type": "check",
+        },
+      ],
+      "title": "summary",
+      "type": "item",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "description",
+          "type": "check",
+        },
+      ],
+      "title": "description",
+      "type": "item",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "result": Object {
+            "result": true,
+          },
+          "title": "is an array",
+          "type": "check",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "\`type\` is valid",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "\`url\` is a string",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "\`url\` is an http(s) url",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "\`detail\` is an optional string",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "\`price\` is an optional string (only present in ticket)",
+              "type": "check",
+            },
+          ],
+          "title": "item 0",
+          "type": "item",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "\`type\` is valid",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "\`url\` is a string",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "\`url\` is an http(s) url",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "\`detail\` is an optional string",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "result": true,
+              },
+              "title": "\`price\` is an optional string (only present in ticket)",
+              "type": "check",
+            },
+          ],
+          "title": "item 1",
+          "type": "item",
+        },
+      ],
+      "title": "links",
+      "type": "item",
+    },
   ],
   "event": Object {
     "categories": Array [
@@ -256,6 +431,7 @@ Object {
       "month": 1,
       "year": 2018,
     },
+    "summary": "Cloud OnBoard is a free full-day instructor-led enablement and training event that will provide you with a step-by-step technical introduction to the Google Cloud Platform (GCP). Through a combination of instructor-led presentations and hands-on labs, you will learn how to get started with Google App Engine, Datastore, Storage, Container Engine, Compute Engine and Network, Big Data and Machine Learning.",
     "time": Array [
       Object {
         "after": false,
@@ -294,6 +470,7 @@ Object {
         },
       },
     ],
+    "title": "Google Cloud OnBoard Bangkok 2018",
     "topics": Array [
       "Google Cloud Platform",
       "Cloud",
