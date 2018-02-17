@@ -8,6 +8,7 @@
     "front-matter": "^2.3.0",
     "glob": "^7.1.2",
     "icalendar": "^0.7.1",
+    "indent-string": "^3.2.0",
     "js-yaml": "^3.10.0",
     "mkdirp": "^0.5.1",
     "pegjs": "^0.10.0"

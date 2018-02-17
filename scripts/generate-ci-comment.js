@@ -1,5 +1,7 @@
 const fs = require('fs')
 const { execSync } = require('child_process')
+const indent = require('indent-string')
+const escapeHtml = require('escape-html')
 
 console.error('# Please pipe the output of this command to "tmp/ci-comment.txt"')
 console.error(`# so that the "post-ci-comment.js" works!`)
@@ -24,8 +26,7 @@ if (fs.existsSync('tmp/readme-parse-diagnostic.json')) {
     console.log()
     for (const error of diagnostics.errors) {
       console.log(
-        '  - ' + require('escape-html')(error.message) + '<br />' +
-        error.location.filename + ', line ' + error.location.line + ', column ' + error.location.column
+        '  - **' + error.location.filename + '**\n\n' + escapeHtml(indent(error.message, 4))
       )
       console.log()
     }
