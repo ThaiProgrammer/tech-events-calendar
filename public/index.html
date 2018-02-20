@@ -197,7 +197,10 @@
       },
       hooks: {
         mounted: function () {
-          fetch('https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json')
+          const base = /deploy-preview.*netlify/.test(location.host)
+            ? ''
+            : 'https://thaiprogrammer-tech-events-calendar.spacet.me'
+          fetch(base + '/calendar.json')
             .then(function (response) { return response.json() })
             .then(function (result) {
               list.set('data', result)
