@@ -15,7 +15,7 @@ links:
   - type: website
     url: https://2018.bangkok.wordcamp.org
     title: 2018.bangkok.wordcamp.org
-  - type: tickets
+  - type: ticket
     url: https://2018.bangkok.wordcamp.org/tickets/
     title: 2018.bangkok.wordcamp.org
     price: FREE for Contributor Day, 300 THB for Conference Day
