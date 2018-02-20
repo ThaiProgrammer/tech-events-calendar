@@ -7,14 +7,14 @@ Object {
       "children": Array [
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "is present",
           "type": "check",
         },
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "is a string",
           "type": "check",
@@ -27,35 +27,35 @@ Object {
       "children": Array [
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "is present",
           "type": "check",
         },
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "is a string",
           "type": "check",
         },
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "is in form of \\"YYYY-MM-DD\\" or \\"YYYY-MM-DD ~ YYYY-MM-DD\\"",
           "type": "check",
         },
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "start date is valid",
           "type": "check",
         },
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "end date is valid",
           "type": "check",
@@ -68,21 +68,21 @@ Object {
       "children": Array [
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "is present",
           "type": "check",
         },
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "is an array",
           "type": "check",
         },
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "item 0 is valid",
           "type": "check",
@@ -95,28 +95,28 @@ Object {
       "children": Array [
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "is present",
           "type": "check",
         },
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "is an array",
           "type": "check",
         },
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "item 0 is valid",
           "type": "check",
         },
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "item 1 is valid",
           "type": "check",
@@ -129,7 +129,7 @@ Object {
       "children": Array [
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "is an array of time strings",
           "type": "check",
@@ -138,28 +138,28 @@ Object {
           "children": Array [
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "is a string",
               "type": "check",
             },
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "is in form \\"HH:MM ~ HH:MM[++][ (agenda)]\\"",
               "type": "check",
             },
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "start time is valid",
               "type": "check",
             },
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "end time is valid",
               "type": "check",
@@ -172,28 +172,28 @@ Object {
           "children": Array [
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "is a string",
               "type": "check",
             },
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "is in form \\"HH:MM ~ HH:MM[++][ (agenda)]\\"",
               "type": "check",
             },
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "start time is valid",
               "type": "check",
             },
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "end time is valid",
               "type": "check",
@@ -206,28 +206,28 @@ Object {
           "children": Array [
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "is a string",
               "type": "check",
             },
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "is in form \\"HH:MM ~ HH:MM[++][ (agenda)]\\"",
               "type": "check",
             },
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "start time is valid",
               "type": "check",
             },
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "end time is valid",
               "type": "check",
@@ -244,14 +244,14 @@ Object {
       "children": Array [
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "markdown body is valid",
           "type": "check",
         },
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "title is present",
           "type": "check",
@@ -264,28 +264,28 @@ Object {
       "children": Array [
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "is present",
           "type": "check",
         },
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "\`title\` is a string",
           "type": "check",
         },
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "\`url\` is an optional Google Maps URL",
           "type": "check",
         },
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "\`detail\` is an optional string",
           "type": "check",
@@ -298,7 +298,7 @@ Object {
       "children": Array [
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "summary",
           "type": "check",
@@ -311,7 +311,7 @@ Object {
       "children": Array [
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "description",
           "type": "check",
@@ -324,7 +324,7 @@ Object {
       "children": Array [
         Object {
           "result": Object {
-            "result": true,
+            "status": true,
           },
           "title": "is an array",
           "type": "check",
@@ -333,35 +333,35 @@ Object {
           "children": Array [
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "\`type\` is valid",
               "type": "check",
             },
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "\`url\` is a string",
               "type": "check",
             },
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "\`url\` is an http(s) url",
               "type": "check",
             },
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "\`detail\` is an optional string",
               "type": "check",
             },
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "\`price\` is an optional string (only present in ticket)",
               "type": "check",
@@ -374,35 +374,35 @@ Object {
           "children": Array [
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "\`type\` is valid",
               "type": "check",
             },
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "\`url\` is a string",
               "type": "check",
             },
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "\`url\` is an http(s) url",
               "type": "check",
             },
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "\`detail\` is an optional string",
               "type": "check",
             },
             Object {
               "result": Object {
-                "result": true,
+                "status": true,
               },
               "title": "\`price\` is an optional string (only present in ticket)",
               "type": "check",
@@ -426,6 +426,23 @@ Object {
       "year": 2018,
     },
     "id": "google-cloud-onboard-bangkok-2018",
+    "links": Array [
+      Object {
+        "title": "Google Cloud",
+        "type": "website",
+        "url": "https://cloudplatformonline.com/2018-onboard-bkk.html",
+      },
+      Object {
+        "title": "Google Cloud",
+        "type": "ticket",
+        "url": "https://cloudplatformonline.com/2018-onboard-bkk.html#register",
+      },
+    ],
+    "location": Object {
+      "detail": "Convention Centre B2, 22nd Floor",
+      "title": "Centara Grand at CentralWorld",
+      "url": "https://www.google.com/maps/place/Centara+Grand+at+CentralWorld/@13.7477222,100.5365583,17z/data=!3m1!4b1!4m5!3m4!1s0x30e2992f7809567f:0xccc050cff0e7d234!8m2!3d13.747717!4d100.538747",
+    },
     "start": Object {
       "date": 30,
       "month": 1,
