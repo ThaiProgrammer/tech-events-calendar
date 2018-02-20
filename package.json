@@ -1,4 +1,7 @@
 {
+  "workspaces": [
+    "website"
+  ],
   "dependencies": {
     "axios": "^0.17.1",
     "common-tags": "^1.7.2",
