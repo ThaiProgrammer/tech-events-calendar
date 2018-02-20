@@ -330,6 +330,13 @@ Object {
           "type": "check",
         },
         Object {
+          "result": Object {
+            "status": true,
+          },
+          "title": "is not empty",
+          "type": "check",
+        },
+        Object {
           "children": Array [
             Object {
               "result": Object {
