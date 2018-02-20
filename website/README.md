@@ -1,21 +1,19 @@
-# tech-events-calendar-website
+# [tech-events-calendar](..) website
 
-> A curated list of tech events relevant to tech people in Thailand.
+This folder contains the source code for the website of the [tech-events-calendar](..) project.
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+## install dependencies
+```bash
+yarn
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## serve with hot reload at localhost:8080
+```bash
+yarn dev
+```
+
+## build for production
+```
+yarn build --report
+```
+
