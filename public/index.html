@@ -104,6 +104,12 @@
     #list td.edit {
       white-space: nowrap;
     }
+    #list td.edit a {
+      display: block;
+      max-width: 16em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
     #list .num {
       font-variant-numeric: tabular-nums;
     }
@@ -169,7 +175,7 @@
           <tr m-for="item in data">
             <td class="date">{{formatDate(item)}}</td>
             <td class="event-name"><a href="go/?view={{item.id}}"><strong>{{item.title}}</strong></a></td>
-            <td class="edit"><a href="go/?edit={{item.id}}">{{item.declared.filename}}#L<span class="num">{{item.declared.line}}</span></a></td>
+            <td class="edit"><a href="go/?edit={{item.id}}" title="{{item.declared.filename}}">{{formatDeclaration(item)}}</a></td>
           </tr>
         </tbody>
       </table>
@@ -193,11 +199,14 @@
             pad(item.start.month) + '-' +
             pad(item.start.date) +
             (item.start.date !== item.end.date ? '~' + pad(item.end.date) : '')
+        },
+        formatDeclaration: function (item) {
+          return item.declared.filename.replace(/data\//, '')
         }
       },
       hooks: {
         mounted: function () {
-          const base = /deploy-preview.*netlify/.test(location.host)
+          var base = /deploy-preview.*netlify/.test(location.host)
             ? ''
             : 'https://thaiprogrammer-tech-events-calendar.spacet.me'
           fetch(base + '/calendar.json')
