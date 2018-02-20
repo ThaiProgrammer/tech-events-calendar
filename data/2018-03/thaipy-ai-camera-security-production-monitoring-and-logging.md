@@ -1,4 +1,5 @@
 ---
+id: thaipy-bangkok-meetup-246773984
 date: '2018-03-08'
 time: 18:30 ~ 20:30++
 categories:
