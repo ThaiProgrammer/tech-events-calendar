@@ -5,7 +5,7 @@ time: 08:00 ~ 17:00
 location:
   title: มหาวิทยาลัยสยาม
   url: >-
-    https://www.google.co.th/maps/place/Siam+University/@13.7182852,100.450954,17z/data=!3m1!4b1!4m5!3m4!1s0x30e2983b3ccda6b9:0x7160b277b60e7199!8m2!3d13.71828!4d100.453148
+    https://www.google.com/maps/place/Siam+University/@13.7182852,100.450954,17z/data=!3m1!4b1!4m5!3m4!1s0x30e2983b3ccda6b9:0x7160b277b60e7199!8m2!3d13.71828!4d100.453148
   detail: null
 categories:
   - Conference
