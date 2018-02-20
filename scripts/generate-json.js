@@ -1,16 +1,91 @@
 /** @flow */
 const fs = require('fs')
-const parseReadme = require('../lib/parseReadme')
+const parseMarkdown = require('../lib/parseMarkdown')
+const glob = require('glob')
+
+function hasError (checks) {
+  return checks.some(isError)
+  function isError (node) {
+    if (node.type === 'item') {
+      return (node.children || [ ]).some(isError)
+    }
+    if (node.type === 'check') {
+      return node.result.status === false
+    }
+    throw new Error('Invalid node type: ' + node.type)
+  }
+}
+
+function formatError (checks) {
+  const out = [ ]
+  const traverse = (node, prefix) => {
+    if (node.type === 'item') {
+      out.push(prefix + '  - ✴️ ' + node.title)
+      return (node.children || [ ]).forEach(child => traverse(child, prefix + '    '))
+    }
+    if (node.type === 'check') {
+      if (node.result.status === true) {
+        out.push(prefix + '  - ✅ ' + node.title)
+      } else if (node.result.status === false) {
+        const message = node.result.message
+          ? `: ${node.result.message}`
+          : ''
+        out.push(prefix + '  - ❌ ' + node.title + message)
+      } else {
+        out.push(prefix + '  - *️⃣ ' + node.title)
+      }
+      return
+    }
+    throw new Error('Invalid node type: ' + node.type)
+  }
+  for (const node of checks) {
+    traverse(node, '')
+  }
+  return out.join('\n')
+}
 
 function main () {
   const diagnostic = { errors: [ ] }
+  const files = glob.sync('data/*/*.md')
   try {
-    const rawContent = fs.readFileSync('./README.md', { encoding: 'utf8' })
-    const json = parseReadme(rawContent, 'README.md')
-    validateJson(json)
+    const events = [ ]
+    for (const file of files) {
+      try {
+        const md = fs.readFileSync(file, 'utf8')
+        const { checks, event } = parseMarkdown(md)
+        event.declared = {
+          filename: file,
+          line: 1,
+          column: 1
+        }
+        if (hasError(checks)) {
+          diagnostic.errors.push({
+            location: event.declared,
+            message: formatError(checks)
+          })
+          continue
+        }
+        events.push(event)
+      } catch (e) {
+        diagnostic.errors.push({
+          location: {
+            filename: file,
+            line: 1,
+            column: 1
+          },
+          message: e.message
+        })
+      }
+    }
+    validateJson(events)
     const path = 'public/calendar.json'
-    fs.writeFileSync(path, require('format-json').diffy(json))
-    console.log('* Written calendar to', path)
+    if (!diagnostic.errors.length) {
+      events.sort(compareEvents)
+      fs.writeFileSync(path, require('format-json').diffy(events))
+      console.log('* Written calendar to', path)
+    } else {
+      console.log('* Not writing because of error')
+    }
   } catch (e) {
     if (!e.location) {
       throw e
@@ -26,6 +101,13 @@ function main () {
     fs.writeFileSync(path, JSON.stringify(diagnostic, null, 2))
     console.log('* Diagnostic information written to', path)
   }
+}
+
+function compareEvents (a, b) {
+  return (a.start.year - b.start.year) ||
+    (a.start.month - b.start.month) ||
+    (a.start.date - b.start.date) ||
+    (a.id < b.id ? -1 : 1)
 }
 
 function validateJson (json) {
@@ -45,7 +127,7 @@ function validateJson (json) {
 }
 
 function formatLocation (location) {
-  return `${location.filename}, line ${location.line}, column ${location.column}`
+  return `${location.filename}`
 }
 
 main()

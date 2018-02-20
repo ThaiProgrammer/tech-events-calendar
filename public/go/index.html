@@ -55,15 +55,18 @@
     function view (event) {
       var file = event.declared.filename === 'README.md' ? '' : '/tree/master/' + event.declared.filename
       var slug = event.id
-      return 'https://github.com/ThaiProgrammer/tech-events-calendar' + file + '#' + slug
+      return 'https://github.com/ThaiProgrammer/tech-events-calendar' + file
     }
     function edit (event) {
       var file = '/edit/master/' + event.declared.filename
-      return 'https://github.com/ThaiProgrammer/tech-events-calendar' + file + '#L' + event.declared.line
+      return 'https://github.com/ThaiProgrammer/tech-events-calendar' + file
     }
     try {
       setStatus('Loading data…')
-      fetch('https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json')
+      var base = /deploy-preview.*netlify/.test(location.host)
+        ? ''
+        : 'https://thaiprogrammer-tech-events-calendar.spacet.me'
+      fetch(base + '/calendar.json')
         .then(function (response) { return response.json() })
         .then(function (result) {
           setStatus('Loading data…')

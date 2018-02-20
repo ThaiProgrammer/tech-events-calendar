@@ -5,8 +5,7 @@ Thanks for your interest in making this project better!
 
 ## Adding events or changing event details
 
-The calendar file is generated from [README.md](./README.md).
-Please [edit it](https://github.com/ThaiProgrammer/tech-events-calendar/edit/master/README.md) to update the calendar and send a pull request.
+The calendar files are generated from the [`data`](data) folder. To add a new event, fork this repository, create a new file in the `data` folder, and send us a pull request.
 
 
 ## Suggestions for improvement
