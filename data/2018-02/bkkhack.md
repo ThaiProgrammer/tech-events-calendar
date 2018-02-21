@@ -1,6 +1,7 @@
 ---
 id: bkkhack-243386060
 date: '2018-02-22'
+time: 18:00 ~ 22:00
 location:
   title: Learn Hub
   url: https://www.google.com/maps/place/Learn+Hub/@13.7444559,100.5315245,17z/data=!4m8!1m2!2m1!1slearn+hub%2B!3m4!1s0x30e29ed20f89d211:0x810d7dd9fa79451d!8m2!3d13.74532!4d100.534531
