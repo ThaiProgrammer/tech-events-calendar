@@ -15,7 +15,7 @@ links:
     title: International Open Data Day Bangkok 2018
   - type: ticket
     url: https://www.eventbrite.com/e/opendata-hackathon-civic-engagement-tickets-43121660046?utm-medium=discovery&utm-campaign=social&utm-content=attendeeshare&aff=escb&utm-source=cp&utm-term=listing
-    price: Free
+    price: FREE
     title: Eventbrite
   - type: rsvp
     url: https://www.facebook.com/events/221503615089896/
