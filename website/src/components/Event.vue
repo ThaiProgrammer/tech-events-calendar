@@ -61,7 +61,7 @@ export default {
   display: flex;
 }
 .event-date {
-  width: 7.5em;
+  width: 7em;
 }
 .event-details {
   flex: 1;
