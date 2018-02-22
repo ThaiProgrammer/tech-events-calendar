@@ -14,6 +14,5 @@ yarn dev
 
 ## build for production
 ```
-yarn build --report
+yarn build
 ```
-

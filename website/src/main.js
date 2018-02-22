@@ -1,6 +1,9 @@
-import Vue from 'vue'
+import './primer.scss'
+
 import App from './App'
+import Vue from 'vue'
 import router from './router'
+import store from './store'
 
 Vue.config.productionTip = false
 
@@ -8,5 +11,9 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  render: h => h(App)
+  store,
+  render: h => h(App),
+  created () {
+    this.$store.dispatch('load')
+  }
 })

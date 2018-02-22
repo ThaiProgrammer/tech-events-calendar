@@ -25,7 +25,10 @@ exports.cssLoaders = function (options) {
   const postcssLoader = {
     loader: 'postcss-loader',
     options: {
-      sourceMap: options.sourceMap
+      sourceMap: options.sourceMap,
+      config: {
+        path: require.resolve('../.postcssrc')
+      }
     }
   }
 
@@ -60,7 +63,9 @@ exports.cssLoaders = function (options) {
     postcss: generateLoaders(),
     less: generateLoaders('less'),
     sass: generateLoaders('sass', { indentedSyntax: true }),
-    scss: generateLoaders('sass'),
+    scss: generateLoaders('sass', {
+      includePaths: [ path.dirname(path.dirname(require.resolve('primer/index.scss'))) ]
+    }),
     stylus: generateLoaders('stylus'),
     styl: generateLoaders('stylus')
   }
