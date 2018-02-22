@@ -7028,6 +7028,10 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vue-analytics@^5.9.0:
+  version "5.9.0"
+  resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.9.0.tgz#c2e61f67cbb7e5221e533dc511b547af23deeaaa"
+
 vue-hot-reload-api@^2.2.0:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.2.4.tgz#683bd1d026c0d3b3c937d5875679e9a87ec6cd8f"

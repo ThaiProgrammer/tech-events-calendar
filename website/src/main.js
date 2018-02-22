@@ -5,8 +5,13 @@ import 'vue-octicon/icons/location'
 
 import App from './App'
 import Vue from 'vue'
+import VueAnalytics from 'vue-analytics'
 import router from './router'
 import store from './store'
+
+Vue.use(VueAnalytics, {
+  id: 'UA-59441941-4'
+})
 
 document.querySelector('#loading').style.display = 'none'
 
