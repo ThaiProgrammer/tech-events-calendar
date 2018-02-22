@@ -16,7 +16,7 @@
               </span>
               <span class="info-text">
                 <strong>{{startDate}}</strong> ({{day(event.start)}})
-                <span v-if="startDate !== endDate"> ~ <strong>{{endDate}}</strong> ( ({{day(event.end)}}))</span>
+                <span v-if="startDate !== endDate"> ~ <strong>{{endDate}}</strong> ({{day(event.end)}})</span>
               </span>
             </li>
             <li class="Box-row info-row" v-if="event.time && event.time.length > 0">
