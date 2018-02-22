@@ -2,10 +2,8 @@
   <div>
     <div class="Subhead">
       <h2 class="Subhead-heading">{{event.title}}</h2>
-      <!-- /* TODO dedupe event-tags */ -->
-      <div class="event-tags f6">
-        <span href="#" class="event-tag" v-for="category in event.categories">{{category}}</span>
-        <span href="#" class="event-tag" v-for="topic in event.topics">{{topic}}</span>
+      <div class="mt-1">
+        <event-tags :event="event"></event-tags>
       </div>
     </div>
     <div class="clearfix mt-4">
@@ -66,6 +64,7 @@
 <script>
 import MarkdownIt from 'markdown-it'
 import Octicon from 'vue-octicon/components/Octicon.vue'
+import EventTags from './EventTags'
 
 const md = MarkdownIt()
 
@@ -115,7 +114,8 @@ export default {
     }
   },
   components: {
-    Octicon
+    Octicon,
+    EventTags
   }
 }
 </script>
@@ -131,22 +131,5 @@ export default {
 .info-extended {
   display: block;
   padding-left: 12px;
-}
-
-/* TODO dedupe event-tags */
-.event-tags {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-}
-.event-tag {
-  border-radius: 3px;
-  background: #FAF8D1;
-  color: #f49200;
-  padding: 0.3em 0.9em;
-  margin-right: 0.5em;
-  margin-top: 0.5em;
-  white-space: nowrap;
-  text-decoration: none;
 }
 </style>

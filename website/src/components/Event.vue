@@ -17,16 +17,16 @@
       <div class="event-summary">
         {{event.summary}}
       </div>
-      <!-- /* TODO dedupe event-tags */ -->
-      <div class="event-tags f6">
-        <span href="#" class="event-tag" v-for="category in event.categories">{{category}}</span>
-        <span href="#" class="event-tag" v-for="topic in event.topics">{{topic}}</span>
+      <div class="mt-1">
+        <event-tags :event="event"></event-tags>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import EventTags from './EventTags'
+
 export default {
   props: [ 'event' ],
   methods: {
@@ -49,6 +49,9 @@ export default {
     href () {
       return `/event/${this.event.id}`
     }
+  },
+  components: {
+    EventTags
   }
 }
 </script>
