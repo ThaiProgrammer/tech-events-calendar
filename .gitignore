@@ -60,8 +60,14 @@ build/Release
 # see https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
 node_modules
 
+# Generated data files
 /public/calendar.json
 /public/calendar.ics
 /public/generated/calendar-images
+
+# Generated web pages
+/public/index.html
+/public/static/
+
 /package-lock.json
 /tmp
