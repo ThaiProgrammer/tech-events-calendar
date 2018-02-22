@@ -33,6 +33,10 @@ The [`data`](data) folder in this repository contains the event data.
 
 For convenience, you can [see the list of events here.](https://thaiprogrammer-tech-events-calendar.spacet.me/#list)
 
+## Website
+
+The source code for the website can be found in [website](website) folder. It’s a Vue app.``
+
 ## Contributing
 
 Please see [CONTRIBUTING.md] for more information about contributing to this repository.
