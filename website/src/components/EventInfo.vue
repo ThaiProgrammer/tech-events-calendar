@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="clearfix mt-4">
-      <div class="col-lg-3 col-md-4 pr-4 float-left">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-12 pr-4 float-left">
         <div class="Box Box--condensed info-box">
           <ul>
             <li class="Box-row info-row">
@@ -53,7 +53,7 @@
           </a>
         </nav>
       </div>
-      <div class="col-lg-9 col-md-8 float-left">
+      <div class="col-lg-9 col-md-8 col-12 float-left">
         <div class="markdown-body" v-html="descriptionHtml"></div>
         <p class="text-right mt-4">
           <a :href="editLink" class="btn btn-secondary">Edit on GitHub</a>
