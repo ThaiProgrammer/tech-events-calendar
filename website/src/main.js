@@ -10,7 +10,8 @@ import router from './router'
 import store from './store'
 
 Vue.use(VueAnalytics, {
-  id: 'UA-59441941-4'
+  id: 'UA-59441941-4',
+  router
 })
 
 document.querySelector('#loading').style.display = 'none'
