@@ -19,7 +19,7 @@
   "private": "true",
   "scripts": {
     "build": "node scripts/generate-json.js && node scripts/generate-svg.js && node scripts/generate-ics.js && (cd website && yarn build) && cp -Rv website/dist/index.html website/dist/static public",
-    "netlify": "(curl -o- -L https://yarnpkg.com/install.sh | bash) && yarn && yarn build"
+    "netlify": "(curl -o- -L https://yarnpkg.com/install.sh | bash) && ~/.yarn/bin/yarn && yarn build"
   },
   "devDependencies": {
     "jest": "^22.3.0",
