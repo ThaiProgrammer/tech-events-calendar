@@ -13,14 +13,14 @@
     <div class="flash flash-error" v-if="!!error">
       <strong>Cannot load data.</strong> {{error.toString()}}
     </div>
-    <div class="Box mt-4" v-if="loading">
+    <div class="Box mt-3" v-if="loading">
       <ul>
         <li class="Box-row text-center p-4">
           <spinner></spinner>
         </li>
       </ul>
     </div>
-    <div class="Box mt-4" v-if="topUpcomingEvents.length > 0">
+    <div class="Box mt-3" v-if="topUpcomingEvents.length > 0">
       <ul>
         <li class="Box-row" v-for="event in topUpcomingEvents">
           <event :event="event"></event>
@@ -29,6 +29,9 @@
       <div class="Box-footer Box-row--gray text-center" v-if="upcomingEvents.length > topUpcomingEvents.length">
         <router-link to='/list'>See more events &rarr;</router-link>
       </div>
+    </div>
+    <div class="mt-3">
+      <p>Missing events or details incorrect? <a href="https://github.com/ThaiProgrammer/tech-events-calendar/tree/master/CONTRIBUTING.md">Please contribute!</a></p>
     </div>
 
     <div class="Subhead Subhead--spacious">
