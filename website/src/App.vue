@@ -20,6 +20,13 @@
       </div>
     </header>
     <router-view/>
+    <footer class="text-center mt-5 mb-4 text-gray">
+      GitHub: <a href="https://github.com/ThaiProgrammer/tech-events-calendar" class="text-gray"><strong>ThaiProgrammer/tech-events-calendar</strong></a>
+      <br>
+      Missing events or details incorrect? <a href="https://github.com/ThaiProgrammer/tech-events-calendar/tree/master/CONTRIBUTING.md" class="text-gray"><strong>Please contribute!</strong></a>
+      <br>
+      The data in this website is also available as <a href="https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json" class="text-gray"><strong>JSON</strong> file</a> and <a href="https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.ics" class="text-gray"><strong>ICS</strong> file</a>.
+    </footer>
   </div>
 </template>
 
