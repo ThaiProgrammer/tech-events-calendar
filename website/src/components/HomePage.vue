@@ -10,15 +10,21 @@
       These are the upcoming tech events.
       You can subscribe to the calendar via <a href="https://calendar.google.com/calendar/embed?src=j5i0o6v2ihfboe19upl9lhonbci6ankr%40import.calendar.google.com&ctz=Asia%2FBangkok">Google Calendar</a>.
     </p>
-    <div class="Box mt-4">
+    <div class="flash flash-error" v-if="!!error">
+      <strong>Cannot load data.</strong> {{error.toString()}}
+    </div>
+    <div class="Box mt-4" v-if="topUpcomingEvents.length > 0">
       <ul>
-        <li class="Box-row" v-for="event in upcomingEvents">
+        <li class="Box-row" v-for="event in topUpcomingEvents">
           <event :event="event"></event>
         </li>
         <li class="Box-row text-center p-4" v-if="loading">
           <spinner></spinner>
         </li>
       </ul>
+      <div class="Box-footer Box-row--gray text-center" v-if="upcomingEvents.length > topUpcomingEvents.length">
+        <router-link to='/list'>See more events &rarr;</router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -39,7 +45,9 @@ export default {
           const date = new Date(event.start.year, event.start.month - 1, event.start.date)
           return date >= now
         })
-        .slice(0, 5)
+    },
+    topUpcomingEvents () {
+      return this.upcomingEvents.slice(0, 5)
     }
   },
   components: { Event, Spinner }

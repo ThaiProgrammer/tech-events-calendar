@@ -1,7 +1,12 @@
 <template>
   <div class="event">
     <div class="event-date">
-      <strong>{{date}}</strong><br>{{day}}
+      <strong>
+        {{startDate}}
+        <span v-if="startDate !== endDate"> ~<br>{{endDate}}</span>
+      </strong>
+      <br>
+      {{day(event.start)}}<span v-if="startDate !== endDate"> – {{day(event.end)}}</span>
     </div>
     <div class="event-details">
       <div class="event-title">
@@ -12,7 +17,8 @@
       <div class="event-summary">
         {{event.summary}}
       </div>
-      <div class="event-tags f6 mt-1">
+      <!-- /* TODO dedupe event-tags */ -->
+      <div class="event-tags f6">
         <span href="#" class="event-tag" v-for="category in event.categories">{{category}}</span>
         <span href="#" class="event-tag" v-for="topic in event.topics">{{topic}}</span>
       </div>
@@ -23,17 +29,25 @@
 <script>
 export default {
   props: [ 'event' ],
-  computed: {
-    date () {
-      const month = ['?', 'JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'][this.event.start.month]
-      return `${month} ${this.event.start.date}`
+  methods: {
+    formatDate (d) {
+      const month = ['?', 'JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'][d.month]
+      return `${month} ${d.date}`
     },
-    day () {
-      const date = new Date(this.event.start.year, this.event.start.month - 1, this.event.start.date)
+    day (d) {
+      const date = new Date(d.year, d.month - 1, d.date)
       return ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'][date.getDay()]
+    }
+  },
+  computed: {
+    startDate () {
+      return this.formatDate(this.event.start)
+    },
+    endDate () {
+      return this.formatDate(this.event.end)
     },
     href () {
-      return `/events/${this.event.id}`
+      return `/event/${this.event.id}`
     }
   }
 }
@@ -44,11 +58,13 @@ export default {
   display: flex;
 }
 .event-date {
-  width: 10em;
+  width: 7.5em;
 }
 .event-details {
   flex: 1;
 }
+
+/* TODO dedupe event-tags */
 .event-tags {
   display: flex;
   flex-wrap: wrap;
@@ -60,6 +76,7 @@ export default {
   color: #f49200;
   padding: 0.3em 0.9em;
   margin-right: 0.5em;
+  margin-top: 0.5em;
   white-space: nowrap;
   text-decoration: none;
 }

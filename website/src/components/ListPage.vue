@@ -20,6 +20,9 @@
         </a>
       </div>
     </nav>
+    <div class="flash flash-error mt-4" v-if="!!error">
+      <strong>Cannot load data.</strong> {{error.toString()}}
+    </div>
     <div class="Box mt-4" v-for="group in eventGroups">
       <div class="Box-header">
         <h3 class="Box-title">{{group.title}}</h3>
