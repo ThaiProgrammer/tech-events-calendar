@@ -26,4 +26,4 @@ This will be our very first time holding at Link co-working space - see below fo
 
 - Talk 1: Getting Started with Rails and Docker - Dan Itsara from Glazziq
 
-- Talk 2: TBD
+- Talk 2: Coding with Ruby on Sketchup - Khun Yuthana Tubtimtong creator of Quicksketch, QuickNano, Qprecast & Qestimate
