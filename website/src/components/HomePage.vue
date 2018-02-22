@@ -13,13 +13,17 @@
     <div class="flash flash-error" v-if="!!error">
       <strong>Cannot load data.</strong> {{error.toString()}}
     </div>
+    <div class="Box mt-4" v-if="loading">
+      <ul>
+        <li class="Box-row text-center p-4">
+          <spinner></spinner>
+        </li>
+      </ul>
+    </div>
     <div class="Box mt-4" v-if="topUpcomingEvents.length > 0">
       <ul>
         <li class="Box-row" v-for="event in topUpcomingEvents">
           <event :event="event"></event>
-        </li>
-        <li class="Box-row text-center p-4" v-if="loading">
-          <spinner></spinner>
         </li>
       </ul>
       <div class="Box-footer Box-row--gray text-center" v-if="upcomingEvents.length > topUpcomingEvents.length">
