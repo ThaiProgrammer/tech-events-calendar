@@ -24,7 +24,7 @@
 
 ## เทคโนโลยีที่ใช้
 
-- **ไฟล์ข้อมูล** เก็บในไฟล์ภาษา [Markdown](https://en.wikipedia.org/wiki/Markdown) โดยเก็บข้อมูลเพิ่มเติมไว้ใน [YAML Front Matter](https://jekyllrb.com/docs/frontmatter/)
+- **ไฟล์ข้อมูล** ในโฟลเดอร์ [data](data) เก็บเป็นไฟล์ภาษา [Markdown](https://en.wikipedia.org/wiki/Markdown) โดยเก็บข้อมูลเพิ่มเติมไว้ใน [YAML Front Matter](https://jekyllrb.com/docs/frontmatter/) ดู[รูปแบบการเก็บข้อมูลได้ที่หน้านี้](https://github.com/ThaiProgrammer/tech-events-calendar/blob/master/CONTRIBUTING.md#contributing-event-data)
 - **สคริปต์เพื่อประมวลผลไฟล์ข้อมูล** เขียนด้วยภาษา JavaScript รันด้วย [Node.js](https://nodejs.org/en/)
 - **เว็บไซต์** เขียนด้วย JavaScript โดยใช้เฟรมเวิร์ค [Vue](https://vuejs.org/) เป็นในการสร้างหน้าเว็บ, [Vuex](https://vuex.vuejs.org/en/) สำหรับจัดการข้อมูล, [vue-router](https://router.vuejs.org/en/) สำหรับการจัดการ URL Routing และใช้ [Primer](https://primer.github.io/) เป็น CSS Framework
 
