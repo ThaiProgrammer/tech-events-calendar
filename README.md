@@ -26,7 +26,7 @@
 
 - **ไฟล์ข้อมูล** ในโฟลเดอร์ [data](data) เก็บเป็นไฟล์ภาษา [Markdown](https://en.wikipedia.org/wiki/Markdown) โดยเก็บข้อมูลเพิ่มเติมไว้ใน [YAML Front Matter](https://jekyllrb.com/docs/frontmatter/) ดู[รูปแบบการเก็บข้อมูลได้ที่หน้านี้](https://github.com/ThaiProgrammer/tech-events-calendar/blob/master/CONTRIBUTING.md#contributing-event-data)
 - **สคริปต์เพื่อประมวลผลไฟล์ข้อมูล** เขียนด้วยภาษา JavaScript รันด้วย [Node.js](https://nodejs.org/en/)
-- **เว็บไซต์** เขียนด้วย JavaScript โดยใช้เฟรมเวิร์ค [Vue](https://vuejs.org/) เป็นในการสร้างหน้าเว็บ, [Vuex](https://vuex.vuejs.org/en/) สำหรับจัดการข้อมูล, [vue-router](https://router.vuejs.org/en/) สำหรับการจัดการ URL Routing และใช้ [Primer](https://primer.github.io/) เป็น CSS Framework
+- **เว็บไซต์** เขียนด้วย JavaScript โดยใช้เฟรมเวิร์ค [Vue](https://vuejs.org/) ในการสร้างหน้าเว็บ, [Vuex](https://vuex.vuejs.org/en/) สำหรับจัดการข้อมูล, [vue-router](https://router.vuejs.org/en/) สำหรับการจัดการ URL Routing และใช้ [Primer](https://primer.github.io/) เป็น CSS Framework
 
 เพื่อให้โค้ดและข้อมูลในโปรเจกต์นี้มีข้อมูลที่ถูกรูปแบบอยู่เสมอ เราจึงมีการทำ [**Continuous integration**](http://www.somkiat.cc/imrpove-quality-with-continuous-integration/) ([อ่านเพิ่มเติม](http://www.notaboutcode.com/post/01-ci-journey/)) และ [**Continuous delivery**](http://www.somkiat.cc/continuous-delivery-and-devops-is-about-customer/) โดยในทุกๆ Commit เราจะมีการทดสอบโค้ดอัตโนมัติ ([Automated testing](http://go.spacet.me/tdd20160330)) ว่าทำงานถูกต้องหรือเปล่า รวมถึงมีการเช็ครูปแบบโค้ด ว่าเขียนตาม [JavaScript Standard Style](https://standardjs.com/) หรือไม่ เมื่อโค้ดผ่านการทดสอบทั้งหมด เราจะทำการ Deploy โค้ดขึ้นไปบนเว็บทันที โดยไม่ต้อง Deploy มือเลย
 
