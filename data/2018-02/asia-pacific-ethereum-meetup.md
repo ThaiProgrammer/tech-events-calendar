@@ -4,7 +4,7 @@ date: '2018-02-25'
 time: '09:00 ~ 17:00'
 location:
   title: KX - Knowledge Exchange Center
-  url: https://goo.gl/maps/7WXHGgz4DE82
+  url: https://www.google.com/maps/place/The+Knowledge+Exchange:+KX/@13.7204878,100.4961223,17z/data=!3m1!4b1!4m5!3m4!1s0x30e298ee5d02d0a3:0xe2511ae461733d57!8m2!3d13.7204878!4d100.498311
 categories:
   - Conference
   - Meetup
