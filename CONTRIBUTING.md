@@ -93,14 +93,19 @@ If you found a mistake in any event’s data, please help us correct it.
 On the event page, you can click on the “Edit on GitHub” button to edit the event data, and submit your correction to the project.
 
 
-## Suggestions for improvement
-
-Please [open an issue](https://github.com/ThaiProgrammer/tech-events-calendar/issues).
-
-
 ## Help maintain this project
 
 The goal of this project is to be **community-maintained**,
 rather than being maintained by a single entity.
 If you want to help maintain this project,
 [please go to the CALL FOR MAINTAINERS page](https://github.com/ThaiProgrammer/tech-events-calendar/issues/11).
+
+
+## Other things you can help
+
+- Star this project.
+- Share and promote the website [calendar.thaiprogrammer.org](https://calendar.thaiprogrammer.org/).
+- Help writing the documentation for this project to make it easier for first-time contributors to get started with this project.
+- Take a look at issues labeled [`help wanted`](https://github.com/ThaiProgrammer/tech-events-calendar/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22help+wanted%22). Issues friendly for first-time contributors are labeled [`good first issue`](https://github.com/ThaiProgrammer/tech-events-calendar/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22good+first+issue%22).
+- Teach your friends to use Git and GitHub by guiding them through the process of making a contribution to this project. We are already doing good practices such as automated tests, CI and CD, so this project can be useful for introducing people to modern software development.
+- Report bugs, suggest design/UX improvements, [file an issue](https://github.com/ThaiProgrammer/tech-events-calendar/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc).
