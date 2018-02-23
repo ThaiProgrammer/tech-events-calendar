@@ -4,7 +4,9 @@
 
 [**calendar.thaiprogrammer.org**](https://calendar.thaiprogrammer.org/) เป็นโปรเจกต์เพื่อรวบรวมข้อมูลของ Tech events ต่างๆ เพื่อให้ง่ายต่อการค้นหา และเพื่อส่งเสริมให้คนสาย Tech ในไทย ได้มาพบปะเจอกันมากขึ้น
 
-โดยโปรเจกต์นี้แบ่งเป็น 3 ส่วน:
+![Screenshot](./docs/images/screenshot.png)
+
+โปรเจกต์นี้แบ่งเป็น 3 ส่วน:
 
 1. โฟลเดอร์ [`data`](data) เก็บไฟล์ข้อมูลเกี่ยวกับ Tech event ต่างๆ
 2. โฟลเดอร์ [`scripts`](scripts) และ [`lib`](lib) เก็บโค้ดสำหรับอ่านไฟล์ข้อมูลในข้อ 1 เพื่อสร้างเป็นไฟล์ [JSON](https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json) (สำหรับให้นักพัฒนาไปใช้ต่อ) และไฟล์ [ICS](https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.ics) (เพื่อเชื่อมกับ [Google Calendar](https://calendar.google.com/calendar/embed?src=j5i0o6v2ihfboe19upl9lhonbci6ankr%40import.calendar.google.com&ctz=Asia%2FBangkok) ให้คนมากดติดตามได้ง่ายๆ)
@@ -45,16 +47,15 @@
 - สั่ง `yarn website` เพื่อเปิดเซิฟเวอร์สำหรับพัฒนาเว็บไซต์ โดยสามารถดูเว็บไซต์ได้ที่ http://localhost:8080
 
 
+## Contributing
 
+โปรเจกต์นี้ถูกพัฒนาโดย Community โดยคุณเองก็สามารถช่วยพัฒนาโปรเจกต์นี้ให้ไปข้างไหนได้เช่นกัน โดยมีหลายช่องท่าง เช่น:
 
-
-
-
-
-
-
-
-
-
-
-
+- แชร์และโปรโหมตเว็บ [calendar.thaiprogrammer.org](https://calendar.thaiprogrammer.org/) ให้เป็นที่รู้จักมากขึ้น ส่งโปรเจกต์นี้ให้เพื่อนดู ชวนกันมา Contribute ชวนเพื่อนไปงาน Event ต่างๆ
+- [ส่งข้อมูลงาน Tech event ที่ยังไม่อยู่ในระบบ](https://github.com/ThaiProgrammer/tech-events-calendar/blob/master/CONTRIBUTING.md#missing-events) เพื่อให้ข้อมูลไม่รก ช่วย
+- ช่วยแก้ไขข้อมูลที่ไม่ถูกต้อง โดยในหน้าเว็บ คุณสามารถกดปุ่ม “Edit on GitHub” เพื่อแก้ไขข้อมูลบน GitHub ได้เลย และส่ง Pull request มาให้เรา
+- ช่วยเขียนคู่มือ เพื่อให้มือใหม่สามารถเข้ามาช่วยพัฒนาโปรเจกต์นี้ได้ง่ายขึ้น
+- แก้บั๊ก หรือเพิ่มฟีเจอร์ต่างๆ
+  - หากคุณไม่รู้จะช่วยตรงไหนดี [ลองดู Issue ที่แปะป้าย `help wanted`](https://github.com/ThaiProgrammer/tech-events-calendar/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22help+wanted%22)
+  - สำหรับมือใหม่ แนะนำให้ดู Issue ที่มีป้าย [`good first issue`](https://github.com/ThaiProgrammer/tech-events-calendar/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22good+first+issue%22)
+- รายงานบั๊ก เสนอไอเดียต่างๆ เพื่อให้โปรเจกต์นี้ดีขึ้น โดยสามารถสร้าง [Issue](https://github.com/ThaiProgrammer/tech-events-calendar/issues) ใน Repository นี้ (เขียนเป็นภาษาไทยได้)
