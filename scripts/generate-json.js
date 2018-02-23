@@ -67,6 +67,7 @@ function main () {
         }
         events.push(event)
       } catch (e) {
+        console.error('Caught error while parsing markdown:', e.stack)
         diagnostic.errors.push({
           location: {
             filename: file,

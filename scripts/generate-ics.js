@@ -47,7 +47,7 @@ function generateICS () {
       }
       vEvent.setSummary(event.title)
       vEvent.setLocation(event.location.title)
-      const url = 'https://github.com/ThaiProgrammer/tech-events-calendar#' + event.id
+      const url = 'https://calendar.thaiprogrammer.org/event/' + event.id
       vEvent.addProperty('URL', url)
       vEvent.setDescription(event.summary + '\n\n' + event.description + '\n\n' + url)
       vEvent.addProperty('CATEGORIES', event.categories)
