@@ -13,6 +13,8 @@ You can also contribute the event data directly and send us a pull request.
 To avoid information clutter on this calendar, here is the guideline of what should be in the calendar.
 
 - It should be a public event (e.g. meetups, conferences, hackathons, workshop).
+    - The event should be organized _for_ the community. (Events organized by businesses are OK, but they should be for the benefit of the community.)
+    - Therefore, paid training courses and paid workshops of commercial nature are not allowed.
 - The location and topics should already be determined.
 - For recurring events, only 1 upcoming event should be on the calendar.
 
