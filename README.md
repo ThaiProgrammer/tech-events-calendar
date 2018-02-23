@@ -52,7 +52,7 @@
 โปรเจกต์นี้ถูกพัฒนาโดย Community โดยคุณเองก็สามารถช่วยพัฒนาโปรเจกต์นี้ให้ไปข้างไหนได้เช่นกัน โดยมีหลายช่องท่าง เช่น:
 
 - แชร์และโปรโหมตเว็บ [calendar.thaiprogrammer.org](https://calendar.thaiprogrammer.org/) ให้เป็นที่รู้จักมากขึ้น ส่งโปรเจกต์นี้ให้เพื่อนดู ชวนกันมา Contribute ชวนเพื่อนไปงาน Event ต่างๆ
-- [ส่งข้อมูลงาน Tech event ที่ยังไม่อยู่ในระบบ](https://github.com/ThaiProgrammer/tech-events-calendar/blob/master/CONTRIBUTING.md#missing-events) เพื่อให้ข้อมูลไม่รก ช่วย
+- [ส่งข้อมูลงาน Tech event ที่ยังไม่อยู่ในระบบ](https://github.com/ThaiProgrammer/tech-events-calendar/blob/master/CONTRIBUTING.md#missing-events)
 - ช่วยแก้ไขข้อมูลที่ไม่ถูกต้อง โดยในหน้าเว็บ คุณสามารถกดปุ่ม “Edit on GitHub” เพื่อแก้ไขข้อมูลบน GitHub ได้เลย และส่ง Pull request มาให้เรา
 - ช่วยเขียนคู่มือ เพื่อให้มือใหม่สามารถเข้ามาช่วยพัฒนาโปรเจกต์นี้ได้ง่ายขึ้น
 - แก้บั๊ก หรือเพิ่มฟีเจอร์ต่างๆ
