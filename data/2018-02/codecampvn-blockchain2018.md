@@ -1,4 +1,5 @@
 ---
+id: codecampvn-blockchain2018
 date: '2018-02-24'
 time: 19:00 ~ 22:00
 categories:
