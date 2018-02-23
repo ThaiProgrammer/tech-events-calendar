@@ -18,8 +18,10 @@
   },
   "private": "true",
   "scripts": {
-    "build": "node scripts/generate-json.js && node scripts/generate-svg.js && node scripts/generate-ics.js && (cd website && yarn build) && cp -Rv website/dist/index.html website/dist/static public",
-    "netlify": "(curl -o- -L https://yarnpkg.com/install.sh | bash) && ~/.yarn/bin/yarn && yarn build"
+    "build-json": "node scripts/generate-json.js",
+    "build": "yarn run build-json && node scripts/generate-svg.js && node scripts/generate-ics.js && (cd website && yarn run build) && cp -Rv website/dist/index.html website/dist/static public",
+    "netlify": "(curl -o- -L https://yarnpkg.com/install.sh | bash) && ~/.yarn/bin/yarn && yarn run build",
+    "dev": "cd website && yarn dev"
   },
   "devDependencies": {
     "jest": "^22.3.0",

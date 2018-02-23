@@ -85,6 +85,11 @@ function main () {
       console.log('* Written calendar to', path)
     } else {
       console.log('* Not writing because of error')
+      for (const error of diagnostic.errors) {
+        console.log('')
+        console.log(error.location.filename)
+        console.log(error.message)
+      }
     }
   } catch (e) {
     if (!e.location) {
