@@ -58,4 +58,5 @@
 - แก้บั๊ก หรือเพิ่มฟีเจอร์ต่างๆ
   - หากคุณไม่รู้จะช่วยตรงไหนดี [ลองดู Issue ที่แปะป้าย `help wanted`](https://github.com/ThaiProgrammer/tech-events-calendar/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22help+wanted%22)
   - สำหรับมือใหม่ แนะนำให้ดู Issue ที่มีป้าย [`good first issue`](https://github.com/ThaiProgrammer/tech-events-calendar/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22good+first+issue%22)
+- สอนเพื่อนของคุณใช้งาน GitHub โดยให้ลองมาร่วมพัฒนาและปรับปรุงโปรเจกต์นี้
 - รายงานบั๊ก เสนอไอเดียต่างๆ เพื่อให้โปรเจกต์นี้ดีขึ้น โดยสามารถสร้าง [Issue](https://github.com/ThaiProgrammer/tech-events-calendar/issues) ใน Repository นี้ (เขียนเป็นภาษาไทยได้)
