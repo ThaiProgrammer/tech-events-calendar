@@ -5,6 +5,9 @@ categories:
   - Conference
 topics:
   - Blockchain
+location:
+  url: https://www.google.com/maps/place/The+Knowledge+Exchange:+KX/@13.720493,100.4961223,17z/data=!3m1!4b1!4m5!3m4!1s0x30e298ee5d02d0a3:0xe2511ae461733d57!8m2!3d13.7204878!4d100.498311
+  title: 'The Knowledge Exchange: KX'
 links:
   - type: website
     url: http://codecampvn.me/blockchain2018
