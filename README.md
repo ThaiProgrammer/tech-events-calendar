@@ -4,7 +4,7 @@
 
 [**calendar.thaiprogrammer.org**](https://calendar.thaiprogrammer.org/) เป็นโปรเจกต์เพื่อรวบรวมข้อมูลของ Tech events ต่างๆ เพื่อให้ง่ายต่อการติดตาม ค้นหา และเพื่อส่งเสริมให้คนสาย Tech ในไทย ได้มาพบปะเจอกันมากขึ้น
 
-![Screenshot](./docs/images/screenshot.png)
+[![Screenshot](./docs/images/screenshot.png)](https://calendar.thaiprogrammer.org/)
 
 โปรเจกต์นี้แบ่งเป็น 3 ส่วน:
 
