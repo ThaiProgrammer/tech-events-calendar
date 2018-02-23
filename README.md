@@ -49,8 +49,9 @@
 
 ## Contributing
 
-โปรเจกต์นี้ถูกพัฒนาโดย Community โดยคุณเองก็สามารถช่วยพัฒนาโปรเจกต์นี้ให้ไปข้างไหนได้เช่นกัน โดยมีหลายช่องท่าง เช่น:
+โปรเจกต์นี้ถูกพัฒนาโดย Community โดยคุณเองก็สามารถช่วยพัฒนาโปรเจกต์นี้ให้ไปข้างหน้าได้เช่นกัน โดยมีหลายช่องท่าง เช่น:
 
+- กด Star ที่ Repo นี้
 - แชร์และโปรโหมตเว็บ [calendar.thaiprogrammer.org](https://calendar.thaiprogrammer.org/) ให้เป็นที่รู้จักมากขึ้น ส่งโปรเจกต์นี้ให้เพื่อนดู ชวนกันมา Contribute ชวนเพื่อนไปงาน Event ต่างๆ
 - [ส่งข้อมูลงาน Tech event ที่ยังไม่อยู่ในระบบ](https://github.com/ThaiProgrammer/tech-events-calendar/blob/master/CONTRIBUTING.md#missing-events)
 - ช่วยแก้ไขข้อมูลที่ไม่ถูกต้อง โดยในหน้าเว็บ คุณสามารถกดปุ่ม “Edit on GitHub” เพื่อแก้ไขข้อมูลบน GitHub ได้เลย และส่ง Pull request มาให้เรา
