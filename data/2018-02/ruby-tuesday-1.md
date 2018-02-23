@@ -1,7 +1,7 @@
 ---
 id: ruby-tuesday-1-246894729
 date: '2018-02-27'
-time: 18:30 ~ 20:30++
+time: 19:00 ~ 20:30++
 categories:
   - Meetup
 topics:
