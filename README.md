@@ -2,7 +2,7 @@
 
 # ThaiProgrammer/tech-events-calendar
 
-[**calendar.thaiprogrammer.org**](https://calendar.thaiprogrammer.org/) เป็นโปรเจกต์เพื่อรวบรวมข้อมูลของ Tech events ต่างๆ เพื่อให้ง่ายต่อการค้นหา และเพื่อส่งเสริมให้คนสาย Tech ในไทย ได้มาพบปะเจอกันมากขึ้น
+[**calendar.thaiprogrammer.org**](https://calendar.thaiprogrammer.org/) เป็นโปรเจกต์เพื่อรวบรวมข้อมูลของ Tech events ต่างๆ เพื่อให้ง่ายต่อการติดตาม ค้นหา และเพื่อส่งเสริมให้คนสาย Tech ในไทย ได้มาพบปะเจอกันมากขึ้น
 
 ![Screenshot](./docs/images/screenshot.png)
 
