@@ -2,9 +2,10 @@
 
 const data = require('../public/calendar')
 const icalendar = require('icalendar')
+const ICalendar = icalendar.iCalendar
 
 function generateICS () {
-  const ical = new icalendar.iCalendar()
+  const ical = new ICalendar()
   for (const event of generateEvents()) {
     ical.addComponent(event)
   }
@@ -13,9 +14,8 @@ function generateICS () {
   function generateEvents () {
     const result = []
     for (const event of data) {
-      const genDate = new Date()
       const vEvent = new icalendar.VEvent(`${event.id}@thaiprogrammer-calendar`)
-      let start, end, startDate, endDate
+      let startDate, endDate
 
       if (event.time != null) {
         const total = event.time.length
