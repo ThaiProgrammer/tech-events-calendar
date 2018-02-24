@@ -62,9 +62,9 @@ function generateSVG (year, month) {
       const count = occupiedCells[occupationKey(new Date(year, month, date))] || 0
       const cellColor = count <= 0 ? '#eee'
         : count <= 1 ? '#c6e48b'
-        : count <= 2 ? '#7bc96f'
-        : count <= 3 ? '#239a3b'
-        : '#196127'
+          : count <= 2 ? '#7bc96f'
+            : count <= 3 ? '#239a3b'
+              : '#196127'
       return [
         `<rect x="${x + 1}" y="${y + 1}" width="${cellWidth - 2}" height="${cellHeight - 2}" fill="${cellColor}" />`,
         `<text x="${x + cellWidth / 2}" y="${y + 16}" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="${count > 0 ? 'bold' : 'normal'}" fill="#333333" text-anchor="middle">${date}</text>`

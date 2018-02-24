@@ -120,7 +120,7 @@ function validateJson (json) {
   const usedIds = { }
   for (const event of json) {
     if (usedIds[event.id]) {
-      const error/*: any*/ = new Error(
+      const error/*: any */ = new Error(
         'Validation error at ' + formatLocation(event.declared) + ': ' +
         'Duplicate event ID "' + event.id + '" ' +
         '(previously declared at ' + formatLocation(usedIds[event.id].declared) + ')'
