@@ -21,18 +21,17 @@ const store = new Vuex.Store({
     }
   },
   actions: {
-    load ({ commit }) {
-      var base = /deploy-preview.*netlify/.test(window.location.host)
-        ? ''
-        : 'https://thaiprogrammer-tech-events-calendar.spacet.me'
-      fetch(base + '/calendar.json')
-        .then((response) => response.json())
-        .then((events) => {
-          commit('eventsLoaded', { events })
-        })
-        .catch((error) => {
-          commit('eventsFailedToLoad', { error })
-        })
+    async load ({ commit }) {
+      try {
+        var base = /deploy-preview.*netlify/.test(window.location.host)
+          ? ''
+          : 'https://thaiprogrammer-tech-events-calendar.spacet.me'
+        const events = await fetch(base + '/calendar.json')
+          .then((response) => response.json())
+        commit('eventsLoaded', { events })
+      } catch (error) {
+        commit('eventsFailedToLoad', { error })
+      }
     }
   }
 })
