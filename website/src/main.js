@@ -1,3 +1,4 @@
+import 'whatwg-fetch'
 import './primer.scss'
 import 'vue-octicon/icons/calendar'
 import 'vue-octicon/icons/clock'
