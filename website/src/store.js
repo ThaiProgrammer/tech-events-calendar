@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import fetch from 'whatwg-fetch'
 
 Vue.use(Vuex)
 
@@ -21,7 +22,7 @@ const store = new Vuex.Store({
   },
   actions: {
     load ({ commit }) {
-      var base = /deploy-preview.*netlify/.test(location.host)
+      var base = /deploy-preview.*netlify/.test(window.location.host)
         ? ''
         : 'https://thaiprogrammer-tech-events-calendar.spacet.me'
       fetch(base + '/calendar.json')

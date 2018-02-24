@@ -16,7 +16,8 @@
     "vue-analytics": "^5.9.0",
     "vue-octicon": "^2.1.1",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
