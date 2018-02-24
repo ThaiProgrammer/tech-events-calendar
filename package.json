@@ -30,5 +30,11 @@
     "jest": "^22.3.0",
     "pretty-format": "^22.1.0",
     "standard": "^11.0.0"
+  },
+  "standard": {
+    "ignore": [
+      "website/dist",
+      "public/static"
+    ]
   }
 }
