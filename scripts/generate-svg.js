@@ -18,7 +18,7 @@ for (const event of data) {
     const key = occupationKey(date)
     occupiedCells[key] = (occupiedCells[key] || 0) + 1
     date.setDate(date.getDate() + 1)
-  } while (date <= endDate)
+  } while (date.valueOf() <= endDate.valueOf())
 }
 
 const monthName = [
