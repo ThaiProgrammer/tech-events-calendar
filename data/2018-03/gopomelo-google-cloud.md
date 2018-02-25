@@ -1,6 +1,6 @@
 ---
 id: gopomelo-google-cloud-infra-workshop-3
-date: 2018-03-14
+date: '2018-03-14'
 time: 14:00 ~ 17:00
 categories:
   - Workshop
