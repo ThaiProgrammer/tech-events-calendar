@@ -15,7 +15,7 @@
         </strong>
       </div>
       <div class="event-summary">
-        {{event.summary}}
+        <markdown :text="event.summary"></markdown>
       </div>
       <div class="mt-1">
         <event-tags :event="event"></event-tags>
@@ -26,6 +26,7 @@
 
 <script>
 import EventTags from './EventTags'
+import Markdown from './Markdown'
 
 export default {
   props: [ 'event' ],
@@ -51,7 +52,8 @@ export default {
     }
   },
   components: {
-    EventTags
+    EventTags,
+    Markdown
   }
 }
 </script>
