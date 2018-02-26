@@ -37,7 +37,7 @@
               <span class="info-text">
                 <a target="_blank" :href="event.location.url">{{event.location.title}}</a>
                 <span class="info-extended text-gray f6" v-if="event.location.detail">
-                  <markdown :text="event.location.detail"></markdown>
+                  <markdown :text="event.location.detail" :inline="true"></markdown>
                 </span>
               </span>
             </li>

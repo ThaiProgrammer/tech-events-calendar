@@ -8,10 +8,10 @@ import MarkdownIt from 'markdown-it'
 const md = MarkdownIt()
 
 export default {
-  props: ['text'],
+  props: [ 'text', 'inline' ],
   computed: {
     renderedText () {
-      return md.render(this.text)
+      return this.inline ? md.renderInline(this.text) : md.render(this.text)
     }
   }
 }
