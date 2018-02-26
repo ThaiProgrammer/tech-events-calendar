@@ -422,10 +422,150 @@ Object {
       "title": "\`links\`",
       "type": "item",
     },
+    Object {
+      "children": Array [
+        Object {
+          "result": Object {
+            "status": true,
+          },
+          "title": "is an array",
+          "type": "check",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "result": Object {
+                "status": true,
+              },
+              "title": "\`type\` is valid",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "status": true,
+              },
+              "title": "\`url\` is a string",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "status": true,
+              },
+              "title": "\`url\` is an http(s) url",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "status": true,
+              },
+              "title": "\`detail\` is an optional string",
+              "type": "check",
+            },
+          ],
+          "title": "item 0",
+          "type": "item",
+        },
+      ],
+      "title": "\`resources\`",
+      "type": "item",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "result": Object {
+            "status": true,
+          },
+          "title": "is an optional array",
+          "type": "check",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "result": Object {
+                "status": true,
+              },
+              "title": "\`type\` is valid",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "status": true,
+              },
+              "title": "\`url\` is a string",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "status": true,
+              },
+              "title": "\`url\` is an http(s) url",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "status": true,
+              },
+              "title": "\`detail\` is an optional string",
+              "type": "check",
+            },
+          ],
+          "title": "item 0",
+          "type": "item",
+        },
+        Object {
+          "children": Array [
+            Object {
+              "result": Object {
+                "status": true,
+              },
+              "title": "\`type\` is valid",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "status": true,
+              },
+              "title": "\`url\` is a string",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "status": true,
+              },
+              "title": "\`url\` is an http(s) url",
+              "type": "check",
+            },
+            Object {
+              "result": Object {
+                "status": true,
+              },
+              "title": "\`detail\` is an optional string",
+              "type": "check",
+            },
+          ],
+          "title": "item 1",
+          "type": "item",
+        },
+      ],
+      "title": "\`community_resources\`",
+      "type": "item",
+    },
   ],
   "event": Object {
     "categories": Array [
       "Workshop",
+    ],
+    "communityResources": Array [
+      Object {
+        "title": "Google Cloud on Board Bangkok 2018 Part 1",
+        "type": "video",
+        "url": "https://www.youtube.com/watch?v=63_ld1OHnC4",
+      },
+      Object {
+        "title": "Google Cloud on Board Bangkok 2018 Part 2",
+        "type": "video",
+        "url": "https://www.youtube.com/watch?v=3Mzv7GKb1f4",
+      },
     ],
     "description": "Cloud OnBoard is a free full-day instructor-led enablement and training event that will provide you with a step-by-step technical introduction to the Google Cloud Platform (GCP). Through a combination of instructor-led presentations and hands-on labs, you will learn how to get started with Google App Engine, Datastore, Storage, Container Engine, Compute Engine and Network, Big Data and Machine Learning.",
     "end": Object {
@@ -451,6 +591,13 @@ Object {
       "title": "Centara Grand at CentralWorld",
       "url": "https://www.google.com/maps/place/Centara+Grand+at+CentralWorld/@13.7477222,100.5365583,17z/data=!3m1!4b1!4m5!3m4!1s0x30e2992f7809567f:0xccc050cff0e7d234!8m2!3d13.747717!4d100.538747",
     },
+    "resources": Array [
+      Object {
+        "title": "Mock official writeup resource",
+        "type": "writeup",
+        "url": "https://cloudplatformonline.com/2018-onboard-bkk.html",
+      },
+    ],
     "start": Object {
       "date": 30,
       "month": 1,
