@@ -16,7 +16,13 @@ links:
     url: https://baoming.in
     title: Information & Ticketing Site
     price: $35
-
+resources:
+  - type: video
+    title: Morning's Livestream
+    url: https://www.youtube.com/watch?v=jpmaMMAUDU0
+  - type: video
+    title: Afternoon's Livestream
+    url: https://www.youtube.com/watch?v=OOJVpL9Nsx8
 ---
 
 # Asia-Pacific Ethereum Community Meetup
