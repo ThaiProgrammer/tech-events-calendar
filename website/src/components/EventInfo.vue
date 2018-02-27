@@ -53,7 +53,7 @@
           </a>
         </nav>
 
-        <nav class="menu mt-4" v-if="event.resources">
+        <nav class="menu mt-4" v-if="event.resources && event.resources.length > 0">
           <span class="menu-heading">Official Resources</span>
           <a v-for="resource in event.resources" :href="resource.url" class="menu-item">
             {{resource.title}} <span class="text-gray f6">({{resource.type}})</span>
@@ -61,7 +61,7 @@
           </a>
         </nav>
 
-        <nav class="menu mt-4" v-if="event.communityResources">
+        <nav class="menu mt-4" v-if="event.communityResources && event.communityResources.length > 0">
           <span class="menu-heading">Community Resources</span>
           <a v-for="resource in event.communityResources" :href="resource.url" class="menu-item">
             {{resource.title}} <span class="text-gray f6">({{resource.type}})</span>
