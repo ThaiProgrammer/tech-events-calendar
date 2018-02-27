@@ -1,6 +1,6 @@
 ---
 id: thoughtworks-talks-tech-scaled-agile-delivery-framework-3040
-date: '2018-03-17'
+date: '2018-03-07'
 time: '18:30 ~ 21:00'
 categories:
   - Meetup
