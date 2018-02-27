@@ -6,6 +6,9 @@ categories:
   - Conference
 topics:
   - AI
+location:
+  url: https://www.google.com/maps/place/Grand+Hyatt+Erawan+Bangkok/@13.7437023,100.5396588,16z/data=!4m20!1m14!4m13!1m4!2m2!1d100.547846!2d13.7429044!4e1!1m6!1m2!1s0x30e29ed0796254fd:0x9e847c23cf565839!2sGrand+Hyatt+Erawan+Bangkok,+494+Rajdamri+Road,+Khwaeng+Lumphini,+Khet+Pathum+Wan,+Bangkok+10330!2m2!1d100.5404889!2d13.7435228!3e0!3m4!1s0x0:0x9e847c23cf565839!8m2!3d13.7435228!4d100.5404889
+  title: Grand Hyatt Erawan Bangkok
 links:
   - type: website
     url: https://www.techtalkthai.com/ibm-power-your-future-with-ai-forum-invitation/
