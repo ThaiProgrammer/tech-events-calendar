@@ -23,6 +23,13 @@ links:
   - type: rsvp
     url: 'https://www.facebook.com/events/111499759572747/'
     title: Facebook event
+resources:
+  - type: video
+    url: https://www.youtube.com/playlist?list=PL37ZVnwpeshFqN5dcZ704lxI3F5iHDYkl
+    title: Recorded Talks
+  - type: video
+    url: https://www.youtube.com/playlist?list=PLECEw2eFfW7hBFd_WWQRvWyftLnlaQufC
+    title: Recorded Workshops
 ---
 # JSConf.Asia 2018
 
