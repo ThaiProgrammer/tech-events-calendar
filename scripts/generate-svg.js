@@ -73,7 +73,7 @@ function generateSVG (year, month) {
   }
 }
 
-require('child_process').execSync('mkdir -p public/generated/calendar-images')
+require('mkdirp').sync('public/generated/calendar-images')
 
 for (let year = 2018; year <= 2018; year++) {
   for (let month = 0; month <= 11; month++) {

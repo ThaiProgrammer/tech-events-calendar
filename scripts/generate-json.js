@@ -102,7 +102,7 @@ function main () {
     })
     throw e
   } finally {
-    fs.existsSync('tmp') || fs.mkdirSync('tmp')
+    require('mkdirp').sync('tmp')
     const path = 'tmp/readme-parse-diagnostic.json'
     fs.writeFileSync(path, JSON.stringify(diagnostic, null, 2))
     console.log('* Diagnostic information written to', path)
