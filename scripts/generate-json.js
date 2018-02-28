@@ -102,7 +102,7 @@ function main () {
     })
     throw e
   } finally {
-    require('child_process').execSync('mkdir -p tmp')
+    fs.existsSync('tmp') || fs.mkdirSync('tmp')
     const path = 'tmp/readme-parse-diagnostic.json'
     fs.writeFileSync(path, JSON.stringify(diagnostic, null, 2))
     console.log('* Diagnostic information written to', path)
