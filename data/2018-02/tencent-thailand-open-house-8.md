@@ -19,6 +19,10 @@ links:
   - type: rsvp
     url: https://www.facebook.com/events/2073397532701007/
     title: Facebook Event
+resources:
+  - type: video
+    url: https://www.facebook.com/TencentTHOpenHouse/videos/2635922993215074/
+    title: Facebook Live
 ---
 
 # Tencent Thailand Open House # 8 : MATH PROGRAMMING & WEB ASSEMBLY
