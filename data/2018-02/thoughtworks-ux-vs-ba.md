@@ -17,6 +17,10 @@ links:
     url: 'https://www.eventpop.me/e/2981'
     title: Event Pop
     price: FREE
+resources:
+  - type: video
+    url: https://www.facebook.com/thoughtworksthailand/videos/1905106199799926/
+    title: Facebook Live
 ---
 # ลั่นกลองรบ : ศึกระหว่าง User Experience กับ Business Analyst
 
