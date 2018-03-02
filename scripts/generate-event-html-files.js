@@ -17,25 +17,12 @@ const mkdirp = require('mkdirp')
 const path = require('path')
 const escapeHtml = require('escape-html')
 
-const findImage = (filepath) => {
-  const pngPath = filepath.replace(/\.md$/, '.png')
-  if (fs.existsSync(pngPath)) return pngPath
-}
-
 for (const event of data) {
   const id = event.id
   const outFilepath = `public/event/${id}.html`
-  const inImageFilepath = findImage(event.declared.filename)
-
-  let imageUrl = '/og-image.png'
-  if (inImageFilepath) {
-    const outImagePathname = `/event/${id}.png`
-    const outImageFilepath = `public${outImagePathname}`
-    imageUrl = outImagePathname
-    mkdirp.sync(path.dirname(outImageFilepath))
-    console.log(`Copying image "${outImageFilepath}"`)
-    fs.copyFileSync(inImageFilepath, outImageFilepath)
-  }
+  const imageUrl = event.image
+    ? `/${event.image}`
+    : '/og-image.png'
 
   const metaTags = `
     <meta property="og:title" content="${escapeHtml(event.title)}">
