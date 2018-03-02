@@ -17,19 +17,36 @@ const mkdirp = require('mkdirp')
 const path = require('path')
 const escapeHtml = require('escape-html')
 
+const findImage = (filepath) => {
+  const pngPath = filepath.replace(/\.md$/, '.png')
+  if (fs.existsSync(pngPath)) return pngPath
+}
+
 for (const event of data) {
   const id = event.id
-  const filepath = `public/event/${id}.html`
+  const outFilepath = `public/event/${id}.html`
+  const inImageFilepath = findImage(event.declared.filename)
+
+  let imageUrl = '/og-image.png'
+  if (inImageFilepath) {
+    const outImagePathname = `/event/${id}.png`
+    const outImageFilepath = `public${outImagePathname}`
+    imageUrl = outImagePathname
+    mkdirp.sync(path.dirname(outImageFilepath))
+    console.log(`Copying image "${outImageFilepath}"`)
+    fs.copyFileSync(inImageFilepath, outImageFilepath)
+  }
+
   const metaTags = `
     <meta property="og:title" content="${escapeHtml(event.title)}">
     <meta property="og:description" content="${escapeHtml(event.summary)}">
-    <meta property="og:image" content="/og-image.png">
+    <meta property="og:image" content="${imageUrl}">
   `
   const outHtml = html
     .replace(/<meta property(?:[^>"]|"([^"]*)")+>/g, '<!--og-->')
     .replace(/<!--og-->/, () => metaTags)
     .replace(/<!--og-->/g, '')
-  console.log(`Generating "${filepath}"...`)
-  mkdirp.sync(path.dirname(filepath))
-  fs.writeFileSync(filepath, outHtml)
+  console.log(`Generating "${outFilepath}"...`)
+  mkdirp.sync(path.dirname(outFilepath))
+  fs.writeFileSync(outFilepath, outHtml)
 }
