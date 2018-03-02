@@ -1,3 +1,15 @@
+// This script generates a separate HTML file for each event.
+// This allows each event’s URL to be shared easily on Facebook
+// and other social networks.
+//
+// See this issue for more information:
+// https://github.com/ThaiProgrammer/tech-events-calendar/issues/87
+//
+// 1. Reads `index.html` file (template)
+// 2. Reads `calendar.json` (data)
+// 3. For each event, create `public/event/[id].html`,
+//    replacing the meta tags.
+
 const fs = require('fs')
 const html = fs.readFileSync('public/index.html', 'utf8')
 const data = require('../public/calendar')
