@@ -6,7 +6,7 @@
     "axios": "^0.17.1",
     "common-tags": "^1.7.2",
     "escape-html": "^1.0.3",
-    "flow-bin": "^0.62.0",
+    "flow-bin": "^0.66.0",
     "format-json": "^1.0.3",
     "front-matter": "^2.3.0",
     "glob": "^7.1.2",
