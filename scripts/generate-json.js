@@ -1,7 +1,9 @@
 /** @flow */
 const fs = require('fs')
+const path = require('path')
 const parseMarkdown = require('../lib/parseMarkdown')
 const glob = require('glob')
+const mkdirp = require('mkdirp')
 
 function hasError (checks) {
   return checks.some(isError)
@@ -57,6 +59,10 @@ function main () {
           filename: file,
           line: 1,
           column: 1
+        }
+        const imageFilepath = findImage(file)
+        if (imageFilepath) {
+          event.image = copyEventImage(imageFilepath, event.id)
         }
         if (hasError(checks)) {
           diagnostic.errors.push({
@@ -134,6 +140,21 @@ function validateJson (json) {
 
 function formatLocation (location) {
   return `${location.filename}`
+}
+
+function findImage (filepath) {
+  const pngPath = filepath.replace(/\.md$/, '.png')
+  if (fs.existsSync(pngPath)) return pngPath
+}
+
+function copyEventImage (inFilepath, eventId) {
+  const extname = path.extname(inFilepath)
+  const outUrl = `event-images/${eventId}${extname}`
+  const outFilepath = `public/${outUrl}`
+  console.log(`* Copying image "${outFilepath}"`)
+  mkdirp.sync(path.dirname(outFilepath))
+  fs.copyFileSync(inFilepath, outFilepath)
+  return outUrl
 }
 
 main()
