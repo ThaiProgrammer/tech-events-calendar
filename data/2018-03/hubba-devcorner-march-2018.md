@@ -1,5 +1,5 @@
 ---
-id: hubba-devcorner-march-2018.md
+id: hubba-devcorner-march-2018
 date: '2018-03-22'
 time: 18:30 ~ 21:00
 categories:
