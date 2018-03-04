@@ -19,6 +19,13 @@ Object {
           "title": "is a string",
           "type": "check",
         },
+        Object {
+          "result": Object {
+            "status": true,
+          },
+          "title": "contains only lowercase characters, numbers, or hyphens",
+          "type": "check",
+        },
       ],
       "title": "\`id\`",
       "type": "item",
