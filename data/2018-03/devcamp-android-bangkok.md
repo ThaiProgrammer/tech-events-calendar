@@ -6,7 +6,7 @@ location:
   title: KBank Siam Pic-Ganesha Theatre
 categories:
   - Conference
-tags:
+topics:
   - Android
 links:
   - type: website
