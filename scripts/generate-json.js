@@ -145,6 +145,8 @@ function formatLocation (location) {
 function findImage (filepath) {
   const pngPath = filepath.replace(/\.md$/, '.png')
   if (fs.existsSync(pngPath)) return pngPath
+  const jpgPath = filepath.replace(/\.md$/, '.jpg')
+  if (fs.existsSync(jpgPath)) return jpgPath
 }
 
 function copyEventImage (inFilepath, eventId) {
