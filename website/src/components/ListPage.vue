@@ -76,6 +76,7 @@ export default {
           const date = new Date(event.start.year, event.start.month - 1, event.start.date)
           return date < today
         })
+        .reverse()
     },
     eventList () {
       return this.tab === 'upcoming' ? this.upcomingEvents : this.pastEvents
