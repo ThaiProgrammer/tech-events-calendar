@@ -76,16 +76,7 @@ export default {
           const date = new Date(event.start.year, event.start.month - 1, event.start.date)
           return date < today
         })
-        .sort((first, second) => {
-          const firstDate = new Date(first.start.year, first.start.month -1, first.start.date )
-          const secondDate = new Date(second.start.year, second.start.month - 1, second.start.date)
-          if (firstDate < secondDate) {
-            return 1
-          } else if (firstDate > secondDate) {
-            return -1
-          }
-          return 0
-        })
+        .reverse()
     },
     eventList () {
       return this.tab === 'upcoming' ? this.upcomingEvents : this.pastEvents
