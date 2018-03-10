@@ -1,0 +1,8 @@
+{
+    "name": "Tech events calendar",
+    "short_name": "Tech events",
+    "lang": "en-US",
+    "start_url": "/",
+    "display": "fullscreen",
+    "theme_color": "#19232d"
+  }
