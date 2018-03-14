@@ -15,7 +15,6 @@ links:
   - type: ticket
     url: https://dev.wi.th/event/android-bangkok
     title: Devcamp
-    price: FREE
   - type: rsvp
     url: https://www.facebook.com/events/417872145301444/
     title: Facebook Event
