@@ -7,7 +7,7 @@ location:
 categories:
   - Hackathon
 topics:
-  - Financial
+  - Financial Tech
 links:
   - type: website
     url: https://docs.google.com/forms/d/e/1FAIpQLSfNC8HzIRo2Ouf4CHPHwoF54ub6P6uOVmm3qviXlPt0E1he7w/viewform?fbzx=5245257866068083000
