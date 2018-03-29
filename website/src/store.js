@@ -22,10 +22,7 @@ const store = new Vuex.Store({
   actions: {
     async load ({ commit }) {
       try {
-        var base = /deploy-preview.*netlify/.test(window.location.host)
-          ? ''
-          : 'https://thaiprogrammer-tech-events-calendar.spacet.me'
-        const events = await window.fetch(base + '/calendar.json')
+        const events = await window.fetch('/calendar.json')
           .then((response) => response.json())
         commit('eventsLoaded', { events })
       } catch (error) {
