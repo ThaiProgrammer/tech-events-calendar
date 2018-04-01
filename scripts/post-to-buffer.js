@@ -56,17 +56,22 @@ async function post (event, postMode) {
     throw new Error('Must supply event')
   }
 
-  const link = `https://calendar.thaiprogrammer.org/event/${event.id}`
+  const url = `https://calendar.thaiprogrammer.org/event/${event.id}`
+  const fbEventLink = event.links
+    .filter(link => /https:\/\/(?:www|web)\.facebook\.com\/events\/\d+/.test(link.url))[0]
+  const fbEventUrl = fbEventLink && fbEventLink.url
+  const link = fbEventUrl || url
   const location = event.location && event.location.title
   const text = [
     `[Event] ${event.title}`,
     `${dates(event)}${location ? ` @ ${location}` : ''}`,
     '',
     `${event.summary}`,
-    `${hashtags([ ...event.categories, ...event.topics ])}`
+    `${hashtags([ ...event.categories, ...event.topics ])}`,
+    ...(fbEventUrl ? [ '', url ] : [ ])
   ].join('\n')
   console.log('Text to be posted:')
-  console.log(say(text))
+  console.log(say(text + '\n\n' + link))
   console.log()
 
   // Uncomment the next line for dry-run!
@@ -76,6 +81,7 @@ async function post (event, postMode) {
     text,
     profile_ids: [ '5abf3ce205fbf6386e4cebc8' ],
     media: { link },
+    shorten: 'false',
     access_token: bufferAccessToken
   })
   console.log('Post data:')
@@ -129,7 +135,7 @@ async function main () {
     ]))
     console.log(table.toString())
 
-    for (const { postMode, result, event } of results) {
+    for (const { postMode, event } of results) {
       if (postMode) await post(event, postMode)
     }
   } catch (e) {
