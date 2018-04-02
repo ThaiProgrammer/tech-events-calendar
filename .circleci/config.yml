@@ -32,3 +32,32 @@ jobs:
       - store_artifacts:
           path: ~/src/public
           prefix: public
+  facebook:
+    working_directory: ~/src
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: yarn
+          command: yarn install --frozen-lockfile
+      - run:
+          name: buffer new events
+          command: node scripts/post-to-buffer.js
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - build
+  nightly:
+    triggers:
+      - schedule:
+          cron: "30 1 * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - facebook
