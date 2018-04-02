@@ -6,7 +6,7 @@ const cowsay = require('cowsay')
 const wrapAnsi = require('wrap-ansi')
 const Table = require('cli-table')
 
-const serviceAccount = JSON.parse(new Buffer(process.env.FIREBASE_SERVICE_ACCOUNT_BASE64, 'base64').toString('utf8'))
+const serviceAccount = JSON.parse(Buffer.from(process.env.FIREBASE_SERVICE_ACCOUNT_BASE64, 'base64').toString('utf8'))
 
 const bufferAccessToken = process.env.BUFFER_ACCESS_TOKEN
 if (!bufferAccessToken) throw new Error('Env BUFFER_ACCESS_TOKEN missing')
