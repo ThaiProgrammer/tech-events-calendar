@@ -13,7 +13,7 @@ links:
   - type: ticket
     url: https://www.eventpop.me/e/3293
     title: Event Pop
-    price: 369 THB
+    price: 369 THB
   - type: rsvp
     url: https://www.facebook.com/events/185373065603790/
     title: Facebook Event
