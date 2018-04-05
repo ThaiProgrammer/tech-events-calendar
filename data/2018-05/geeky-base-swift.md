@@ -10,12 +10,16 @@ categories:
 topics:
   - Swift
 links:
-  - type: rsvp
+  - type: ticket
+    url: https://www.eventpop.me/e/3293
+    title: Event Pop
+    price: 369 THB
+  - type: rsvp
     url: https://www.facebook.com/events/185373065603790/
     title: Facebook Event
 issue: https://github.com/ThaiProgrammer/tech-events-calendar/issues/115
 ---
 
-# เขียน Swift กันค่ะ
+# Pro(Ag)gressive Swift - เขียน Swift กันค่ะ
 
 > บัตรจับมือขายทำไม มีแต่บัตรเขียนโค้ดค่ะ
