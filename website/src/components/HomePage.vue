@@ -38,6 +38,12 @@
       <h2 class="Subhead-heading">2018 calendar</h2>
     </div>
     <div class="year-calendar">
+      <!--
+        @todo #101 Replace this image list with an actual SVG calendar.
+        Tiles with no events are not clickable.
+        Tiles with events should take you to event list page, scrolling to the first event on that day,
+        possibly highlighting the events on that day.
+      -->
       <router-link to="/list">
         <img src="/generated/calendar-images/2018-01.svg" alt="January 2018" width="200" height="185" />
         <img src="/generated/calendar-images/2018-02.svg" alt="February 2018" width="200" height="185" />
