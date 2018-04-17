@@ -1,6 +1,6 @@
 ---
 id: 2600-thailand-meeting-37
-date: '2017-04-20'
+date: '2018-04-20'
 time: 18:30 ~ 21:00
 location:
   title: The Connecion Educuisine
