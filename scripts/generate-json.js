@@ -1,6 +1,7 @@
 /** @flow */
 const fs = require('fs')
 const path = require('path')
+const { dirname, basename } = path
 const parseMarkdown = require('../lib/parseMarkdown')
 const glob = require('glob')
 const mkdirp = require('mkdirp')
@@ -54,7 +55,11 @@ function main () {
     for (const file of files) {
       try {
         const md = fs.readFileSync(file, 'utf8')
-        const { checks, event } = parseMarkdown(md)
+        const yearMonthParts = basename(dirname(file)).split('-')
+        const { checks, event } = parseMarkdown(md, {
+          expectedYear: parseInt(yearMonthParts[0], 10),
+          expectedMonth: parseInt(yearMonthParts[1], 10)
+        })
         event.declared = {
           filename: file,
           line: 1,
