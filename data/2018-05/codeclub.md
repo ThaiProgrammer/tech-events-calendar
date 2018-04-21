@@ -5,6 +5,7 @@ time: 10:00 ~ 16:00
 location:
   title: Sansiri PLC Head Office
   url: https://www.google.com/maps/place/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97+%E0%B9%81%E0%B8%AA%E0%B8%99%E0%B8%AA%E0%B8%B4%E0%B8%A3%E0%B8%B4+%E0%B8%88%E0%B8%B3%E0%B8%81%E0%B8%B1%E0%B8%94+(%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%8A%E0%B8%99)+:+Sansiri+PLC+Head+office/@13.7582842,100.5334193,17z/data=!3m1!4b1!4m5!3m4!1s0x30e29eb50c4ca0b9:0xec7176713e5eafaf!8m2!3d13.758279!4d100.535608
+  detail: ชั้น 16 ห้อง 1601
 categories:
   - Codefest
 topics: [ ]
