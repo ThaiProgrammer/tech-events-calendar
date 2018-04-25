@@ -4,7 +4,7 @@ date: '2018-05-03'
 time: 18:00 ~ 21:00
 location:
   title: BIG Co-Working Space
-  url: https://www.google.co.th/maps/place/BIG+Co-working+Space/@13.7566867,100.571952,15z/data=!4m2!3m1!1s0x0:0xf2124609ad0be030?sa=X&ved=0ahUKEwjX1NOmz_zZAhWBuY8KHYfJA6UQ_BIIuwEwDg
+  url: https://www.google.com/maps/place/BIG+Co-working+Space/@13.7566867,100.571952,15z/data=!4m2!3m1!1s0x0:0xf2124609ad0be030?sa=X&ved=0ahUKEwjX1NOmz_zZAhWBuY8KHYfJA6UQ_BIIuwEwDg
 categories:
   - Meetup
 topics:
