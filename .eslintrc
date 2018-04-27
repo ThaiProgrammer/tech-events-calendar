@@ -20,7 +20,7 @@ rules:
         "test/**",
         "tests/**",
         "spec/**",
-        "config/**",
+        "**/config/**",
         "**/__tests__/**",
         "test.{js,jsx}",
         "test-*.{js,jsx}",
