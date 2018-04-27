@@ -3,40 +3,48 @@
     <nav class="UnderlineNav">
       <div class="UnderlineNav-body">
         <a
+          :class="{ selected: tab === 'upcoming' }"
           href="javascript://"
           class="UnderlineNav-item"
-          :class="{ selected: tab === 'upcoming' }"
           @click="changeTab('upcoming')"
         >
-          Upcoming events <span class="Counter">{{upcomingEvents.length}}</span>
+          Upcoming events <span class="Counter">{{ upcomingEvents.length }}</span>
         </a>
         <a
+          :class="{ selected: tab === 'past' }"
           href="javascript://"
           class="UnderlineNav-item"
-          :class="{ selected: tab === 'past' }"
           @click="changeTab('past')"
         >
-          Past events <span class="Counter">{{pastEvents.length}}</span>
+          Past events <span class="Counter">{{ pastEvents.length }}</span>
         </a>
       </div>
     </nav>
-    <div class="flash flash-error mt-4" v-if="!!error">
-      <strong>Cannot load data.</strong> {{error.toString()}}
+    <div 
+      v-if="!!error" 
+      class="flash flash-error mt-4">
+      <strong>Cannot load data.</strong> {{ error.toString() }}
     </div>
-    <div class="Box mt-4" v-if="loading">
+    <div 
+      v-if="loading" 
+      class="Box mt-4">
       <ul>
         <li class="Box-row text-center p-4">
-          <spinner></spinner>
+          <spinner/>
         </li>
       </ul>
     </div>
-    <div class="Box mt-4" v-for="group in eventGroups">
+    <div 
+      v-for="group in eventGroups" 
+      class="Box mt-4">
       <div class="Box-header">
-        <h3 class="Box-title">{{group.title}}</h3>
+        <h3 class="Box-title">{{ group.title }}</h3>
       </div>
       <ul>
-        <li class="Box-row" v-for="event in group.events">
-          <event :event="event"></event>
+        <li 
+          v-for="event in group.events" 
+          class="Box-row">
+          <event :event="event"/>
         </li>
       </ul>
     </div>
@@ -49,41 +57,48 @@ import Event from './Event'
 import Spinner from './Spinner'
 
 export default {
-  data () {
+  data() {
     const today = new Date()
     today.setHours(0, 0, 0, 0)
     return { today, tab: 'upcoming' }
   },
   methods: {
-    changeTab (tab) {
+    changeTab(tab) {
       this.tab = tab
     }
   },
   computed: {
-    ...mapState([ 'loading', 'error', 'events' ]),
-    upcomingEvents () {
+    ...mapState(['loading', 'error', 'events']),
+    upcomingEvents() {
       const { today, events } = this
-      return events
-        .filter(event => {
-          const date = new Date(event.start.year, event.start.month - 1, event.start.date)
-          return date >= today
-        })
+      return events.filter(event => {
+        const date = new Date(
+          event.start.year,
+          event.start.month - 1,
+          event.start.date
+        )
+        return date >= today
+      })
     },
-    pastEvents () {
+    pastEvents() {
       const { today, events } = this
       return events
         .filter(event => {
-          const date = new Date(event.start.year, event.start.month - 1, event.start.date)
+          const date = new Date(
+            event.start.year,
+            event.start.month - 1,
+            event.start.date
+          )
           return date < today
         })
         .reverse()
     },
-    eventList () {
+    eventList() {
       return this.tab === 'upcoming' ? this.upcomingEvents : this.pastEvents
     },
-    eventGroups () {
+    eventGroups() {
       const { today, eventList } = this
-      const groups = [ ]
+      const groups = []
       const MONTHS = [
         'January',
         'February',
@@ -102,15 +117,22 @@ export default {
       nextWeek.setDate(nextWeek.getDate() + 7 - nextWeek.getDay())
       const next2Weeks = new Date(+nextWeek)
       next2Weeks.setDate(next2Weeks.getDate() + 7)
-      const getGroupInfo = (event) => {
-        const date = new Date(event.start.year, event.start.month - 1, event.start.date)
+      const getGroupInfo = event => {
+        const date = new Date(
+          event.start.year,
+          event.start.month - 1,
+          event.start.date
+        )
         if (date >= today && date < nextWeek) {
           return { title: 'This week', id: 'this-week' }
         }
         if (date >= today && date < next2Weeks) {
           return { title: 'Next week', id: 'next-week' }
         }
-        return { title: `${MONTHS[date.getMonth()]} ${date.getFullYear()}`, id: `${date.getFullYear()}-${date.getMonth()}` }
+        return {
+          title: `${MONTHS[date.getMonth()]} ${date.getFullYear()}`,
+          id: `${date.getFullYear()}-${date.getMonth()}`
+        }
       }
       let currentGroup
       for (const event of eventList) {
@@ -119,7 +141,7 @@ export default {
           currentGroup = {
             id: groupInfo.id,
             title: groupInfo.title,
-            events: [ ]
+            events: []
           }
           groups.push(currentGroup)
         }

@@ -1,21 +1,27 @@
 <template>
   <div class="container-lg p-4">
-    <div class="text-center p-4" v-if="loading">
-      <spinner></spinner>
+    <div 
+      v-if="loading" 
+      class="text-center p-4">
+      <spinner/>
       <br>
       Loading event info…
     </div>
     <div v-if="!loading && !error">
-      <div class="blankslate blankslate-large" v-if="!event">
+      <div 
+        v-if="!event" 
+        class="blankslate blankslate-large">
         <h3>Event not found</h3>
         <p>Sorry, but the requested event cannot be found.</p>
       </div>
       <div v-if="!!event">
-        <event-info :event="event"></event-info>
+        <event-info :event="event"/>
       </div>
     </div>
-    <div class="flash flash-error" v-if="!!error">
-      <strong>Cannot load data.</strong> {{error.toString()}}
+    <div 
+      v-if="!!error" 
+      class="flash flash-error">
+      <strong>Cannot load data.</strong> {{ error.toString() }}
     </div>
   </div>
 </template>
@@ -27,11 +33,11 @@ import EventInfo from './EventInfo'
 
 export default {
   computed: {
-    id () {
+    id() {
       return this.$route.params.id
     },
-    ...mapState([ 'loading', 'error', 'events' ]),
-    event () {
+    ...mapState(['loading', 'error', 'events']),
+    event() {
       return this.events.filter(e => e.id === this.id)[0]
     }
   },

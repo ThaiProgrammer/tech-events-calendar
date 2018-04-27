@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="Subhead">
-      <h2 class="Subhead-heading">{{event.title}}</h2>
+      <h2 class="Subhead-heading">{{ event.title }}</h2>
       <div class="mt-1">
-        <event-tags :event="event"></event-tags>
+        <event-tags :event="event"/>
       </div>
     </div>
     <div class="clearfix mt-4">
@@ -12,32 +12,44 @@
           <ul>
             <li class="Box-row info-row">
               <span class="info-icon">
-                <octicon name="calendar"></octicon>
+                <octicon name="calendar"/>
               </span>
               <span class="info-text">
-                <strong>{{startDate}}</strong> ({{day(event.start)}})
-                <span v-if="startDate !== endDate"> ~ <strong>{{endDate}}</strong> ({{day(event.end)}})</span>
+                <strong>{{ startDate }}</strong> ({{ day(event.start) }})
+                <span v-if="startDate !== endDate"> ~ <strong>{{ endDate }}</strong> ({{ day(event.end) }})</span>
               </span>
             </li>
-            <li class="Box-row info-row" v-if="event.time && event.time.length > 0">
+            <li 
+              v-if="event.time && event.time.length > 0" 
+              class="Box-row info-row">
               <span class="info-icon">
-                <octicon name="clock"></octicon>
+                <octicon name="clock"/>
               </span>
               <div class="info-text">
-                <div v-for="t of event.time" class="info-time">
-                  <strong>{{formatTime(t.from)}} ~ {{formatTime(t.to)}}{{t.after ? '++' : ''}}</strong>
-                  <span class="info-extended text-gray f6" v-if="t.agenda">{{t.agenda}}</span>
+                <div 
+                  v-for="t of event.time" 
+                  class="info-time">
+                  <strong>{{ formatTime(t.from) }} ~ {{ formatTime(t.to) }}{{ t.after ? '++' : '' }}</strong>
+                  <span 
+                    v-if="t.agenda" 
+                    class="info-extended text-gray f6">{{ t.agenda }}</span>
                 </div>
               </div>
             </li>
             <li class="Box-row info-row">
               <span class="info-icon">
-                <octicon name="location"></octicon>
+                <octicon name="location"/>
               </span>
               <span class="info-text">
-                <a target="_blank" :href="event.location.url">{{event.location.title}}</a>
-                <span class="info-extended text-gray f6" v-if="event.location.detail">
-                  <markdown :text="event.location.detail" :inline="true"></markdown>
+                <a 
+                  :href="event.location.url" 
+                  target="_blank">{{ event.location.title }}</a>
+                <span 
+                  v-if="event.location.detail" 
+                  class="info-extended text-gray f6">
+                  <markdown 
+                    :text="event.location.detail" 
+                    :inline="true"/>
                 </span>
               </span>
             </li>
@@ -46,35 +58,58 @@
 
         <nav class="menu mt-4">
           <span class="menu-heading">Links</span>
-          <a v-for="link in event.links" :href="link.url" class="menu-item">
-            {{link.title}} <span class="text-gray f6">({{link.type}})</span>
-            <span class="info-extended text-gray f6" v-if="link.detail">{{link.detail}}</span>
-            <span class="info-extended text-gray f6" v-if="link.price">{{link.price}}</span>
+          <a 
+            v-for="link in event.links" 
+            :href="link.url" 
+            class="menu-item">
+            {{ link.title }} <span class="text-gray f6">({{ link.type }})</span>
+            <span 
+              v-if="link.detail" 
+              class="info-extended text-gray f6">{{ link.detail }}</span>
+            <span 
+              v-if="link.price" 
+              class="info-extended text-gray f6">{{ link.price }}</span>
           </a>
         </nav>
 
-        <nav class="menu mt-4" v-if="event.resources && event.resources.length > 0">
+        <nav 
+          v-if="event.resources && event.resources.length > 0" 
+          class="menu mt-4">
           <span class="menu-heading">Official Resources</span>
-          <a v-for="resource in event.resources" :href="resource.url" class="menu-item">
-            {{resource.title}} <span class="text-gray f6">({{resource.type}})</span>
-            <span class="info-extended text-gray f6" v-if="resource.detail">{{resource.detail}}</span>
+          <a 
+            v-for="resource in event.resources" 
+            :href="resource.url" 
+            class="menu-item">
+            {{ resource.title }} <span class="text-gray f6">({{ resource.type }})</span>
+            <span 
+              v-if="resource.detail" 
+              class="info-extended text-gray f6">{{ resource.detail }}</span>
           </a>
         </nav>
 
-        <nav class="menu mt-4" v-if="event.communityResources && event.communityResources.length > 0">
+        <nav 
+          v-if="event.communityResources && event.communityResources.length > 0" 
+          class="menu mt-4">
           <span class="menu-heading">Community Resources</span>
-          <a v-for="resource in event.communityResources" :href="resource.url" class="menu-item">
-            {{resource.title}} <span class="text-gray f6">({{resource.type}})</span>
-            <span class="info-extended text-gray f6" v-if="resource.detail">{{resource.detail}}</span>
+          <a 
+            v-for="resource in event.communityResources" 
+            :href="resource.url" 
+            class="menu-item">
+            {{ resource.title }} <span class="text-gray f6">({{ resource.type }})</span>
+            <span 
+              v-if="resource.detail" 
+              class="info-extended text-gray f6">{{ resource.detail }}</span>
           </a>
         </nav>
       </div>
       <div class="col-lg-9 col-md-8 col-12 float-left">
         <div class="markdown-body">
-          <markdown :text="description"></markdown>
+          <markdown :text="description"/>
         </div>
         <p class="text-right mt-4">
-          <a :href="editLink" class="btn btn-secondary">Edit on GitHub</a>
+          <a 
+            :href="editLink" 
+            class="btn btn-secondary">Edit on GitHub</a>
         </p>
       </div>
     </div>
@@ -87,9 +122,33 @@ import EventTags from './EventTags'
 import Markdown from './Markdown'
 
 export default {
-  props: [ 'event' ],
+  components: {
+    Octicon,
+    EventTags,
+    Markdown
+  },
+  props: ['event'],
+  computed: {
+    startDate() {
+      return this.formatDate(this.event.start)
+    },
+    endDate() {
+      return this.formatDate(this.event.end)
+    },
+    editLink() {
+      return `https://thaiprogrammer-tech-events-calendar.spacet.me/go/?edit=${
+        this.event.id
+      }`
+    },
+    href() {
+      return `/event/${this.event.id}`
+    },
+    description() {
+      return `> ${this.event.summary}\n\n${this.event.description}`
+    }
+  },
   methods: {
-    formatDate (d) {
+    formatDate(d) {
       const MONTHS = [
         'January',
         'February',
@@ -106,35 +165,13 @@ export default {
       ]
       return `${MONTHS[d.month - 1]} ${d.date}`
     },
-    day (d) {
+    day(d) {
       const date = new Date(d.year, d.month - 1, d.date)
       return ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][date.getDay()]
     },
-    formatTime (t) {
-      return t.hour + ':' + (t.minute < 10 ? '0' : '') + t.minute
+    formatTime(t) {
+      return `${t.hour}:${t.minute < 10 ? '0' : ''}${t.minute}`
     }
-  },
-  computed: {
-    startDate () {
-      return this.formatDate(this.event.start)
-    },
-    endDate () {
-      return this.formatDate(this.event.end)
-    },
-    editLink () {
-      return `https://thaiprogrammer-tech-events-calendar.spacet.me/go/?edit=${this.event.id}`
-    },
-    href () {
-      return `/event/${this.event.id}`
-    },
-    description () {
-      return '> ' + this.event.summary + '\n\n' + this.event.description
-    }
-  },
-  components: {
-    Octicon,
-    EventTags,
-    Markdown
   }
 }
 </script>

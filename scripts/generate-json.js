@@ -1,45 +1,46 @@
 /** @flow */
 const fs = require('fs')
 const path = require('path')
+
 const { dirname, basename } = path
 const parseMarkdown = require('../lib/parseMarkdown')
 const glob = require('glob')
 const mkdirp = require('mkdirp')
 
-function hasError (checks) {
+function hasError(checks) {
   return checks.some(isError)
-  function isError (node) {
+  function isError(node) {
     if (node.type === 'item') {
-      return (node.children || [ ]).some(isError)
+      return (node.children || []).some(isError)
     }
     if (node.type === 'check') {
       return node.result.status === false
     }
-    throw new Error('Invalid node type: ' + node.type)
+    throw new Error(`Invalid node type: ${node.type}`)
   }
 }
 
-function formatError (checks) {
-  const out = [ ]
+function formatError(checks) {
+  const out = []
   const traverse = (node, prefix) => {
     if (node.type === 'item') {
-      out.push(prefix + '  - ✴️ ' + node.title)
-      return (node.children || [ ]).forEach(child => traverse(child, prefix + '    '))
+      out.push(`${prefix}  - ✴️ ${node.title}`)
+      return (node.children || []).forEach(child =>
+        traverse(child, `${prefix}    `)
+      )
     }
     if (node.type === 'check') {
       if (node.result.status === true) {
-        out.push(prefix + '  - ✅ ' + node.title)
+        out.push(`${prefix}  - ✅ ${node.title}`)
       } else if (node.result.status === false) {
-        const message = node.result.message
-          ? `: ${node.result.message}`
-          : ''
-        out.push(prefix + '  - ❌ ' + node.title + message)
+        const message = node.result.message ? `: ${node.result.message}` : ''
+        out.push(`${prefix}  - ❌ ${node.title}${message}`)
       } else {
-        out.push(prefix + '  - *️⃣ ' + node.title)
+        out.push(`${prefix}  - *️⃣ ${node.title}`)
       }
       return
     }
-    throw new Error('Invalid node type: ' + node.type)
+    throw new Error(`Invalid node type: ${node.type}`)
   }
   for (const node of checks) {
     traverse(node, '')
@@ -47,11 +48,11 @@ function formatError (checks) {
   return out.join('\n')
 }
 
-function main () {
-  const diagnostic = { errors: [ ] }
+function main() {
+  const diagnostic = { errors: [] }
   const files = glob.sync('data/*/*.md')
   try {
-    const events = [ ]
+    const events = []
     for (const file of files) {
       try {
         const md = fs.readFileSync(file, 'utf8')
@@ -120,21 +121,25 @@ function main () {
   }
 }
 
-function compareEvents (a, b) {
-  return (a.start.year - b.start.year) ||
-    (a.start.month - b.start.month) ||
-    (a.start.date - b.start.date) ||
+function compareEvents(a, b) {
+  return (
+    a.start.year - b.start.year ||
+    a.start.month - b.start.month ||
+    a.start.date - b.start.date ||
     (a.id < b.id ? -1 : 1)
+  )
 }
 
-function validateJson (json) {
-  const usedIds = { }
+function validateJson(json) {
+  const usedIds = {}
   for (const event of json) {
     if (usedIds[event.id]) {
-      const error/*: any */ = new Error(
-        'Validation error at ' + formatLocation(event.declared) + ': ' +
-        'Duplicate event ID "' + event.id + '" ' +
-        '(previously declared at ' + formatLocation(usedIds[event.id].declared) + ')'
+      const error /* : any */ = new Error(
+        `Validation error at ${formatLocation(event.declared)}: ` +
+          `Duplicate event ID "${event.id}" ` +
+          `(previously declared at ${formatLocation(
+            usedIds[event.id].declared
+          )})`
       )
       error.location = event.declared
       throw error
@@ -143,18 +148,18 @@ function validateJson (json) {
   }
 }
 
-function formatLocation (location) {
+function formatLocation(location) {
   return `${location.filename}`
 }
 
-function findImage (filepath) {
+function findImage(filepath) {
   const pngPath = filepath.replace(/\.md$/, '.png')
   if (fs.existsSync(pngPath)) return pngPath
   const jpgPath = filepath.replace(/\.md$/, '.jpg')
   if (fs.existsSync(jpgPath)) return jpgPath
 }
 
-function copyEventImage (inFilepath, eventId) {
+function copyEventImage(inFilepath, eventId) {
   const extname = path.extname(inFilepath)
   const outUrl = `event-images/${eventId}${extname}`
   const outFilepath = `public/${outUrl}`

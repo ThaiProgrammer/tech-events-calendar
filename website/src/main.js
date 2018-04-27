@@ -24,8 +24,8 @@ new Vue({
   el: '#app',
   router,
   store,
-  render: h => h(App),
-  created () {
+  created() {
     this.$store.dispatch('load')
-  }
+  },
+  render: h => h(App)
 })

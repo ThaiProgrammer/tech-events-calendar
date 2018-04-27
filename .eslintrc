@@ -4,3 +4,20 @@ extends:
   - airbnb
   - plugin:vue/recommended
   - plugin:prettier/recommended
+rules:
+  import/extensions: ['error', 'ignorePackages', {
+    js: 'never',
+    mjs: 'never',
+    jsx: 'never',
+    vue: 'never',
+  }]
+  vue/require-default-prop: off
+settings:
+  import/extensions:
+    - .js
+    - .vue
+  import/resolver:
+    node:
+      extensions:
+        - .js
+        - .vue
