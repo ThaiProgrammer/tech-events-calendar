@@ -33,7 +33,9 @@ export default {
     EventTags,
     Markdown
   },
-  props: ['event'],
+  props: {
+    event: Object
+  },
   computed: {
     startDate() {
       return this.formatDate(this.event.start)

@@ -19,19 +19,20 @@
                 <span v-if="startDate !== endDate"> ~ <strong>{{ endDate }}</strong> ({{ day(event.end) }})</span>
               </span>
             </li>
-            <li 
-              v-if="event.time && event.time.length > 0" 
+            <li
+              v-if="event.time && event.time.length > 0"
               class="Box-row info-row">
               <span class="info-icon">
                 <octicon name="clock"/>
               </span>
               <div class="info-text">
-                <div 
-                  v-for="t of event.time" 
+                <div
+                  v-for="(t, index) in event.time"
+                  :key="index"
                   class="info-time">
                   <strong>{{ formatTime(t.from) }} ~ {{ formatTime(t.to) }}{{ t.after ? '++' : '' }}</strong>
-                  <span 
-                    v-if="t.agenda" 
+                  <span
+                    v-if="t.agenda"
                     class="info-extended text-gray f6">{{ t.agenda }}</span>
                 </div>
               </div>
@@ -41,14 +42,14 @@
                 <octicon name="location"/>
               </span>
               <span class="info-text">
-                <a 
-                  :href="event.location.url" 
+                <a
+                  :href="event.location.url"
                   target="_blank">{{ event.location.title }}</a>
-                <span 
-                  v-if="event.location.detail" 
+                <span
+                  v-if="event.location.detail"
                   class="info-extended text-gray f6">
-                  <markdown 
-                    :text="event.location.detail" 
+                  <markdown
+                    :text="event.location.detail"
                     :inline="true"/>
                 </span>
               </span>
@@ -58,46 +59,49 @@
 
         <nav class="menu mt-4">
           <span class="menu-heading">Links</span>
-          <a 
-            v-for="link in event.links" 
-            :href="link.url" 
+          <a
+            v-for="link in event.links"
+            :key="link.url"
+            :href="link.url"
             class="menu-item">
             {{ link.title }} <span class="text-gray f6">({{ link.type }})</span>
-            <span 
-              v-if="link.detail" 
+            <span
+              v-if="link.detail"
               class="info-extended text-gray f6">{{ link.detail }}</span>
-            <span 
-              v-if="link.price" 
+            <span
+              v-if="link.price"
               class="info-extended text-gray f6">{{ link.price }}</span>
           </a>
         </nav>
 
-        <nav 
-          v-if="event.resources && event.resources.length > 0" 
+        <nav
+          v-if="event.resources && event.resources.length > 0"
           class="menu mt-4">
           <span class="menu-heading">Official Resources</span>
-          <a 
-            v-for="resource in event.resources" 
-            :href="resource.url" 
+          <a
+            v-for="resource in event.resources"
+            :key="resource.url"
+            :href="resource.url"
             class="menu-item">
             {{ resource.title }} <span class="text-gray f6">({{ resource.type }})</span>
-            <span 
-              v-if="resource.detail" 
+            <span
+              v-if="resource.detail"
               class="info-extended text-gray f6">{{ resource.detail }}</span>
           </a>
         </nav>
 
-        <nav 
-          v-if="event.communityResources && event.communityResources.length > 0" 
+        <nav
+          v-if="event.communityResources && event.communityResources.length > 0"
           class="menu mt-4">
           <span class="menu-heading">Community Resources</span>
-          <a 
-            v-for="resource in event.communityResources" 
-            :href="resource.url" 
+          <a
+            v-for="resource in event.communityResources"
+            :key="resource.url"
+            :href="resource.url"
             class="menu-item">
             {{ resource.title }} <span class="text-gray f6">({{ resource.type }})</span>
-            <span 
-              v-if="resource.detail" 
+            <span
+              v-if="resource.detail"
               class="info-extended text-gray f6">{{ resource.detail }}</span>
           </a>
         </nav>
@@ -107,8 +111,8 @@
           <markdown :text="description"/>
         </div>
         <p class="text-right mt-4">
-          <a 
-            :href="editLink" 
+          <a
+            :href="editLink"
             class="btn btn-secondary">Edit on GitHub</a>
         </p>
       </div>
@@ -117,7 +121,7 @@
 </template>
 
 <script>
-import Octicon from 'vue-octicon/components/Octicon.vue'
+import Octicon from 'vue-octicon/components/Octicon'
 import EventTags from './EventTags'
 import Markdown from './Markdown'
 
@@ -127,7 +131,9 @@ export default {
     EventTags,
     Markdown
   },
-  props: ['event'],
+  props: {
+    event: Object
+  },
   computed: {
     startDate() {
       return this.formatDate(this.event.start)
