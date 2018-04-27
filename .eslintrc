@@ -21,6 +21,7 @@ rules:
         "tests/**",
         "spec/**",
         "**/config/**",
+        "**/*.conf.js",
         "**/__tests__/**",
         "test.{js,jsx}",
         "test-*.{js,jsx}",
