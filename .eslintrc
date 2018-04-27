@@ -13,6 +13,49 @@ rules:
     jsx: 'never',
     vue: 'never',
   }]
+  import/no-extraneous-dependencies: [
+    "error",
+    {
+      "devDependencies": [
+        "test/**",
+        "tests/**",
+        "spec/**",
+        "config/**",
+        "**/__tests__/**",
+        "test.{js,jsx}",
+        "test-*.{js,jsx}",
+        "**/*.{test,spec}.{js,jsx}",
+        "**/jest.config.js",
+        "**/webpack.config.js",
+        "**/webpack.config.*.js",
+        "**/rollup.config.js",
+        "**/rollup.config.*.js",
+        "**/gulpfile.js",
+        "**/gulpfile.*.js",
+        "**/Gruntfile{,.js}",
+        "**/protractor.conf.js",
+        "**/protractor.conf.*.js"
+      ],
+      "optionalDependencies": false
+    }
+  ]
+  no-param-reassign: [
+    "error",
+    {
+      "props": true,
+      "ignorePropertyModificationsFor": [
+        "acc",
+        "e",
+        "ctx",
+        "req",
+        "request",
+        "res",
+        "response",
+        "$scope",
+        "state" # vuex
+      ]
+    }
+  ]
   vue/require-default-prop: off
 settings:
   import/extensions:
