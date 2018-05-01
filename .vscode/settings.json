@@ -1,6 +1,4 @@
 {
-  "eslint.validate": [
-    "javascript",
-    "vue"
-  ]
+  "eslint.validate": ["javascript", "vue"],
+  "editor.formatOnSave": true
 }
