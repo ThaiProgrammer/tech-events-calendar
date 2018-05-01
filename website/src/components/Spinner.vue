@@ -1,6 +1,6 @@
 <!-- From https://loading.io/css/ -->
 <template>
-  <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+  <div class="lds-ellipsis"><div/><div/><div/><div/></div>
 </template>
 
 <style>
@@ -62,5 +62,5 @@
 </style>
 
 <script>
-export default { }
+export default {}
 </script>

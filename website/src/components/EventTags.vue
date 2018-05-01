@@ -1,7 +1,13 @@
 <template>
   <div class="event-tags f6">
-    <span class="event-tag" v-for="category in event.categories">{{category}}</span>
-    <span class="event-tag" v-for="topic in event.topics">{{topic}}</span>
+    <span
+      v-for="category in event.categories"
+      :key="category"
+      class="event-tag">{{ category }}</span>
+    <span
+      v-for="topic in event.topics"
+      :key="topic"
+      class="event-tag">{{ topic }}</span>
   </div>
 </template>
 
@@ -14,7 +20,7 @@
 }
 .event-tag {
   border-radius: 3px;
-  background: #FAF8D1;
+  background: #faf8d1;
   color: #f49200;
   padding: 0.3em 0.9em;
   margin-right: 0.5em;
@@ -26,6 +32,8 @@
 
 <script>
 export default {
-  props: [ 'event' ]
+  props: {
+    event: Object
+  }
 }
 </script>

@@ -1,0 +1,100 @@
+parserOptions:
+  ecmaVersion: 2017
+plugins:
+  - prettier
+extends:
+  - airbnb
+  - plugin:vue/recommended
+  - plugin:prettier/recommended
+rules:
+  # Top-down code is easier to read in my opinion.
+  no-use-before-define: off
+
+  # Signify unused variables
+  no-void: off
+
+  # Allow ++ in for loops.
+  no-plusplus: ["error", { "allowForLoopAfterthoughts": true }]
+
+  # Added `.vue` extension.
+  import/extensions: ['error', 'ignorePackages', {
+    js: 'never',
+    mjs: 'never',
+    jsx: 'never',
+    vue: 'never',
+  }]
+
+  # Allow `devDependencies` in test files.
+  import/no-extraneous-dependencies: [
+    "error",
+    {
+      "devDependencies": [
+        "test/**",
+        "tests/**",
+        "spec/**",
+        "**/config/**",
+        "**/build/**",
+        "**/__tests__/**",
+        "test.{js,jsx}",
+        "test-*.{js,jsx}",
+        "**/*.{test,spec}.{js,jsx}",
+        "**/jest.config.js",
+        "**/webpack.config.js",
+        "**/webpack.config.*.js",
+        "**/rollup.config.js",
+        "**/rollup.config.*.js",
+        "**/gulpfile.js",
+        "**/gulpfile.*.js",
+        "**/Gruntfile{,.js}",
+        "**/protractor.conf.js",
+        "**/protractor.conf.*.js"
+      ],
+      "optionalDependencies": false
+    }
+  ]
+
+  # Vue and VueX uses a lot of assignments to state!
+  no-param-reassign: [
+    "error",
+    {
+      "props": true,
+      "ignorePropertyModificationsFor": [
+        "acc",
+        "e",
+        "ctx",
+        "req",
+        "request",
+        "res",
+        "response",
+        "$scope",
+        "state" # vuex
+      ]
+    }
+  ]
+
+  # Async functions and generators removed...
+  no-restricted-syntax: [
+    "error",
+    {
+      "selector": "ForInStatement",
+      "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
+    },
+    {
+      "selector": "LabeledStatement",
+      "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+    },
+    {
+      "selector": "WithStatement",
+      "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+    }
+  ]
+  vue/require-default-prop: off
+settings:
+  import/extensions:
+    - .js
+    - .vue
+  import/resolver:
+    node:
+      extensions:
+        - .js
+        - .vue

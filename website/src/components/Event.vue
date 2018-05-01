@@ -2,23 +2,23 @@
   <div class="event">
     <div class="event-date">
       <strong>
-        {{startDate}}
-        <span v-if="startDate !== endDate"> ~<br>{{endDate}}</span>
+        {{ startDate }}
+        <span v-if="startDate !== endDate"> ~<br>{{ endDate }}</span>
       </strong>
       <br>
-      {{day(event.start)}}<span v-if="startDate !== endDate"> – {{day(event.end)}}</span>
+      {{ day(event.start) }}<span v-if="startDate !== endDate">&#8201;–&#8201;{{ day(event.end) }}</span>
     </div>
     <div class="event-details">
       <div class="event-title">
         <strong>
-          <router-link :to="href">{{event.title}}</router-link>
+          <router-link :to="href">{{ event.title }}</router-link>
         </strong>
       </div>
       <div class="event-summary">
-        <markdown :text="event.summary"></markdown>
+        <markdown :text="event.summary"/>
       </div>
       <div class="mt-1">
-        <event-tags :event="event"></event-tags>
+        <event-tags :event="event"/>
       </div>
     </div>
   </div>
@@ -29,31 +29,47 @@ import EventTags from './EventTags'
 import Markdown from './Markdown'
 
 export default {
-  props: [ 'event' ],
-  methods: {
-    formatDate (d) {
-      const month = ['?', 'JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'][d.month]
-      return `${month} ${d.date}`
-    },
-    day (d) {
-      const date = new Date(d.year, d.month - 1, d.date)
-      return ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'][date.getDay()]
-    }
-  },
-  computed: {
-    startDate () {
-      return this.formatDate(this.event.start)
-    },
-    endDate () {
-      return this.formatDate(this.event.end)
-    },
-    href () {
-      return `/event/${this.event.id}`
-    }
-  },
   components: {
     EventTags,
     Markdown
+  },
+  props: {
+    event: Object
+  },
+  computed: {
+    startDate() {
+      return this.formatDate(this.event.start)
+    },
+    endDate() {
+      return this.formatDate(this.event.end)
+    },
+    href() {
+      return `/event/${this.event.id}`
+    }
+  },
+  methods: {
+    formatDate(d) {
+      const month = [
+        '?',
+        'JAN',
+        'FEB',
+        'MAR',
+        'APR',
+        'MAY',
+        'JUN',
+        'JUL',
+        'AUG',
+        'SEP',
+        'OCT',
+        'NOV',
+        'DEC'
+      ][d.month]
+      return `${month} ${d.date}`
+    },
+    day(d) {
+      const date = new Date(d.year, d.month - 1, d.date)
+      return ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'][date.getDay()]
+    }
   }
 }
 </script>
@@ -77,7 +93,7 @@ export default {
 }
 .event-tag {
   border-radius: 3px;
-  background: #FAF8D1;
+  background: #faf8d1;
   color: #f49200;
   padding: 0.3em 0.9em;
   margin-right: 0.5em;

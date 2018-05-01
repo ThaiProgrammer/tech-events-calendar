@@ -1,0 +1,8 @@
+{
+  "eslint.validate": ["javascript", "vue"],
+  "editor.formatOnSave": true,
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#19232d",
+    "titleBar.activeForeground": "#f49200"
+  }
+}

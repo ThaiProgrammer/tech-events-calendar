@@ -6,7 +6,11 @@ const cowsay = require('cowsay')
 const wrapAnsi = require('wrap-ansi')
 const Table = require('cli-table')
 
-const serviceAccount = JSON.parse(Buffer.from(process.env.FIREBASE_SERVICE_ACCOUNT_BASE64, 'base64').toString('utf8'))
+const serviceAccount = JSON.parse(
+  Buffer.from(process.env.FIREBASE_SERVICE_ACCOUNT_BASE64, 'base64').toString(
+    'utf8'
+  )
+)
 
 const bufferAccessToken = process.env.BUFFER_ACCESS_TOKEN
 if (!bufferAccessToken) throw new Error('Env BUFFER_ACCESS_TOKEN missing')
@@ -16,49 +20,49 @@ admin.initializeApp({
   databaseURL: 'https://tech-events-calendar-th.firebaseio.com'
 })
 
-process.on('unhandledRejection', up => { throw up })
+process.on('unhandledRejection', up => {
+  throw up
+})
 
 const MONTHS = 'Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec'.split(',')
 const DAYS = 'Sun,Mon,Tue,Wed,Thu,Fri,Sat'.split(',')
 
-function dateOf ({ year, month, date }) {
+function dateOf({ year, month, date }) {
   return new Date(year, month - 1, date)
 }
 
-function dates (event) {
-  const date = ({ year, month, date }) => {
+function dates(event) {
+  const formatDate = ({ year, month, date }) => {
     const day = dateOf({ year, month, date }).getDay()
     return `${MONTHS[month - 1]} ${date} (${DAYS[day]})`
   }
-  const formatTime = (t) => {
-    return t.hour + ':' + (t.minute < 10 ? '0' : '') + t.minute
-  }
-  const start = date(event.start)
-  const end = date(event.end)
-  const time = event.time && event.time.length === 1
-    ? `${formatTime(event.time[0].from)} ~ ${formatTime(event.time[0].to)}`
-    : ''
+  const formatTime = t => `${t.hour}:${t.minute < 10 ? '0' : ''}${t.minute}`
+  const start = formatDate(event.start)
+  const end = formatDate(event.end)
+  const time =
+    event.time && event.time.length === 1
+      ? `${formatTime(event.time[0].from)} ~ ${formatTime(event.time[0].to)}`
+      : ''
   return `${start}${end !== start ? ` ~ ${end}` : ''}${time ? `, ${time}` : ''}`
 }
 
-function hashtags (tags) {
-  return tags
-    .map(x => `#${x.replace(/[^a-zA-Z0-9_]/g, '')}`)
-    .join(' ')
+function hashtags(tags) {
+  return tags.map(x => `#${x.replace(/[^a-zA-Z0-9_]/g, '')}`).join(' ')
 }
 
-function say (text) {
+function say(text) {
   return cowsay.say({ text: wrapAnsi(text, 80, { hard: true }) })
 }
 
-async function post (event, postMode) {
+async function post(event, postMode) {
   if (!event) {
     throw new Error('Must supply event')
   }
 
   const url = `https://calendar.thaiprogrammer.org/event/${event.id}`
-  const fbEventLink = event.links
-    .filter(link => /https:\/\/(?:www|web)\.facebook\.com\/events\/\d+/.test(link.url))[0]
+  const fbEventLink = event.links.filter(link =>
+    /https:\/\/(?:www|web)\.facebook\.com\/events\/\d+/.test(link.url)
+  )[0]
   const fbEventUrl = fbEventLink && fbEventLink.url
   const link = fbEventUrl || url
   const location = event.location && event.location.title
@@ -67,11 +71,11 @@ async function post (event, postMode) {
     `${dates(event)}${location ? ` @ ${location}` : ''}`,
     '',
     `${event.summary}`,
-    `${hashtags([ ...event.categories, ...event.topics ])}`,
-    ...(fbEventUrl ? [ '', url ] : [ ])
+    `${hashtags([...event.categories, ...event.topics])}`,
+    ...(fbEventUrl ? ['', url] : [])
   ].join('\n')
   console.log('Text to be posted:')
-  console.log(say(text + '\n\n' + link))
+  console.log(say(`${text}\n\n${link}`))
   console.log()
 
   // Uncomment the next line for dry-run!
@@ -79,7 +83,7 @@ async function post (event, postMode) {
 
   const postData = querystring.stringify({
     text,
-    profile_ids: [ '5abf3ce205fbf6386e4cebc8' ],
+    profile_ids: ['5abf3ce205fbf6386e4cebc8'],
     media: { link },
     shorten: 'false',
     access_token: bufferAccessToken
@@ -88,54 +92,68 @@ async function post (event, postMode) {
   console.log(say(postData))
 
   console.log('Setting status to POSTING...')
-  await admin.database().ref(`buffer/events/${event.id}/status`).set('POSTING')
+  await admin
+    .database()
+    .ref(`buffer/events/${event.id}/status`)
+    .set('POSTING')
   console.log('Posting...')
   await axios.post('https://api.bufferapp.com/1/updates/create.json', postData)
   console.log('Setting status to POSTED...')
-  await admin.database().ref(`buffer/events/${event.id}/status`).set('POSTED')
+  await admin
+    .database()
+    .ref(`buffer/events/${event.id}/status`)
+    .set('POSTED')
   console.log('Writing log...')
-  await admin.database().ref(`buffer/logs`).push({
-    type: 'POST',
-    postMode: postMode,
-    date: new Date(),
-    eventId: event.id
-  })
+  await admin
+    .database()
+    .ref(`buffer/logs`)
+    .push({
+      type: 'POST',
+      postMode,
+      date: new Date(),
+      eventId: event.id
+    })
 }
 
-function checkPostingCriteria (event, bufferData) {
-  const status = _.get(bufferData, [ 'events', event.id, 'status' ])
+function checkPostingCriteria(event, bufferData) {
+  const status = _.get(bufferData, ['events', event.id, 'status'])
   if (!status) {
     return { postMode: 'NEW', result: 'NEW EVENT' }
-  } else {
-    return { result: status }
   }
+  return { result: status }
 }
 
-async function main () {
+async function main() {
   try {
-    const response = await axios.get('https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json')
-    const bufferData = (await admin.database().ref('buffer').once('value')).val()
+    const response = await axios.get(
+      'https://thaiprogrammer-tech-events-calendar.spacet.me/calendar.json'
+    )
+    const bufferData = (await admin
+      .database()
+      .ref('buffer')
+      .once('value')).val()
     const today = new Date()
     today.setHours(0, 0, 0, 0)
-    const upcomingEvents = response.data.filter(e => {
-      return dateOf(e.start) >= today
-    })
+    const upcomingEvents = response.data.filter(e => dateOf(e.start) >= today)
 
     const table = new Table({
-      head: [ 'event id', 'post', 'result' ]
+      head: ['event id', 'post', 'result']
     })
     const results = upcomingEvents.map(e => {
       const { postMode, result } = checkPostingCriteria(e, bufferData)
       return { postMode, result, event: e }
     })
-    table.push(...results.map(({ postMode, result, event }) => [
-      event.id,
-      postMode || '---',
-      result
-    ]))
+    table.push(
+      ...results.map(({ postMode, result, event }) => [
+        event.id,
+        postMode || '---',
+        result
+      ])
+    )
     console.log(table.toString())
 
     for (const { postMode, event } of results) {
+      // eslint-disable-next-line no-await-in-loop
       if (postMode) await post(event, postMode)
     }
   } catch (e) {

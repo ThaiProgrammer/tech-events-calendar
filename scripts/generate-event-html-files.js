@@ -11,18 +11,17 @@
 //    replacing the meta tags.
 
 const fs = require('fs')
+
 const html = fs.readFileSync('public/index.html', 'utf8')
-const data = require('../public/calendar')
+const data = JSON.parse(fs.readFileSync('public/calendar.json', 'utf8'))
 const mkdirp = require('mkdirp')
 const path = require('path')
 const escapeHtml = require('escape-html')
 
 for (const event of data) {
-  const id = event.id
+  const { id } = event
   const outFilepath = `public/event/${id}.html`
-  const imageUrl = event.image
-    ? `/${event.image}`
-    : '/og-image.png'
+  const imageUrl = event.image ? `/${event.image}` : '/og-image.png'
 
   const metaTags = `
     <meta property="og:title" content="${escapeHtml(event.title)}">

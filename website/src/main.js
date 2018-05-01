@@ -1,12 +1,12 @@
 import 'whatwg-fetch'
-import './primer.scss'
 import 'vue-octicon/icons/calendar'
 import 'vue-octicon/icons/clock'
 import 'vue-octicon/icons/location'
-
-import App from './App'
 import Vue from 'vue'
 import VueAnalytics from 'vue-analytics'
+
+import './primer.scss'
+import App from './App'
 import router from './router'
 import store from './store'
 
@@ -24,8 +24,8 @@ new Vue({
   el: '#app',
   router,
   store,
-  render: h => h(App),
-  created () {
+  created() {
     this.$store.dispatch('load')
-  }
+  },
+  render: h => h(App)
 })
