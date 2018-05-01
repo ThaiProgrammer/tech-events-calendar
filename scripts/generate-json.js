@@ -1,4 +1,5 @@
-/** @flow */
+/* This file uses a lot of imperative logic, so continues are allowed. */
+/* eslint no-continue: off */
 const fs = require('fs')
 const path = require('path')
 
@@ -25,9 +26,10 @@ function formatError(checks) {
   const traverse = (node, prefix) => {
     if (node.type === 'item') {
       out.push(`${prefix}  - ✴️ ${node.title}`)
-      return (node.children || []).forEach(child =>
+      void (node.children || []).forEach(child =>
         traverse(child, `${prefix}    `)
       )
+      return
     }
     if (node.type === 'check') {
       if (node.result.status === true) {
@@ -91,11 +93,14 @@ function main() {
       }
     }
     validateJson(events)
-    const path = 'public/calendar.json'
+    const calendarJsonFilePath = 'public/calendar.json'
     if (!diagnostic.errors.length) {
       events.sort(compareEvents)
-      fs.writeFileSync(path, require('format-json').diffy(events))
-      console.log('* Written calendar to', path)
+      fs.writeFileSync(
+        calendarJsonFilePath,
+        require('format-json').diffy(events)
+      )
+      console.log('* Written calendar to', calendarJsonFilePath)
     } else {
       console.log('* Not writing because of error')
       for (const error of diagnostic.errors) {
@@ -115,9 +120,9 @@ function main() {
     throw e
   } finally {
     require('mkdirp').sync('tmp')
-    const path = 'tmp/readme-parse-diagnostic.json'
-    fs.writeFileSync(path, JSON.stringify(diagnostic, null, 2))
-    console.log('* Diagnostic information written to', path)
+    const diagnosticFilepath = 'tmp/readme-parse-diagnostic.json'
+    fs.writeFileSync(diagnosticFilepath, JSON.stringify(diagnostic, null, 2))
+    console.log('* Diagnostic information written to', diagnosticFilepath)
   }
 }
 
@@ -157,6 +162,7 @@ function findImage(filepath) {
   if (fs.existsSync(pngPath)) return pngPath
   const jpgPath = filepath.replace(/\.md$/, '.jpg')
   if (fs.existsSync(jpgPath)) return jpgPath
+  return undefined
 }
 
 function copyEventImage(inFilepath, eventId) {

@@ -1,3 +1,4 @@
+/* eslint global-require: off */
 const utils = require('./utils')
 const webpack = require('webpack')
 const config = require('../config')
@@ -9,7 +10,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
-const HOST = process.env.HOST
+const { HOST } = process.env
 const PORT = process.env.PORT && Number(process.env.PORT)
 
 const devWebpackConfig = merge(baseWebpackConfig, {

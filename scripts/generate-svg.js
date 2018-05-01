@@ -61,10 +61,18 @@ function generateSVG(year, month) {
 
   function getPosition(date) {
     const day = (firstDay + (date - 1)) % 7
-    const row = ~~((firstDay + (date - 1)) / 7)
+    const row = Math.floor((firstDay + (date - 1)) / 7)
     const x = hPadding + day * cellWidth
     const y = calendarStartY + row * cellHeight
     return { x, y }
+  }
+
+  function getCellColor(count) {
+    if (count <= 0) return '#eee'
+    if (count <= 1) return '#c6e48b'
+    if (count <= 2) return '#7bc96f'
+    if (count <= 3) return '#239a3b'
+    return '#196127'
   }
 
   function renderCells() {
@@ -75,16 +83,7 @@ function generateSVG(year, month) {
         const { x, y } = getPosition(date)
         const count =
           occupiedCells[occupationKey(new Date(year, month, date))] || 0
-        const cellColor =
-          count <= 0
-            ? '#eee'
-            : count <= 1
-              ? '#c6e48b'
-              : count <= 2
-                ? '#7bc96f'
-                : count <= 3
-                  ? '#239a3b'
-                  : '#196127'
+        const cellColor = getCellColor(count)
         return [
           `<rect x="${x + 1}" y="${y + 1}" width="${cellWidth -
             2}" height="${cellHeight - 2}" fill="${cellColor}" />`,
@@ -100,8 +99,8 @@ function generateSVG(year, month) {
 
 require('mkdirp').sync('public/generated/calendar-images')
 
-for (let year = 2018; year <= 2018; year++) {
-  for (let month = 0; month <= 11; month++) {
+for (let year = 2018; year <= 2018; year += 1) {
+  for (let month = 0; month <= 11; month += 1) {
     const svg = generateSVG(year, month)
     const path = `public/generated/calendar-images/${year}-${String(
       month + 1

@@ -1,8 +1,9 @@
+import Router from 'vue-router'
+import Vue from 'vue'
+
 import EventInfoPage from './components/EventInfoPage'
 import HomePage from './components/HomePage'
 import ListPage from './components/ListPage'
-import Router from 'vue-router'
-import Vue from 'vue'
 
 Vue.use(Router)
 

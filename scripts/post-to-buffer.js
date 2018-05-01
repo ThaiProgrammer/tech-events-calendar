@@ -32,13 +32,13 @@ function dateOf({ year, month, date }) {
 }
 
 function dates(event) {
-  const date = ({ year, month, date }) => {
+  const formatDate = ({ year, month, date }) => {
     const day = dateOf({ year, month, date }).getDay()
     return `${MONTHS[month - 1]} ${date} (${DAYS[day]})`
   }
   const formatTime = t => `${t.hour}:${t.minute < 10 ? '0' : ''}${t.minute}`
-  const start = date(event.start)
-  const end = date(event.end)
+  const start = formatDate(event.start)
+  const end = formatDate(event.end)
   const time =
     event.time && event.time.length === 1
       ? `${formatTime(event.time[0].from)} ~ ${formatTime(event.time[0].to)}`
@@ -153,6 +153,7 @@ async function main() {
     console.log(table.toString())
 
     for (const { postMode, event } of results) {
+      // eslint-disable-next-line no-await-in-loop
       if (postMode) await post(event, postMode)
     }
   } catch (e) {

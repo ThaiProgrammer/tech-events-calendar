@@ -1,10 +1,12 @@
 <template>
   <div class="event-tags f6">
-    <span 
-      v-for="category in event.categories" 
+    <span
+      v-for="category in event.categories"
+      :key="category"
       class="event-tag">{{ category }}</span>
-    <span 
-      v-for="topic in event.topics" 
+    <span
+      v-for="topic in event.topics"
+      :key="topic"
       class="event-tag">{{ topic }}</span>
   </div>
 </template>
@@ -30,6 +32,8 @@
 
 <script>
 export default {
-  props: ['event']
+  props: {
+    event: Object
+  }
 }
 </script>

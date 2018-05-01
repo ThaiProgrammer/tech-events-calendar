@@ -26,12 +26,10 @@ if (shell.which('npm')) {
   })
 }
 
-module.exports = function() {
+module.exports = function checkVersions() {
   const warnings = []
 
-  for (let i = 0; i < versionRequirements.length; i++) {
-    const mod = versionRequirements[i]
-
+  versionRequirements.forEach(mod => {
     if (!semver.satisfies(mod.currentVersion, mod.versionRequirement)) {
       warnings.push(
         `${mod.name}: ${chalk.red(mod.currentVersion)} should be ${chalk.green(
@@ -39,7 +37,7 @@ module.exports = function() {
         )}`
       )
     }
-  }
+  })
 
   if (warnings.length) {
     console.log('')
@@ -50,10 +48,9 @@ module.exports = function() {
     )
     console.log()
 
-    for (let i = 0; i < warnings.length; i++) {
-      const warning = warnings[i]
+    warnings.forEach(warning => {
       console.log(`  ${warning}`)
-    }
+    })
 
     console.log()
     process.exit(1)

@@ -16,7 +16,8 @@ function generateICS() {
     const result = []
     for (const event of data) {
       const vEvent = new icalendar.VEvent(`${event.id}@thaiprogrammer-calendar`)
-      let startDate, endDate
+      let startDate
+      let endDate
 
       if (event.time != null) {
         const total = event.time.length

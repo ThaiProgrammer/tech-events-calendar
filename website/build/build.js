@@ -8,13 +8,24 @@ const path = require('path')
 const chalk = require('chalk')
 const webpack = require('webpack')
 const config = require('../config')
+
 const webpackConfig = require('./webpack.prod.conf')
 
 const spinner = ora('building for production...')
-spinner.start()
 
-rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
-  if (err) throw err
+function main() {
+  spinner.start()
+
+  rm(
+    path.join(config.build.assetsRoot, config.build.assetsSubDirectory),
+    err => {
+      if (err) throw err
+      compile()
+    }
+  )
+}
+
+function compile() {
   webpack(webpackConfig, (err, stats) => {
     spinner.stop()
     if (err) throw err
@@ -41,4 +52,6 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
       )
     )
   })
-})
+}
+
+main()

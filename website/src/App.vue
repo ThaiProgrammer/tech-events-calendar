@@ -22,7 +22,7 @@
     <router-view/>
     <footer class="text-center mt-5 mb-4 pl-3 pr-3 text-gray">
       ข้อมูลไม่ครบ? ข้อมูลผิดพลาด? มีข้อเสนอแนะ?
-      ช่วยเราพัฒนาได้ที่<a href="https://github.com/ThaiProgrammer/tech-events-calendar#contributing">โปรเจกต์​ ThaiProgrammer/tech-events-calendar บน GitHub</a>
+      ช่วยเราพัฒนาได้ที่<a href="https://github.com/ThaiProgrammer/tech-events-calendar#contributing">โปรเจกต์ ThaiProgrammer/tech-events-calendar บน GitHub</a>
     </footer>
   </div>
 </template>

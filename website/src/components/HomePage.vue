@@ -3,8 +3,8 @@
     <div class="Subhead">
       <h2 class="Subhead-heading">Upcoming events</h2>
       <div class="Subhead-actions">
-        <router-link 
-          to="/list" 
+        <router-link
+          to="/list"
           class="btn btn-sm btn-secondary">Event list</router-link>
       </div>
     </div>
@@ -12,13 +12,13 @@
       These are the upcoming tech events.
       You can subscribe to the calendar via <a href="https://calendar.google.com/calendar/embed?src=j5i0o6v2ihfboe19upl9lhonbci6ankr%40import.calendar.google.com&ctz=Asia%2FBangkok">Google Calendar</a>.
     </p>
-    <div 
-      v-if="!!error" 
+    <div
+      v-if="!!error"
       class="flash flash-error">
       <strong>Cannot load data.</strong> {{ error.toString() }}
     </div>
-    <div 
-      v-if="loading" 
+    <div
+      v-if="loading"
       class="Box mt-3">
       <ul>
         <li class="Box-row text-center p-4">
@@ -26,18 +26,19 @@
         </li>
       </ul>
     </div>
-    <div 
-      v-if="topUpcomingEvents.length > 0" 
+    <div
+      v-if="topUpcomingEvents.length > 0"
       class="Box mt-3">
       <ul>
-        <li 
-          v-for="event in topUpcomingEvents" 
+        <li
+          v-for="event in topUpcomingEvents"
+          :key="event.id"
           class="Box-row">
           <event :event="event"/>
         </li>
       </ul>
-      <div 
-        v-if="upcomingEvents.length > topUpcomingEvents.length" 
+      <div
+        v-if="upcomingEvents.length > topUpcomingEvents.length"
         class="Box-footer Box-row--gray text-center">
         <router-link to="/list">See more events &rarr;</router-link>
       </div>
@@ -57,65 +58,65 @@
          possibly highlighting the events on that day.
       -->
       <router-link to="/list">
-        <img 
-          src="/generated/calendar-images/2018-01.svg" 
-          alt="January 2018" 
-          width="200" 
+        <img
+          src="/generated/calendar-images/2018-01.svg"
+          alt="January 2018"
+          width="200"
           height="185" >
-        <img 
-          src="/generated/calendar-images/2018-02.svg" 
-          alt="February 2018" 
-          width="200" 
+        <img
+          src="/generated/calendar-images/2018-02.svg"
+          alt="February 2018"
+          width="200"
           height="185" >
-        <img 
-          src="/generated/calendar-images/2018-03.svg" 
-          alt="March 2018" 
-          width="200" 
+        <img
+          src="/generated/calendar-images/2018-03.svg"
+          alt="March 2018"
+          width="200"
           height="185" >
-        <img 
-          src="/generated/calendar-images/2018-04.svg" 
-          alt="April 2018" 
-          width="200" 
+        <img
+          src="/generated/calendar-images/2018-04.svg"
+          alt="April 2018"
+          width="200"
           height="185" >
-        <img 
-          src="/generated/calendar-images/2018-05.svg" 
-          alt="May 2018" 
-          width="200" 
+        <img
+          src="/generated/calendar-images/2018-05.svg"
+          alt="May 2018"
+          width="200"
           height="185" >
-        <img 
-          src="/generated/calendar-images/2018-06.svg" 
-          alt="June 2018" 
-          width="200" 
+        <img
+          src="/generated/calendar-images/2018-06.svg"
+          alt="June 2018"
+          width="200"
           height="185" >
-        <img 
-          src="/generated/calendar-images/2018-07.svg" 
-          alt="July 2018" 
-          width="200" 
+        <img
+          src="/generated/calendar-images/2018-07.svg"
+          alt="July 2018"
+          width="200"
           height="185" >
-        <img 
-          src="/generated/calendar-images/2018-08.svg" 
-          alt="August 2018" 
-          width="200" 
+        <img
+          src="/generated/calendar-images/2018-08.svg"
+          alt="August 2018"
+          width="200"
           height="185" >
-        <img 
-          src="/generated/calendar-images/2018-09.svg" 
-          alt="September 2018" 
-          width="200" 
+        <img
+          src="/generated/calendar-images/2018-09.svg"
+          alt="September 2018"
+          width="200"
           height="185" >
-        <img 
-          src="/generated/calendar-images/2018-10.svg" 
-          alt="October 2018" 
-          width="200" 
+        <img
+          src="/generated/calendar-images/2018-10.svg"
+          alt="October 2018"
+          width="200"
           height="185" >
-        <img 
-          src="/generated/calendar-images/2018-11.svg" 
-          alt="November 2018" 
-          width="200" 
+        <img
+          src="/generated/calendar-images/2018-11.svg"
+          alt="November 2018"
+          width="200"
           height="185" >
-        <img 
-          src="/generated/calendar-images/2018-12.svg" 
-          alt="December 2018" 
-          width="200" 
+        <img
+          src="/generated/calendar-images/2018-12.svg"
+          alt="December 2018"
+          width="200"
           height="185" >
       </router-link>
     </div>
@@ -128,6 +129,7 @@ import Event from './Event'
 import Spinner from './Spinner'
 
 export default {
+  components: { Event, Spinner },
   computed: {
     ...mapState(['loading', 'error', 'events']),
     upcomingEvents() {
@@ -145,8 +147,7 @@ export default {
     topUpcomingEvents() {
       return this.upcomingEvents.slice(0, 5)
     }
-  },
-  components: { Event, Spinner }
+  }
 }
 </script>
 

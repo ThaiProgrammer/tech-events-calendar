@@ -19,7 +19,7 @@ const path = require('path')
 const escapeHtml = require('escape-html')
 
 for (const event of data) {
-  const id = event.id
+  const { id } = event
   const outFilepath = `public/event/${id}.html`
   const imageUrl = event.image ? `/${event.image}` : '/og-image.png'
 

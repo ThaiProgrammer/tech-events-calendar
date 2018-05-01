@@ -7,12 +7,24 @@ extends:
   - plugin:vue/recommended
   - plugin:prettier/recommended
 rules:
+  # Top-down code is easier to read in my opinion.
+  no-use-before-define: off
+
+  # Signify unused variables
+  no-void: off
+
+  # Allow ++ in for loops.
+  no-plusplus: ["error", { "allowForLoopAfterthoughts": true }]
+
+  # Added `.vue` extension.
   import/extensions: ['error', 'ignorePackages', {
     js: 'never',
     mjs: 'never',
     jsx: 'never',
     vue: 'never',
   }]
+
+  # Allow `devDependencies` in test files.
   import/no-extraneous-dependencies: [
     "error",
     {
@@ -21,7 +33,7 @@ rules:
         "tests/**",
         "spec/**",
         "**/config/**",
-        "**/*.conf.js",
+        "**/build/**",
         "**/__tests__/**",
         "test.{js,jsx}",
         "test-*.{js,jsx}",
@@ -40,6 +52,8 @@ rules:
       "optionalDependencies": false
     }
   ]
+
+  # Vue and VueX uses a lot of assignments to state!
   no-param-reassign: [
     "error",
     {
@@ -55,6 +69,23 @@ rules:
         "$scope",
         "state" # vuex
       ]
+    }
+  ]
+
+  # Async functions and generators removed...
+  no-restricted-syntax: [
+    "error",
+    {
+      "selector": "ForInStatement",
+      "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
+    },
+    {
+      "selector": "LabeledStatement",
+      "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+    },
+    {
+      "selector": "WithStatement",
+      "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
     }
   ]
   vue/require-default-prop: off

@@ -20,13 +20,13 @@
         </a>
       </div>
     </nav>
-    <div 
-      v-if="!!error" 
+    <div
+      v-if="!!error"
       class="flash flash-error mt-4">
       <strong>Cannot load data.</strong> {{ error.toString() }}
     </div>
-    <div 
-      v-if="loading" 
+    <div
+      v-if="loading"
       class="Box mt-4">
       <ul>
         <li class="Box-row text-center p-4">
@@ -34,15 +34,17 @@
         </li>
       </ul>
     </div>
-    <div 
-      v-for="group in eventGroups" 
+    <div
+      v-for="(group, index) in eventGroups"
+      :key="index"
       class="Box mt-4">
       <div class="Box-header">
         <h3 class="Box-title">{{ group.title }}</h3>
       </div>
       <ul>
-        <li 
-          v-for="event in group.events" 
+        <li
+          v-for="event in group.events"
+          :key="event.id"
           class="Box-row">
           <event :event="event"/>
         </li>
@@ -57,15 +59,11 @@ import Event from './Event'
 import Spinner from './Spinner'
 
 export default {
+  components: { Event, Spinner },
   data() {
     const today = new Date()
     today.setHours(0, 0, 0, 0)
     return { today, tab: 'upcoming' }
-  },
-  methods: {
-    changeTab(tab) {
-      this.tab = tab
-    }
   },
   computed: {
     ...mapState(['loading', 'error', 'events']),
@@ -150,9 +148,10 @@ export default {
       return groups
     }
   },
-  components: { Event, Spinner }
+  methods: {
+    changeTab(tab) {
+      this.tab = tab
+    }
+  }
 }
 </script>
-
-<style scoped>
-</style>
