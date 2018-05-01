@@ -1,6 +1,8 @@
 // Generates ICS file from `public/calendar.json`
 
-const data = require('../public/calendar')
+const fs = require('fs')
+
+const data = JSON.parse(fs.readFileSync('public/calendar.json', 'utf8'))
 const icalendar = require('icalendar')
 
 const ICalendar = icalendar.iCalendar
@@ -76,6 +78,6 @@ function generateICS() {
 
 const ics = generateICS()
 const path = `public/calendar.ics`
-require('fs').writeFileSync(path, ics)
+fs.writeFileSync(path, ics)
 
 console.log('* Generated', path)

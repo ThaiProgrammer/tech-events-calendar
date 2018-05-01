@@ -28,7 +28,9 @@ if (!fs.existsSync('public/calendar.json')) {
 }
 
 if (fs.existsSync('tmp/readme-parse-diagnostic.json')) {
-  const diagnostics = require('../tmp/readme-parse-diagnostic.json')
+  const diagnostics = JSON.parse(
+    fs.readFileSync('tmp/readme-parse-diagnostic.json', 'utf8')
+  )
   if (diagnostics.errors && diagnostics.errors.length) {
     console.log(':x: **ข้อผิดพลาดในการประมวลผลไฟล์ (Processing errors):**')
     console.log()

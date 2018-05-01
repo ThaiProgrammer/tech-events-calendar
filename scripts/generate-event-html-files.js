@@ -13,7 +13,7 @@
 const fs = require('fs')
 
 const html = fs.readFileSync('public/index.html', 'utf8')
-const data = require('../public/calendar')
+const data = JSON.parse(fs.readFileSync('public/calendar.json', 'utf8'))
 const mkdirp = require('mkdirp')
 const path = require('path')
 const escapeHtml = require('escape-html')

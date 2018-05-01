@@ -1,6 +1,8 @@
 // Generates SVG file from `public/calendar.json`
 
-const data = require('../public/calendar')
+const fs = require('fs')
+
+const data = JSON.parse(fs.readFileSync('public/calendar.json', 'utf8'))
 
 const totalWidth = 200
 const totalHeight = 185
@@ -105,7 +107,7 @@ for (let year = 2018; year <= 2018; year += 1) {
     const path = `public/generated/calendar-images/${year}-${String(
       month + 1
     ).padStart(2, '0')}.svg`
-    require('fs').writeFileSync(path, svg)
+    fs.writeFileSync(path, svg)
     console.log('* Generated', path)
   }
 }
