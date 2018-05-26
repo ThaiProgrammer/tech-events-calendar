@@ -1,6 +1,6 @@
 ---
 id: bkk-web-107-tech-for-non-technical-entrepreneur
-date: '2018-07-10'
+date: '2018-08-14'
 time: 19:00 ~ 22:00
 location:
   title: Launchpad

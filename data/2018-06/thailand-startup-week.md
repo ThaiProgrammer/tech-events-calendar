@@ -3,7 +3,7 @@ id: thailand-startup-week-2018
 date: '2018-06-16 ~ 2018-06-20'
 location:
   title: HUBBA Thailand (multiple locations)
-  url: https://www.facebook.com/events/1683610605094012/
+  url: https://www.google.com/maps/place/HUBBA+Thailand/@13.72519,100.587628,15z/data=!4m5!3m4!1s0x0:0xd33e81e42904a76b!8m2!3d13.72519!4d100.587628
 categories:
   - Exposition
 topics:

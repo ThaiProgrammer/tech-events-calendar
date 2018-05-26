@@ -3,8 +3,8 @@ id: reactbkk-3
 date: '2018-06-24'
 time: 09:00 ~ 22:00
 location:
-  title: https://www.google.com/maps/place/Energy+Complex+Company+Limited./@13.8193932,100.5572412,15z/data=!4m2!3m1!1s0x0:0x686cce3b970b6f75?sa=X&ved=0ahUKEwju-7igl6PbAhVafCsKHVf1Ai4Q_BIIpAEwDg
-  url: EnCo
+  title: EnCo
+  url: https://www.google.com/maps/place/Energy+Complex+Company+Limited./@13.8193932,100.5572412,15z/data=!4m5!3m4!1s0x0:0x686cce3b970b6f75!8m2!3d13.8193932!4d100.5572412
   detail: Synergy Hall, Energy Complex
 categories:
   - Conference
