@@ -4,5 +4,6 @@
   "workbench.colorCustomizations": {
     "titleBar.activeBackground": "#19232d",
     "titleBar.activeForeground": "#f49200"
-  }
+  },
+  "cSpell.enabled": false
 }
