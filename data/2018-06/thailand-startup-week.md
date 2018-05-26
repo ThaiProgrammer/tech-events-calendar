@@ -17,8 +17,8 @@ links:
     title: Registration Form
     price: FREE
   - type: rsvp
-    url: Facebook Event
-    title: https://www.facebook.com/events/1683610605094012/
+    url: https://www.facebook.com/events/1683610605094012/
+    title: Facebook Event
 ---
 
 # Thailand Startup Week 2018
