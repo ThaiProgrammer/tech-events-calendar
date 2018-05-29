@@ -29,3 +29,16 @@ links:
 Frontend United is a conference that yearly hosts 25 legendary speakers talking about UX, browser performance, theming, Javascript and Drupal. ​​​​​On the 1st June we will host our very own remote live stream event, in Bangkok! This means that we will be participating live, with Frontend United in The Netherlands.
 
 We made sure everything is just like attending the conference in The Netherlands: T-shirts, booklets, a video-steam with an up-close of the speaker, and a room full of enthusiastic designers and developers :) We even have a direct line to ask the speakers questions, and we have our own social event.
+
+For the unique event, we will be streaming 5 of the legendary speakers, among them you will find:
+
+* Blake Newman (Frontend engineer @Attest) - “Vue.js deep dive, looking to the future”
+* Harry Roberts (Frontend Architect) - “FaCSSt — CSS and Performance”
+
+The event will also include:
+
+* A video-steam with an up-close of the speaker
+* A direct line to ask the speakers questions
+* T-shirts and booklets
+* Unlimited Beer
+* Food
