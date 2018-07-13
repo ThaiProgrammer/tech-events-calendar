@@ -1,6 +1,6 @@
 ---
 id: smart-energy-hackathon-2018
-date: '2018-09-07 - 2018-09-09'
+date: '2018-09-07 ~ 2018-09-09'
 location:
   title: KX Innovation Center
   url: https://www.google.com/maps/place/The+Knowledge+Exchange:+KX/@13.7205004,100.498368,15z/data=!4m2!3m1!1s0x0:0xe2511ae461733d57?sa=X&ved=2ahUKEwiu39HqzZvcAhWXfSsKHbfdDMQQ_BIwCnoECAsQCw
@@ -16,15 +16,21 @@ links:
   - type: rsvp
     url: https://www.facebook.com/events/587557494971280/
     title: Facebook Event
-  - type: register
+  - type: ticket
     url: https://docs.google.com/forms/d/e/1FAIpQLSf4-9j8-H48QwZBXUX5s3s3-bEE5LE8xPnNKwPfM2tFdZfyQw/viewform
-    title: Registration Form
-    price: $24 (~800 THB) Adults, $12  (~400 THB) Students
+    title: Registration Form (ADULTS)
+    price: 800
+  - type: ticket
+    url: https://docs.google.com/forms/d/e/1FAIpQLSf4-9j8-H48QwZBXUX5s3s3-bEE5LE8xPnNKwPfM2tFdZfyQw/viewform
+    title: Registration Form (STUDENTS)
+    price: 400
 ---
 
-## Smart Energy Hackathon 2018
+# Smart Energy Hackathon 2018
 
-Smart Energy Hackathon is a software developing competition to tackle current energy challenges. Last year, the hackathon debuted in Bangkok with 16 teams hacking for 29 hours on clean tech solutions. We’re calling on all coders, energy experts, UX/UI designers, product developers, and entrepreneurs to come together and create impactful code, get noticed by key industry players, network, and have a chance for your idea to be funded by an investor!
+> Smart Energy Hackathon is a software developing competition to tackle current energy challenges. Last year, the hackathon debuted in Bangkok with 16 teams hacking for 29 hours on clean tech solutions. We’re calling on all coders, energy experts, UX/UI designers, product developers, and entrepreneurs to come together and create impactful code, get noticed by key industry players, network, and have a chance for your idea to be funded by an investor!
+
+KX Made, in partnership with New Energy Nexus, is proud to bring you the second edition of Smart Energy Hackathon! We are back with brand new challenges for hackers and energy enthusiasts to innovate on. Get ready to join the brightest minds in another nonstop hack-fest of creativity, collaboration, and intense coding to create smart energy solutions.
 
 We welcome participants from all technical and non-technical areas, as well as all skill levels. There will be experts from different fields from design to the energy sector to provide mentorship throughout the event.
 
