@@ -18,12 +18,8 @@ links:
     title: Facebook Event
   - type: ticket
     url: https://docs.google.com/forms/d/e/1FAIpQLSf4-9j8-H48QwZBXUX5s3s3-bEE5LE8xPnNKwPfM2tFdZfyQw/viewform
-    title: Registration Form (ADULTS)
-    price: 800
-  - type: ticket
-    url: https://docs.google.com/forms/d/e/1FAIpQLSf4-9j8-H48QwZBXUX5s3s3-bEE5LE8xPnNKwPfM2tFdZfyQw/viewform
-    title: Registration Form (STUDENTS)
-    price: 400
+    title: Registration Form
+    price: 'THB800 Adults, THB400 Students'
 ---
 
 # Smart Energy Hackathon 2018
