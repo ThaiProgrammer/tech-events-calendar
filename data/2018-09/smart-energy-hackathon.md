@@ -24,7 +24,9 @@ links:
 
 # Smart Energy Hackathon 2018
 
-> Smart Energy Hackathon is a software developing competition to tackle current energy challenges. Last year, the hackathon debuted in Bangkok with 16 teams hacking for 29 hours on clean tech solutions. We’re calling on all coders, energy experts, UX/UI designers, product developers, and entrepreneurs to come together and create impactful code, get noticed by key industry players, network, and have a chance for your idea to be funded by an investor!
+> We’re calling on all coders, energy experts, UX/UI designers, product developers, and entrepreneurs to come together and create impactful code, get noticed by key industry players, network, and have a chance for your idea to be funded by an investor!
+
+Smart Energy Hackathon is a software developing competition to tackle current energy challenges. Last year, the hackathon debuted in Bangkok with 16 teams hacking for 29 hours on clean tech solutions.
 
 KX Made, in partnership with New Energy Nexus, is proud to bring you the second edition of Smart Energy Hackathon! We are back with brand new challenges for hackers and energy enthusiasts to innovate on. Get ready to join the brightest minds in another nonstop hack-fest of creativity, collaboration, and intense coding to create smart energy solutions.
 
