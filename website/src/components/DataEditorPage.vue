@@ -1,54 +1,57 @@
 <template>
   <div class="container-lg p-4">
     <div class="Subhead">
-      <div class="Subhead-heading">Event data generator</div>
+      <div class="Subhead-heading">Event data editor</div>
     </div>
-    <div class="d-flex flex-items-baseline">
-      <div class="col-2 p-2">
-        categories
-      </div>
-      <div class="col-10 p-2">
-        <button
-          v-for="(cat, index) of availableCategories"
-          :key="index"
-          :class="{ selected: isCategorySelected(cat) }"
-          class="btn btn-sm mr-1"
-          @click="toggleCategory(cat)"
-        >
-          {{ cat }}
-        </button>
-      </div>
-    </div>
-    <div class="d-flex flex-items-baseline">
-      <div class="col-2 p-2">
-        data assistant
-      </div>
-      <div class="col-10 p-2">
-        <form @submit="$event.preventDefault()">
-          <input
-            v-model="textToAssist"
-            class="form-control input-block mb-1"
-            type="text"
-            placeholder="enter a URL, place, or topic"
-          >
+    <details class="mb-3">
+      <summary>tools</summary>
+      <div class="d-flex flex-items-baseline">
+        <div class="col-2 p-2">
+          categories
+        </div>
+        <div class="col-10 p-2">
           <button
-            v-if="!suggestedActions.length"
-            disabled
-            class="btn btn-sm mr-1"
-          >
-            No suggested actions
-          </button>
-          <button
-            v-for="(suggestedAction, index) in suggestedActions"
+            v-for="(cat, index) of availableCategories"
             :key="index"
+            :class="{ selected: isCategorySelected(cat) }"
             class="btn btn-sm mr-1"
-            @click="suggestedAction.perform()"
+            @click="toggleCategory(cat)"
           >
-            <span>{{ suggestedAction.title }}</span>
+            {{ cat }}
           </button>
-        </form>
+        </div>
       </div>
-    </div>
+      <div class="d-flex flex-items-baseline">
+        <div class="col-2 p-2">
+          data assistant
+        </div>
+        <div class="col-10 p-2">
+          <form @submit="$event.preventDefault()">
+            <input
+              v-model="textToAssist"
+              class="form-control input-block mb-1"
+              type="text"
+              placeholder="enter a URL, place, or topic"
+            >
+            <button
+              v-if="!suggestedActions.length"
+              disabled
+              class="btn btn-sm mr-1"
+            >
+              No suggested actions
+            </button>
+            <button
+              v-for="(suggestedAction, index) in suggestedActions"
+              :key="index"
+              class="btn btn-sm mr-1"
+              @click="suggestedAction.perform()"
+            >
+              <span>{{ suggestedAction.title }}</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </details>
     <textarea
       v-model="text"
       class="form-control input-monospace"
@@ -292,11 +295,14 @@ export default {
             ].join(' ~ ')
           }
           data.location = {
-            title: event.location
+            title: event.location,
+            url: 'TODO'
           }
-          data.categories = []
-          data.topics = []
+          data.categories = ['TODO']
+          data.topics = ['TODO']
           data.links = [
+            { type: 'website', url: 'TODO', title: 'TODO' },
+            { type: 'ticket', url: 'TODO', title: 'TODO', price: 'TODO' },
             { type: 'rsvp', url: event.url, title: 'Facebook event' }
           ]
         })

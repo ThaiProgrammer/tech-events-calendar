@@ -27,10 +27,10 @@ export default new Router({
       component: ListPage
     },
     {
-      path: '/generator',
-      name: 'DataGeneratorPage',
+      path: '/editor',
+      name: 'DataEditorPage',
       component: () =>
-        import(/* webpackChunkName: "data-generator" */ './components/DataGeneratorPage')
+        import(/* webpackChunkName: "data-generator" */ './components/DataEditorPage')
     },
     {
       path: '/event/:id',
