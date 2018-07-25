@@ -225,6 +225,14 @@ export default {
       }
       if (this.parsed.event) {
         const { event } = this.parsed
+        for (const e of this.$store.state.events) {
+          if (e.id === event.id) {
+            problems.push({
+              title: 'id should be unique',
+              message: `the id “${event.id}” already belongs to “${e.title}”`
+            })
+          }
+        }
         if (!event.categories || !event.categories.length) {
           problems.push({
             title: 'categories',
