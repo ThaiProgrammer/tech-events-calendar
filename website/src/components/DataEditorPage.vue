@@ -235,11 +235,12 @@ export default {
   },
   methods: {
     toggleCategory(category) {
-      this.modifyText(d => {
+      this.modifyText(data => {
+        const d = data
         if (d.categories.includes(category)) {
           d.categories.splice(d.categories.indexOf(category), 1)
         } else {
-          d.categories.push(category)
+          d.categories = [...d.categories, category].filter(x => x != 'TODO')
         }
       })
     },
