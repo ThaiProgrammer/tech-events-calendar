@@ -1,7 +1,7 @@
 <template>
   <div class="container-lg p-4">
     <div class="Subhead">
-      <div class="Subhead-heading">Event data generatorz</div>
+      <div class="Subhead-heading">Event data generator</div>
     </div>
     <div class="d-flex flex-items-baseline">
       <div class="col-2 p-2">
@@ -21,24 +21,30 @@
     </div>
     <div class="d-flex flex-items-baseline">
       <div class="col-2 p-2">
-        urls
+        data assistant
       </div>
       <div class="col-10 p-2">
-        <form @submit="$event.preventDefault(); suggestedAction && suggestedAction.perform()">
+        <form @submit="$event.preventDefault()">
           <input
-            v-model="url"
+            v-model="textToAssist"
             class="form-control input-block mb-1"
             type="text"
-            placeholder="Enter URL"
-            aria-label="Full-width input"
+            placeholder="enter a URL, place, or topic"
           >
           <button
-            :disabled="!suggestedAction"
-            :key="index"
+            v-if="!suggestedActions.length"
+            disabled
             class="btn btn-sm mr-1"
           >
-            Suggested action:
-            <span>{{ suggestedAction ? suggestedAction.title : '(none)' }}</span>
+            No suggested actions
+          </button>
+          <button
+            v-for="(suggestedAction, index) in suggestedActions"
+            :key="index"
+            class="btn btn-sm mr-1"
+            @click="suggestedAction.perform()"
+          >
+            <span>{{ suggestedAction.title }}</span>
           </button>
         </form>
       </div>
@@ -136,7 +142,7 @@ export default {
     const text = this.updateText(sessionStorage.text || template, x => x)
     return {
       text,
-      url: '',
+      textToAssist: '',
       parsed: this.parseText(text),
       availableCategories: [
         'Codefest',
@@ -150,59 +156,10 @@ export default {
     }
   },
   computed: {
-    suggestedAction() {
-      let { url } = this
-      {
-        const m = url.match(
-          /^https:\/\/www\.google\.[^/]+\/maps\/place\/([^?]+)/
-        )
-        if (m) {
-          url = `https://www.google.com/maps/place/${m[1]}`
-          return {
-            title: 'Add location',
-            perform: () => {
-              this.modifyText(d => {
-                const data = d
-                if (!data.location) data.location = {}
-                data.location.url = url
-              })
-            }
-          }
-        }
-      }
-      {
-        const m = url.match(/^https:\/\/www\.eventpop\.me/)
-        if (m) {
-          return {
-            title: 'Add ticket',
-            perform: () => {
-              this.addLink({
-                type: 'ticket',
-                title: 'Event Pop',
-                url,
-                price: 'TODO'
-              })
-            }
-          }
-        }
-      }
-      {
-        const m = url.match(/^https:\/\/dev\.wi\.th/)
-        if (m) {
-          return {
-            title: 'Add ticket',
-            perform: () => {
-              this.addLink({
-                type: 'ticket',
-                title: 'devcamp',
-                url,
-                price: 'TODO'
-              })
-            }
-          }
-        }
-      }
-      return null
+    suggestedActions() {
+      return getSuggestedActions(this.textToAssist, {
+        modifyText: this.modifyText
+      })
     },
     parsedJson() {
       if (this.parsed.event) {
@@ -312,13 +269,6 @@ export default {
     modifyText(f) {
       this.text = this.updateText(this.text, f)
     },
-    addLink(link) {
-      this.modifyText(d => {
-        const data = d
-        if (!data.links) data.links = []
-        data.links.push(link)
-      })
-    },
     async handleDrop(e) {
       e.preventDefault()
       try {
@@ -393,5 +343,86 @@ function serializeTime(d) {
       .toString()
       .padStart(2, 0)
   ].join(':')
+}
+
+function getSuggestedActions(textToAssist, { modifyText }) {
+  const actions = []
+  const suggest = (title, perform) => actions.push({ title, perform })
+  {
+    const m = textToAssist.match(
+      /^https:\/\/www\.google\.[^/]+\/maps\/place\/([^?]+)/
+    )
+    if (m) {
+      const url = `https://www.google.com/maps/place/${m[1]}`
+      suggest('Add location', () => {
+        modifyText(d => {
+          const data = d
+          if (!data.location) data.location = {}
+          data.location.url = url
+        })
+      })
+    }
+  }
+  {
+    const m = textToAssist.match(/^https:\/\/www\.eventpop\.me/)
+    if (m) {
+      const url = textToAssist
+      suggest('Add ticket URL', () => {
+        modifyText(
+          addLink({
+            type: 'ticket',
+            title: 'Event Pop',
+            url,
+            price: 'TODO'
+          })
+        )
+      })
+    }
+  }
+  {
+    const m = textToAssist.match(/^https:\/\/dev\.wi\.th/)
+    if (m) {
+      const url = textToAssist
+      suggest('Add ticket URL', () => {
+        modifyText(
+          addLink({
+            type: 'ticket',
+            title: 'devcamp',
+            url,
+            price: 'TODO'
+          })
+        )
+      })
+    }
+  }
+  {
+    const m = textToAssist.match(
+      /^https:\/\/(?:www|web)\.facebook\.com\/events\/(\d+)/
+    )
+    if (m) {
+      const url = `https://www.facebook.com/events/${m[1]}/`
+      suggest('Add RSVP URL', () => {
+        modifyText(
+          addLink({
+            type: 'rsvp',
+            title: 'Facebook',
+            url
+          })
+        )
+      })
+      suggest('Download ICS file', () => {
+        const icsUrl = `https://www.facebook.com/events/ical/export?eid=${m[1]}`
+        window.open(icsUrl, '_blank')
+      })
+    }
+  }
+  return actions
+}
+function addLink(link) {
+  return d => {
+    const data = d
+    if (!data.links) data.links = []
+    data.links.push(link)
+  }
 }
 </script>
