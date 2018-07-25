@@ -16,7 +16,7 @@ links:
   - type: ticket
     title: Event Pop
     url: 'https://www.eventpop.me/e/3846-bangkok-ux-meetup-16'
-    price: TODO
+    price: FREE
 ---
 
 # Bangkok UX Meetup 16

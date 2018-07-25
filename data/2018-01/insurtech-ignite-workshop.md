@@ -16,6 +16,7 @@ links:
     url: 'https://dev.wi.th/event/insurtech-ignite-workshop'
     title: Devcamp
 ---
+
 # Insurtech Ignite Workshop
 
-Insurtech Ignite Workshop จัดขึ้นเพื่อผู้ที่สนใจจะมาร่วมฟัง เทคนิค แบบเจาะลึก และอัพเดตเทรนต์ด้าน Insurance Industry, Future of Business with Big Data, AI, Automation พร้อมกิจกรรม Networking ในวันที่ 27 มกราคม 2561 นี้
+> Insurtech Ignite Workshop จัดขึ้นเพื่อผู้ที่สนใจจะมาร่วมฟัง เทคนิค แบบเจาะลึก และอัพเดตเทรนต์ด้าน Insurance Industry, Future of Business with Big Data, AI, Automation พร้อมกิจกรรม Networking ในวันที่ 27 มกราคม 2561 นี้
