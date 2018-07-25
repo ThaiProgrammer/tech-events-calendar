@@ -27,6 +27,12 @@ export default new Router({
       component: ListPage
     },
     {
+      path: '/generator',
+      name: 'DataGeneratorPage',
+      component: () =>
+        import(/* webpackChunkName: "data-generator" */ './components/DataGeneratorPage')
+    },
+    {
       path: '/event/:id',
       name: 'EventInfoPage',
       component: EventInfoPage
