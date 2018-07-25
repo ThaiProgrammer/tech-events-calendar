@@ -26,33 +26,32 @@
           data assistant
         </div>
         <div class="col-10 p-2">
-          <form @submit="$event.preventDefault()">
-            <input
-              v-model="textToAssist"
-              class="form-control input-block mb-1"
-              type="text"
-              placeholder="enter a URL, place, or topic"
-            >
-            <button
-              v-if="!suggestedActions.length"
-              disabled
-              class="btn btn-sm mr-1"
-            >
-              No suggested actions
-            </button>
-            <button
-              v-for="(suggestedAction, index) in suggestedActions"
-              :key="index"
-              class="btn btn-sm mr-1"
-              @click="suggestedAction.perform()"
-            >
-              <span>{{ suggestedAction.title }}</span>
-            </button>
-          </form>
+          <input
+            v-model="textToAssist"
+            class="form-control input-block"
+            type="text"
+            placeholder="enter a URL, place, or topic"
+          >
+          <button
+            v-if="!suggestedActions.length"
+            disabled
+            class="btn btn-sm mr-1 mt-1"
+          >
+            No suggested actions
+          </button>
+          <button
+            v-for="(suggestedAction, index) in suggestedActions"
+            :key="index"
+            class="btn btn-sm mr-1 mt-1"
+            @click="suggestedAction.perform()"
+          >
+            <span>{{ suggestedAction.title }}</span>
+          </button>
         </div>
       </div>
     </details>
     <textarea
+      ref="textarea"
       v-model="text"
       class="form-control input-monospace"
       style="width: 100%; height: 25em;"
@@ -65,6 +64,7 @@
       class="Box"
       style="overflow: auto; height: 15em"
     >
+
       <div
         v-for="(problem, index) in problems"
         :key="index"
@@ -74,32 +74,58 @@
       </div>
       <div
         v-if="!problems.length"
-        class="flash flash-success m-2 p-2"
+        class="flash flash-success m-2"
       >
-        No problems found.
+        <form
+          action="https://github.com/ThaiProgrammer/tech-events-calendar/new/master"
+          target="_blank"
+        >
+          <input
+            :value="targetFilename"
+            type="hidden"
+            name="filename"
+          >
+          <button
+            type="submit"
+            class="btn btn-sm btn-primary flash-action"
+            @click="copyText()"
+          >Copy text and submit event</button>
+          No problems found.
+        </form>
       </div>
     </div>
     <br>
-    <br>
-    <EventInfo
-      v-if="parsed.event"
-      :event="parsed.event"
-    />
-    <br>
-    <br>
-    <div class="checks markdown-body">
-      <DataChecks
-        v-if="parsed.checks"
-        :checks="parsed.checks"
+    <details>
+      <summary>event preview</summary>
+      <EventInfo
+        v-if="parsed.event"
+        :event="parsed.event"
       />
-      <pre wrap>{{ parsedJson }}</pre>
-    </div>
+    </details>
+    <br>
+    <details>
+      <summary>detailed checks</summary>
+      <div class="checks markdown-body">
+        <DataChecks
+          v-if="parsed.checks"
+          :checks="parsed.checks"
+        />
+      </div>
+    </details>
+    <br>
+    <details>
+      <summary>parsed event</summary>
+      <div class="checks">
+        <pre wrap>{{ parsedJson }}</pre>
+      </div>
+    </details>
   </div>
 </template>
 
 <script>
 import ical from 'ical/ical'
 import yaml from 'js-yaml'
+import fuzzy from 'fuzzaldrin-plus'
 import formatJson from 'format-json'
 import frontMatter from 'front-matter'
 import parseMarkdown from '../../../lib/parseMarkdown'
@@ -161,8 +187,17 @@ export default {
   computed: {
     suggestedActions() {
       return getSuggestedActions(this.textToAssist, {
-        modifyText: this.modifyText
+        modifyText: this.modifyText,
+        availableTopics: this.$store.getters.topics,
+        availableLocations: this.$store.getters.locations
       })
+    },
+    targetFilename() {
+      const folder = [
+        this.parsed.event.start.year,
+        this.parsed.event.start.month.toString().padStart(2, 0)
+      ].join('-')
+      return `data/${folder}/${this.parsed.event.id}.md`
     },
     parsedJson() {
       if (this.parsed.event) {
@@ -234,13 +269,18 @@ export default {
     }
   },
   methods: {
+    copyText() {
+      this.$refs.textarea.focus()
+      this.$refs.textarea.select()
+      document.execCommand('copy')
+    },
     toggleCategory(category) {
       this.modifyText(data => {
         const d = data
         if (d.categories.includes(category)) {
           d.categories.splice(d.categories.indexOf(category), 1)
         } else {
-          d.categories = [...d.categories, category].filter(x => x != 'TODO')
+          d.categories = [...d.categories, category].filter(x => x !== 'TODO')
         }
       })
     },
@@ -282,7 +322,7 @@ export default {
         const event = events[Object.keys(events)[0]]
         console.log(event)
         const description = event.description.replace(/http[\S]+\s*$/, '')
-        this.text = `# ${event.summary}\n\n${description}`
+        this.text = `# ${event.summary}\n\n> ${description.trim()}`
         this.modifyText(d => {
           const data = d
           data.id = event.uid.replace(/@.*/, '')
@@ -352,7 +392,10 @@ function serializeTime(d) {
   ].join(':')
 }
 
-function getSuggestedActions(textToAssist, { modifyText }) {
+function getSuggestedActions(
+  textToAssist,
+  { availableTopics, availableLocations, modifyText }
+) {
   const actions = []
   const suggest = (title, perform) => actions.push({ title, perform })
   {
@@ -361,11 +404,17 @@ function getSuggestedActions(textToAssist, { modifyText }) {
     )
     if (m) {
       const url = `https://www.google.com/maps/place/${m[1]}`
-      suggest('Add location', () => {
+      const locationTitle = decodeURIComponent(
+        m[1].split('/')[0].replace(/[+]/g, ' ')
+      )
+      suggest(`Set location to ${locationTitle}`, () => {
         modifyText(d => {
           const data = d
           if (!data.location) data.location = {}
           data.location.url = url
+          if (!data.location.title || data.location.title === 'TODO') {
+            data.location.title = locationTitle
+          }
         })
       })
     }
@@ -423,13 +472,45 @@ function getSuggestedActions(textToAssist, { modifyText }) {
       })
     }
   }
+  if (!actions.length && textToAssist.length) {
+    const matchedTopics = fuzzy.filter(availableTopics, textToAssist)
+    for (const topic of matchedTopics.slice(0, 3)) {
+      suggest(`Add topic “${topic}”`, () => {
+        modifyText(addTopic(topic))
+      })
+    }
+    const matchedLocations = fuzzy.filter(availableLocations, textToAssist, {
+      key: 'title'
+    })
+    for (const location of matchedLocations.slice(0, 3)) {
+      suggest(`Location: “${location.title}”`, () => {
+        modifyText(data => {
+          const d = data
+          d.location = location
+        })
+      })
+    }
+  }
   return actions
 }
 function addLink(link) {
-  return d => {
-    const data = d
-    if (!data.links) data.links = []
-    data.links.push(link)
+  const typeOrder = ['website', 'ticket', 'rsvp']
+  return data => {
+    const d = data
+    if (!d.links) d.links = []
+    d.links = [
+      ...(d.links || []).filter(
+        l => !(l.type === link.type && (l.url === 'TODO' || l.url === link.url))
+      ),
+      link
+    ].sort((a, b) => typeOrder.indexOf(a.type) - typeOrder.indexOf(b.type))
+  }
+}
+function addTopic(topic) {
+  return data => {
+    const d = data
+    if (d.topics && d.topics.includes(topic)) return
+    d.topics = [...(d.topics || []), topic].filter(t => t !== 'TODO')
   }
 }
 </script>
