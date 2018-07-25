@@ -46,7 +46,7 @@
     <textarea
       v-model="text"
       class="form-control input-monospace"
-      style="width: 100%; height: 20em;"
+      style="width: 100%; height: 25em;"
       @dragover="$event.preventDefault()"
       @drop="handleDrop($event)"
     />
@@ -54,7 +54,7 @@
     <br>
     <div
       class="Box"
-      style="overflow: auto; height: 10em"
+      style="overflow: auto; height: 15em"
     >
       <div
         v-for="(problem, index) in problems"
@@ -97,13 +97,43 @@ import parseMarkdown from '../../../lib/parseMarkdown'
 import DataChecks from './DataChecks'
 import EventInfo from './EventInfo'
 
+const template = `---
+id: TODO
+date: 'TODO'
+time: TODO
+location:
+  title: TODO
+  url: TODO
+categories:
+  - TODO
+topics:
+  - TODO
+links:
+  - type: website
+    url: TODO
+    title: TODO
+  - type: ticket
+    url: TODO
+    title: TODO
+    price: TODO
+  - type: rsvp
+    url: TODO
+    title: TODO
+---
+
+# TODO
+
+> TODO
+
+TODO`
+
 export default {
   components: {
     DataChecks,
     EventInfo
   },
   data() {
-    const text = this.updateText(sessionStorage.text || '', x => x)
+    const text = this.updateText(sessionStorage.text || template, x => x)
     return {
       text,
       url: '',
