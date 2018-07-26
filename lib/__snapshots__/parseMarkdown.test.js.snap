@@ -287,7 +287,7 @@ Object {
           "result": Object {
             "status": true,
           },
-          "title": "\`url\` is an optional Google Maps URL",
+          "title": "\`url\` is an optional Google Maps URL or TBD",
           "type": "check",
         },
         Object {
@@ -310,6 +310,20 @@ Object {
           "title": "summary",
           "type": "check",
         },
+        Object {
+          "result": Object {
+            "status": true,
+          },
+          "title": "is present",
+          "type": "check",
+        },
+        Object {
+          "result": Object {
+            "status": true,
+          },
+          "title": "is not longer than 280 chars",
+          "type": "check",
+        },
       ],
       "title": "**summary** (in markdown body)",
       "type": "item",
@@ -321,6 +335,13 @@ Object {
             "status": true,
           },
           "title": "description",
+          "type": "check",
+        },
+        Object {
+          "result": Object {
+            "status": true,
+          },
+          "title": "is valid",
           "type": "check",
         },
       ],

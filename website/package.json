@@ -10,7 +10,11 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "format-json": "^1.0.3",
+    "front-matter": "^2.3.0",
+    "fuzzaldrin-plus": "^0.6.0",
     "ical": "^0.5.0",
+    "js-yaml": "^3.10.0",
     "markdown-it": "^8.4.1",
     "primer": "^10.3.0",
     "vue": "^2.5.2",
@@ -18,10 +22,7 @@
     "vue-octicon": "^2.1.1",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
-    "whatwg-fetch": "^2.0.3",
-    "js-yaml": "^3.10.0",
-    "format-json": "^1.0.3",
-    "front-matter": "^2.3.0"
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

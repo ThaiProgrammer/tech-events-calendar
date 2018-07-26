@@ -27,9 +27,6 @@ resources:
 
 # Asia-Pacific Ethereum Community Meetup
 
-The event covers Ethereum-based technology sharing, discussions on some wonderful use cases
-and the development of various Asia-Pacific Ethereum communities, etc. The confirmed guests
-include Vitalik Buterin, Karl Floersch, OmiseGo Team and other developers and various Ethereum
-community representatives (from China, Korea, Singapore, America, Japan etc.), founders of
-excellent Ethereum-based projects, well-known investors and enterprise representatives in
-this sector.
+> The event covers Ethereum-based technology sharing, discussions on some wonderful use cases and the development of various Asia-Pacific Ethereum communities, etc. The confirmed guests include Vitalik Buterin, Karl Floersch, OmiseGo Team and other developers
+
+…and various Ethereum community representatives (from China, Korea, Singapore, America, Japan etc.), founders of excellent Ethereum-based projects, well-known investors and enterprise representatives in this sector.

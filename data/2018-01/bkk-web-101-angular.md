@@ -21,8 +21,11 @@ links:
     url: 'https://www.facebook.com/events/1781210951888915/'
     title: Facebook event
 ---
+
 # BKK WEB 101 - Angular 2, 4, 5, Oh My
 
-This talk will cover all of the topics in the bulleted list by show casing an app to keep track of your favorite movies and discover new ones. This app will include the ability to login in and persist your movie list using Firebase. I will walk through the methods I used to create the app starting with the Angular CLI and how to best structure your code to make it scalable.
+> I will walk through the methods I used to create the app starting with the Angular CLI and how to best structure your code to make it scalable.
+
+This talk will cover all of the topics in the bulleted list by show casing an app to keep track of your favorite movies and discover new ones. This app will include the ability to login in and persist your movie list using Firebase.
 
 Jesse will cover the following topics: CLI, TypeScript, Modules, Components, Templates, Directives, Lifecycle hooks, Services, Routing, Observables, Forms, Pipes, HTTP Requests, Animations

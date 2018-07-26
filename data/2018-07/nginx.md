@@ -8,7 +8,7 @@ location:
 categories:
   - Meetup
 topics:
-  - nginx
+  - NGINX
 links:
   - type: rsvp
     url: 'https://www.facebook.com/events/1832870390093140/'
