@@ -327,8 +327,11 @@ export default {
         const file = e.dataTransfer.files[0]
         const contents = await readFile(file)
         const events = ical.parseICS(contents)
-        const event = events[Object.keys(events)[0]]
-        console.log(event)
+        const event =
+          events[
+            Object.keys(events).filter(k => events[k].type === 'VEVENT')[0]
+          ]
+        console.log(events)
         const description = event.description.replace(/http[\S]+\s*$/, '')
         this.text = `# ${event.summary}\n\n> ${description.trim()}`
         this.modifyText(d => {
@@ -344,16 +347,20 @@ export default {
             ].join(' ~ ')
           }
           data.location = {
-            title: event.location,
+            title: event.location || 'TODO',
             url: 'TODO'
           }
           data.categories = ['TODO']
           data.topics = ['TODO']
+          const linkTitle = event.url.match(/\.facebook\.com\/events\//)
+            ? 'Facebook event'
+            : 'TODO'
           data.links = [
             { type: 'website', url: 'TODO', title: 'TODO' },
             { type: 'ticket', url: 'TODO', title: 'TODO', price: 'TODO' },
-            { type: 'rsvp', url: event.url, title: 'Facebook event' }
+            { type: 'rsvp', url: event.url, title: linkTitle }
           ]
+          console.log('Result', data)
         })
       } catch (error) {
         window.alert(`Cannot process: ${error}`)

@@ -43,8 +43,12 @@
               </span>
               <span class="info-text">
                 <a
+                  v-if="event.location.url && event.location.url !== 'TBD'"
                   :href="event.location.url"
                   target="_blank">{{ event.location.title }}</a>
+                <acronym
+                  v-if="event.location.url === 'TBD'"
+                  title="To be determined">{{ event.location.title }}</acronym>
                 <span
                   v-if="event.location.detail"
                   class="info-extended text-gray f6">
