@@ -7,7 +7,8 @@ const store = new Vuex.Store({
   state: {
     events: [],
     loading: true,
-    error: null
+    error: null,
+    admin: !!localStorage.calendarAdmin
   },
   mutations: {
     eventsLoaded(state, { events }) {
@@ -17,6 +18,9 @@ const store = new Vuex.Store({
     eventsFailedToLoad(state, { error }) {
       state.error = error
       state.loading = false
+    },
+    adminModeSet(state, { admin }) {
+      state.admin = admin
     }
   },
   actions: {
@@ -29,6 +33,11 @@ const store = new Vuex.Store({
       } catch (error) {
         commit('eventsFailedToLoad', { error })
       }
+    },
+    toggleAdminMode({ commit, state }) {
+      const admin = !state.admin
+      localStorage.calendarAdmin = admin ? '1' : ''
+      commit('adminModeSet', { admin })
     }
   },
   getters: {

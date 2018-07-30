@@ -15,7 +15,11 @@
         <p>Sorry, but the requested event cannot be found.</p>
       </div>
       <div v-if="!!event">
-        <event-info :event="event"/>
+        <EventInfo :event="event" />
+        <details v-if="admin">
+          <summary>for admin</summary>
+          <EventInfoAdmin :event="event" />
+        </details>
       </div>
     </div>
     <div
@@ -30,17 +34,19 @@
 import { mapState } from 'vuex'
 import Spinner from './Spinner'
 import EventInfo from './EventInfo'
+import EventInfoAdmin from './EventInfoAdmin'
 
 export default {
   components: {
     Spinner,
-    EventInfo
+    EventInfo,
+    EventInfoAdmin
   },
   computed: {
     id() {
       return this.$route.params.id
     },
-    ...mapState(['loading', 'error', 'events']),
+    ...mapState(['loading', 'error', 'events', 'admin']),
     event() {
       return this.events.filter(e => e.id === this.id)[0]
     }

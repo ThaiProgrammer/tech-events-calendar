@@ -10,6 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "clipboard-copy": "^2.0.0",
     "format-json": "^1.0.3",
     "front-matter": "^2.3.0",
     "fuzzaldrin-plus": "^0.6.0",

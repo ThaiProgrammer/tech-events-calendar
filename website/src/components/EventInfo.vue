@@ -114,11 +114,14 @@
         <div class="markdown-body">
           <markdown :text="description"/>
         </div>
-        <p class="text-right mt-4">
-          <a
-            :href="editLink"
-            class="btn btn-secondary">Edit on GitHub</a>
-        </p>
+        <div class="d-flex flex-items-baseline">
+          <p class="flex-auto" />
+          <p class="text-right mt-4">
+            <a
+              :href="editLink"
+              class="btn btn-secondary">Edit on GitHub</a>
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -128,6 +131,7 @@
 import Octicon from 'vue-octicon/components/Octicon'
 import EventTags from './EventTags'
 import Markdown from './Markdown'
+import { MONTHS, DAYS } from '../utils'
 
 export default {
   components: {
@@ -159,25 +163,11 @@ export default {
   },
   methods: {
     formatDate(d) {
-      const MONTHS = [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December'
-      ]
       return `${MONTHS[d.month - 1]} ${d.date}`
     },
     day(d) {
       const date = new Date(d.year, d.month - 1, d.date)
-      return ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][date.getDay()]
+      return DAYS[date.getDay()]
     },
     formatTime(t) {
       return `${t.hour}:${t.minute < 10 ? '0' : ''}${t.minute}`

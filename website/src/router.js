@@ -4,6 +4,7 @@ import Vue from 'vue'
 import EventInfoPage from './components/EventInfoPage'
 import HomePage from './components/HomePage'
 import ListPage from './components/ListPage'
+import AdminPage from './components/AdminPage'
 
 Vue.use(Router)
 
@@ -31,6 +32,11 @@ export default new Router({
       name: 'DataEditorPage',
       component: () =>
         import(/* webpackChunkName: "data-generator" */ './components/DataEditorPage')
+    },
+    {
+      path: '/admin',
+      name: 'AdminPage',
+      component: AdminPage
     },
     {
       path: '/event/:id',
