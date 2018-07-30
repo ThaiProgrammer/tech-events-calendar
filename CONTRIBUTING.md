@@ -2,11 +2,11 @@
 
 Thanks for your interest in making this project better!
 
-## Missing events
+Here are ways you can contribute to this project.
 
-Please [submit an event by creating an issue using this link](https://github.com/ThaiProgrammer/tech-events-calendar/issues/new?title=[Event]+«EVENT+TITLE+HERE»&body=%23%23%23%20Date%20and%20time%0AYYYY-MM-DD%0AHH%3AMM%20~%20HH%3AMM%0A%0A%23%23%23%20Location%0A%3C!--%20Please%20include%20Google%20Maps%20link%20--%3E%0A%0A%0A%23%23%23%20Links%0A%3C!--%20Please%20include%20relevant%20links%20--%3E%0A-%20Website%3A%0A-%20Tickets%3A%0A-%20Facebook%20event%3A%0A%0A%23%23%23%20Event%20summary%0A%3C!--%20One%20paragraph%2C%20not%20longer%20than%20280%20chars%20--%3E%0A%0A%0A%23%23%23%20Event%20description%0A%3C!--%20Not%20more%20than%203%20paragraph%20--%3E%0A%0A%0A). Our contributors team will review your submission and add it to the calendar as appropriate. Please make sure that your event follows the criteria below.
+## Add an event to the project
 
-You can also contribute the event data directly and send us a pull request.
+Please check out our process document: [The Process of Adding New Events to the calendar.thaiprogrammer.org Database and Facebook Page](https://paper.dropbox.com/doc/The-Process-of-Adding-New-Events-to-the-calendar.thaiprogrammer.org-Database-and-Facebook-Page-NhTeG7Sxzd7LuVWFuE3OP). This document explains how you can submit a new event to this 
 
 ### Criteria for events
 
@@ -86,7 +86,16 @@ Event description, 3 paragraphs or less.
     - **300 THB**
 
 
-## Event data is incorrect or incomplete
+## Spread the word
+
+- **Star** this project on GitHub.
+
+- **Share and promote the website,** [calendar.thaiprogrammer.org](https://calendar.thaiprogrammer.org/).
+
+- **Like and share our Facebook page,** https://www.facebook.com/thtechevents
+
+
+## Update incorrect/incomplete event data
 
 If you found a mistake in any event’s data, please help us correct it.
 
@@ -103,9 +112,10 @@ If you want to help maintain this project,
 
 ## Other things you can help
 
-- Star this project.
-- Share and promote the website [calendar.thaiprogrammer.org](https://calendar.thaiprogrammer.org/).
 - Help writing the documentation for this project to make it easier for first-time contributors to get started with this project.
+
 - Take a look at issues labeled [`help wanted`](https://github.com/ThaiProgrammer/tech-events-calendar/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22help+wanted%22). Issues friendly for first-time contributors are labeled [`good first issue`](https://github.com/ThaiProgrammer/tech-events-calendar/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22good+first+issue%22).
+
 - Teach your friends to use Git and GitHub by guiding them through the process of making a contribution to this project. We are already doing good practices such as automated tests, CI and CD, so this project can be useful for introducing people to modern software development.
+
 - Report bugs, suggest design/UX improvements, [file an issue](https://github.com/ThaiProgrammer/tech-events-calendar/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc).
