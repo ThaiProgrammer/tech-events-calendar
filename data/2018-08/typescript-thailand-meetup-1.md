@@ -1,6 +1,6 @@
 ---
 id: typescript-thailand-meetup-1
-date: '2018-08-17'
+date: '2018-08-16'
 time: '18:00 ~ 21:00'
 location:
   title: BIG Co-working Space
