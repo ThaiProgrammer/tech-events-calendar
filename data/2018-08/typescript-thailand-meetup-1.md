@@ -15,7 +15,7 @@ topics:
 links:
   - type: ticket
     title: Event Pop
-    url: 'https://www.eventpop.me/e/3928-devops-bkk-2018'
+    url: 'https://www.eventpop.me/e/3936-typescript-thailand-meetup-1'
     price: FREE
   - type: rsvp
     url: 'https://www.facebook.com/events/1365101183623296/'
