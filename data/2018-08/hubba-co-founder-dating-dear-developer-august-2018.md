@@ -7,7 +7,9 @@ location:
   url: 'https://www.google.com/maps/place/DISCOVERY+HUBBA/@13.746908,100.53158,15z/data=!4m5!3m4!1s0x0:0x3a05250bc02b4367!8m2!3d13.746908!4d100.53158'
 categories:
   - Meetup
-topics: []
+topics:
+  - Business
+  - Speed Dating
 links:
   - type: ticket
     title: Event Pop
