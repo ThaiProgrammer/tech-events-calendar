@@ -8,6 +8,7 @@ categories:
   - Hackathon
 topics:
   - Software testing
+  - QA
 links:
   - type: website
     url: 'https://testathon.co/more-info-bangkok-04th-august/'
