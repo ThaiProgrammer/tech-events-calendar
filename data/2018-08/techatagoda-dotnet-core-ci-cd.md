@@ -23,7 +23,7 @@ links:
     title: Facebook
     url: 'https://www.facebook.com/events/433227893870769/'
 ---
-# Full Open-Source CI/CD of a dotnet core application
+# Tech@Agoda Workshop: CI/CD .NET Core/React SPA
 
 > 0 to 100, Building a full CI CD pipeline with free tools like GitHub, AppVeyor, etc. Hear from our favourite workshop host Cedric hands on about building your apps and deploying them in the cloud. Great for open and closed source projects.
 
