@@ -1,7 +1,7 @@
 ---
-id: 'GeekyBaseVimPro20181007'
-date: '2018-01-27'
-time: '09:00 ~ 17:30'
+id: 'geekybasevimpro20181007'
+date: '2018-10-07'
+time: '09:00 ~ 17:00'
 categories:
   - Workshop
 topics:
