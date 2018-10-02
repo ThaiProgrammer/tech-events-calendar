@@ -4,7 +4,7 @@ date: '2018-10-03'
 time: '18:00 ~ 21:00'
 location:
   title: BIG Co-Working Space
-  url: https://goo.gl/maps/CMXtSij6pUx
+  url: https://www.google.com/maps/place/BIG+Co-working+Space/@13.7566648,100.5697955,17z/data=!3m1!4b1!4m5!3m4!1s0x30e29e8b209f69c3:0xf2124609ad0be030!8m2!3d13.7566648!4d100.5719842
 categories:
   - Meetup
 topics:
