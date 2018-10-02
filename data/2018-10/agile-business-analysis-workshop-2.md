@@ -3,7 +3,7 @@ id: agile-business-analysis-workshop-2-20181009
 date: "2018-10-09"
 time: "10:00 ~ 16:00"
 location:
-  title: BIG Co-Workingspace
+  title: BIG Co-working Space
   url: https://www.google.com/maps/place/BIG+Co-working+Space/@13.7566648,100.5697955,17z/data=!3m1!4b1!4m5!3m4!1s0x30e29e8b209f69c3:0xf2124609ad0be030!8m2!3d13.7566648!4d100.5719842
 categories:
   - Workshop
@@ -16,7 +16,7 @@ links:
   - type: ticket
     url: https://www.eventpop.me/e/4239
     title: Event Pop
-    price: 3,000 ~ 3,500
+    price: 3,000 ~ 3,500 THB
 ---
 
 # Agile Business Analysis Workshop รุ่น 2
