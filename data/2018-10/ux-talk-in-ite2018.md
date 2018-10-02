@@ -13,12 +13,12 @@ topics:
 links:
   - type: website
     url: http://innovationthailand.org
-    title: ITE: Innovation Thailand Expo 2018
+    title: ITE - Innovation Thailand Expo 2018
   - type: ticket
     url: http://www.innovationthailand.org/f10
     price: Free
-  - type: website2
-    url: TODO
+  - type: website
+    url: https://www.facebook.com/events/538405903250404
     title: Facebook Event
 ---
 
