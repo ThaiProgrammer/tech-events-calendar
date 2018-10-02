@@ -8,7 +8,7 @@ location:
 categories:
   - Meetup
 topics:
-  - From the Iron Age to the Cloud Age by Keif Morris
+  - Cloud
 links:
   - type: website
     url: https://www.facebook.com/events/529475470810760/
@@ -22,14 +22,16 @@ links:
 
 > ThoughtWorks Thailand is excited to welcome Keif Morris to Bangkok!
 
-Title: From the Iron Age to the Cloud Age by Keif Morris
+**Title**: From the Iron Age to the Cloud Age by Keif Morris
 Abstract: The move to cloud is driving a shift in how we manage changes to infrastructure. Long cycles are out, and rapid improvement loops are in.  This talk describes the principles and practices that organisations and teams can apply to deliver more reliable infrastructure more quickly.
 
-Agenda:
-18:30 - 19:00: Sign-in
-19:00 - From the Iron Age to the Cloud Age by Keif Morris
-20:00+: Networking
-* Snacks and drinks will be provided
+**Agenda**:
 
-Key Benefits of Attending:
+- 18:30 - 19:00: Sign-in
+- 19:00 - From the Iron Age to the Cloud Age by Keif Morris
+- 20:00+: Networking
+
+** Snacks and drinks will be provided
+
+**Key Benefits of Attending**:
 "Iron Age to Cloud Age" talk is well-suited towards technical leads, architects, and managers.
