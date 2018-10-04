@@ -8,7 +8,7 @@ topics:
   - Vim
 location:
   title: Geeky Base
-  url: https://www.google.com/maps/place/Geeky+Base/@13.8523142,100.5803435,17z/data=!3m1!4b1!4m5!3m4!1s0x30e29d2386568ec7:0xdf0eb043fcd08544!8m2!3d13.8523142!4d100.5825322
+  url: https://goo.gl/maps/18gUYKBwibA2
   detail: จอดรถฟรี
 links:
   - type: rsvp
