@@ -10,15 +10,13 @@ categories:
 topics:
   - UX
   - Branding
-  - BKK Web
 links:
   - type: website
     url: https://www.facebook.com/events/529361374162133/
     title: Facebook Event
-  - type: ticket
+  - type: rsvp
     url: https://www.eventbrite.com/e/bkk-web-10-branding-the-missing-element-to-user-experience-design-ux-design-tickets-49202572218
     title: Eventbrite
-    price: Free
   - type: website
     url: https://www.facebook.com/groups/bkkweb/
     title: Facebook Group
@@ -36,11 +34,11 @@ links:
 
 ### WE WILL COVER:
 
-Discussion about what UX means?
-The usual misconceptions.
-The importance of understanding how UX and Branding affects business decisions.
-Branding is beyond logo and visual.
-Design is objective not subjective.
+- Discussion about what UX means?
+- The usual misconceptions.
+- The importance of understanding how UX and Branding affects business decisions.
+- Branding is beyond logo and visual.
+- Design is objective not subjective.
 
 
 ### AGENDA
