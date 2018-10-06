@@ -11,10 +11,10 @@ topics:
   - UX
   - Branding
 links:
-  - type: website
+  - type: rsvp
     url: https://www.facebook.com/events/529361374162133/
     title: Facebook Event
-  - type: rsvp
+  - type: ticket
     url: https://www.eventbrite.com/e/bkk-web-10-branding-the-missing-element-to-user-experience-design-ux-design-tickets-49202572218
     title: Eventbrite
   - type: website
