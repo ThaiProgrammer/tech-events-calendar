@@ -11,7 +11,7 @@ location:
   url: https://goo.gl/maps/yxqoDbczJaS2
   detail: 248 Krungthonburi Road, Bangkok, Thailand 10600
 links:
-  - type: website
+  - type: rsvp
     url: https://www.facebook.com/events/245132012864604/
     title: Facebook Event
   - type: ticket
