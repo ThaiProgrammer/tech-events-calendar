@@ -4,9 +4,9 @@ const fs = require('fs')
 const path = require('path')
 
 const { dirname, basename } = path
-const parseMarkdown = require('../lib/parseMarkdown')
 const glob = require('glob')
 const mkdirp = require('mkdirp')
+const parseMarkdown = require('../lib/parseMarkdown')
 
 function hasError(checks) {
   return checks.some(isError)
