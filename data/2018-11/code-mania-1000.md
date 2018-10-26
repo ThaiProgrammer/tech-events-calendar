@@ -1,6 +1,5 @@
-
 ---
-id: codemania-2018
+id: codemania-1000
 date: "2018-11-10"
 time: "08:00 ~ 18:30"
 location:
@@ -17,11 +16,12 @@ topics:
   - DevOps
   - Cloud
   - Blockchain
+  - Deep Tech
 links:
   - type: ticket
     url: https://www.eventpop.me/e/4355
     title: Event Pop
-    price `300 ~ 2,500 THB`
+    price `500 ~ 2,500 THB`
   - type: website
     url: https://web.facebook.com/CodeManiaByTPA
     title: Facebook Fan Page
