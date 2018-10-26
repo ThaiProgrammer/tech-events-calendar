@@ -3,7 +3,7 @@ id: codemania-1000
 date: "2018-11-10"
 time: "08:00 ~ 18:30"
 location:
-  title: The Knowledge Exchange: KX
+  title: 'The Knowledge Exchange: KX'
   url: https://goo.gl/maps/Rvkq1SwCAEq
 categories:
   - Conference
