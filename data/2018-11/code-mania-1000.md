@@ -21,7 +21,7 @@ links:
   - type: ticket
     url: https://www.eventpop.me/e/4355
     title: Event Pop
-    price `500 ~ 2,500 THB`
+    price: '500 ~ 2,500 THB'
   - type: website
     url: https://web.facebook.com/CodeManiaByTPA
     title: Facebook Fan Page
