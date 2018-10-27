@@ -1,5 +1,5 @@
 ---
-id: codemania-1000
+id: code-mania-1000
 date: "2018-11-10"
 time: "08:00 ~ 18:30"
 location:
@@ -33,7 +33,7 @@ links:
     title: สมาคมโปรแกรมเมอร์ไทย
 ---
 
-# Codemania 1000
+# Code Mania 1000
 
 > ธีมงานรอบนี้คือ “Deep Tech” ทางสมาคมโปรแกรมเมอร์ไทยของเราได้เล็งเห็นถึงความสำคัญในเรื่อง “Deep Technology” 
 
