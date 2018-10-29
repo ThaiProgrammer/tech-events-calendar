@@ -33,22 +33,24 @@ links:
 9.  Networking 20.40 - 21.00
 
 Speakers:
-Nutti Saelor@Vertice International: What's New in Angular 7?
 
-JaMe Siwat Kaolueng@Angular Thailand, Freelancer:
-Continuous everything with Angular, TravisCI, and Firebase Hosting
+- Nutti Saelor@Vertice International: “What's New in Angular 7?”
 
-Supagrid Tangsermsit@Odds: Public private protected จำเป็นไหม
+- JaMe Siwat Kaolueng@Angular Thailand, Freelancer:
+  “Continuous everything with Angular, TravisCI, and Firebase Hosting”
 
-Worawut Boontan@iTopPlus: Fullstack Apollo App with Autodigi
+- Supagrid Tangsermsit@Odds: “Public private protected จำเป็นไหม”
 
-Atthaporn Thanongkiatisak@BUILK ONE GROUP:
-Angular + .NET Core = Awesome
+- Worawut Boontan@iTopPlus: “Fullstack Apollo App with Autodigi”
 
-Arnon Kaewprasert@Humanize: Angular x Line LIFF
-Naruebaet Bouhom@Garena OnlineThailand:
-Angular Boost up performance
-Venue: Learn Hub+ Co Learning Space
-Date: Tuesday 30 October 2018 18.00 - 21.00
+- Atthaporn Thanongkiatisak@BUILK ONE GROUP:
+  “Angular + .NET Core = Awesome”
+
+- Arnon Kaewprasert@Humanize: “Angular x Line LIFF”
+
+- Naruebaet Bouhom@Garena OnlineThailand:
+  “Angular Boost up performance”
+
 Pizzas will be provided.
+
 Tickets are limited. Stay tune!
