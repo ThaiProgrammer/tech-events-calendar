@@ -5,7 +5,7 @@ time: '18:00 ~ 21:00'
 categories:
   - Meetup
 topics:
-  - Angular 7
+  - Angular
   - Web
 location:
   title: Learn Hub+ Co Learning Space
@@ -14,7 +14,7 @@ location:
 links:
   - type: ticket
     url: https://www.eventpop.me/e/4415-angularth
-    title: Eventpop
+    title: Event Pop
     price: FREE
 ---
 
@@ -30,9 +30,10 @@ links:
 6.  Angular x Line LIFF 19.50 - 20.10
 7.  Angular Boost up performance 20.10 - 20.30
 8.  Contribution Time: 20.30 - 20.40
-    Networking 20.40 - 21.00
-    Speakers:
-    Nutti Saelor@Vertice International: What's New in Angular 7?
+9.  Networking 20.40 - 21.00
+
+Speakers:
+Nutti Saelor@Vertice International: What's New in Angular 7?
 
 JaMe Siwat Kaolueng@Angular Thailand, Freelancer:
 Continuous everything with Angular, TravisCI, and Firebase Hosting
