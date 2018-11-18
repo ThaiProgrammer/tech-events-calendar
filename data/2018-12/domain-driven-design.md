@@ -13,6 +13,9 @@ links:
   - type: rsvp
     url: https://www.eventbrite.com/e/domain-driven-design-by-roofimon-tickets-52188647650
     title: Eventbrite
+  - type: website
+    url: https://fb.me/greans66
+    title: เกรียนส์ 66 (Organizer)
 ---
 
 # Domain-Driven Design
