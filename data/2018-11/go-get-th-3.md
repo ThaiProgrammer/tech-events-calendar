@@ -9,7 +9,7 @@ categories:
   - Meetup
 topics:
   - Workshop
-  - Openspac
+  - Openspace
 links:
   - type: rsvp
     url: https://www.facebook.com/events/1927689697323594
