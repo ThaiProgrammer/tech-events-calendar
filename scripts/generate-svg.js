@@ -20,9 +20,9 @@ for (const event of data) {
     event.start.month - 1,
     event.start.date
   )
-  const endDate = event.end
-    ? new Date(event.end.year, event.end.month - 1, event.end.date)
-    : null
+  const endDate = event.end ?
+    new Date(event.end.year, event.end.month - 1, event.end.date) :
+    null
   const date = new Date(+startDate)
   do {
     const key = occupationKey(date)
@@ -66,7 +66,10 @@ function generateSVG(year, month) {
     const row = Math.floor((firstDay + (date - 1)) / 7)
     const x = hPadding + day * cellWidth
     const y = calendarStartY + row * cellHeight
-    return { x, y }
+    return {
+      x,
+      y
+    }
   }
 
   function getCellColor(count) {
@@ -82,7 +85,10 @@ function generateSVG(year, month) {
       .fill()
       .map((_, i) => i + 1)
       .map(date => {
-        const { x, y } = getPosition(date)
+        const {
+          x,
+          y
+        } = getPosition(date)
         const count =
           occupiedCells[occupationKey(new Date(year, month, date))] || 0
         const cellColor = getCellColor(count)
@@ -101,7 +107,7 @@ function generateSVG(year, month) {
 
 require('mkdirp').sync('public/generated/calendar-images')
 
-for (let year = 2018; year <= 2018; year += 1) {
+for (let year = 2018; year <= 2019; year += 1) {
   for (let month = 0; month <= 11; month += 1) {
     const svg = generateSVG(year, month)
     const path = `public/generated/calendar-images/${year}-${String(
