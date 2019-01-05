@@ -101,7 +101,7 @@ function generateSVG(year, month) {
 
 require('mkdirp').sync('public/generated/calendar-images')
 
-for (let year = 2018; year <= 2018; year += 1) {
+for (let year = 2018; year <= 2019; year += 1) {
   for (let month = 0; month <= 11; month += 1) {
     const svg = generateSVG(year, month)
     const path = `public/generated/calendar-images/${year}-${String(

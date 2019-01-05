@@ -48,7 +48,7 @@
     </div>
 
     <div class="Subhead Subhead--spacious">
-      <h2 class="Subhead-heading">2018 calendar</h2>
+      <h2 class="Subhead-heading">2019 calendar</h2>
     </div>
     <div class="year-calendar">
       <!--
@@ -59,63 +59,63 @@
       -->
       <router-link to="/list">
         <img
-          src="/generated/calendar-images/2018-01.svg"
-          alt="January 2018"
+          src="/generated/calendar-images/2019-01.svg"
+          alt="January 2019"
           width="200"
           height="185" >
         <img
-          src="/generated/calendar-images/2018-02.svg"
-          alt="February 2018"
+          src="/generated/calendar-images/2019-02.svg"
+          alt="February 2019"
           width="200"
           height="185" >
         <img
-          src="/generated/calendar-images/2018-03.svg"
-          alt="March 2018"
+          src="/generated/calendar-images/2019-03.svg"
+          alt="March 2019"
           width="200"
           height="185" >
         <img
-          src="/generated/calendar-images/2018-04.svg"
-          alt="April 2018"
+          src="/generated/calendar-images/2019-04.svg"
+          alt="April 2019"
           width="200"
           height="185" >
         <img
-          src="/generated/calendar-images/2018-05.svg"
-          alt="May 2018"
+          src="/generated/calendar-images/2019-05.svg"
+          alt="May 2019"
           width="200"
           height="185" >
         <img
-          src="/generated/calendar-images/2018-06.svg"
-          alt="June 2018"
+          src="/generated/calendar-images/2019-06.svg"
+          alt="June 2019"
           width="200"
           height="185" >
         <img
-          src="/generated/calendar-images/2018-07.svg"
-          alt="July 2018"
+          src="/generated/calendar-images/2019-07.svg"
+          alt="July 2019"
           width="200"
           height="185" >
         <img
-          src="/generated/calendar-images/2018-08.svg"
-          alt="August 2018"
+          src="/generated/calendar-images/2019-08.svg"
+          alt="August 2019"
           width="200"
           height="185" >
         <img
-          src="/generated/calendar-images/2018-09.svg"
-          alt="September 2018"
+          src="/generated/calendar-images/2019-09.svg"
+          alt="September 2019"
           width="200"
           height="185" >
         <img
-          src="/generated/calendar-images/2018-10.svg"
-          alt="October 2018"
+          src="/generated/calendar-images/2019-10.svg"
+          alt="October 2019"
           width="200"
           height="185" >
         <img
-          src="/generated/calendar-images/2018-11.svg"
-          alt="November 2018"
+          src="/generated/calendar-images/2019-11.svg"
+          alt="November 2019"
           width="200"
           height="185" >
         <img
-          src="/generated/calendar-images/2018-12.svg"
-          alt="December 2018"
+          src="/generated/calendar-images/2019-12.svg"
+          alt="December 2019"
           width="200"
           height="185" >
       </router-link>
