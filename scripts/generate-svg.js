@@ -21,7 +21,7 @@ for (const event of data) {
     event.start.date
   )
   const endDate = event.end
-    ? new Date(event.end.year, event.end.month - 1, event.end.date) :
+    ? new Date(event.end.year, event.end.month - 1, event.end.date)
     : null
   const date = new Date(+startDate)
   do {
