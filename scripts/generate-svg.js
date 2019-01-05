@@ -111,4 +111,3 @@ for (let year = 2018; year <= 2019; year += 1) {
     console.log('* Generated', path)
   }
 }
-
