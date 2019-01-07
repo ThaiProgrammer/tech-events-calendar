@@ -3,8 +3,8 @@ id: wordcamp-bangkok-2019
 date: 2019-02-16 ~ 2019-02-17
 time: 08:00 ~ 17:00
 location:
-  title: TBD
-  detail: null
+  title: Siam University
+  url: https://www.google.com/maps/place/Siam+University/@13.7211612,100.4511758,17z/data=!3m1!4b1!4m5!3m4!1s0x30e2983b3ccda6b9:0x7160b277b60e7199!8m2!3d13.721156!4d100.4533645
 categories:
   - Conference
 topics:
