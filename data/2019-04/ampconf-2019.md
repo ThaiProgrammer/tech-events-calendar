@@ -21,4 +21,6 @@ links:
 ---
 # AMP Conf 2019
 
+> Building the future web, together.
+
 The AMP team and community is bringing its yearly gathering to Tokyo for two days full of talks by developers for developers, all crafted to help you create a best-in-class user experience. Whether you're interested in rich animations, dynamic content, DevOps or monetization, we got you covered. We can't wait to meet you.
