@@ -1,6 +1,6 @@
 ---
 id: unblock-bangkok-game-of-crypto-markets
-date: '2018-09-17'
+date: '2019-01-17'
 time: '18:30 ~ 21:30'
 location:
   title: Spaces Chamchuri Square
