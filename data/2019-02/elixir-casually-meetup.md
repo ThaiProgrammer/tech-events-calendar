@@ -19,10 +19,10 @@ links:
     title: Facebook Event
 resources:
   - type: video
-    url: https://youtu.be/ktlNa1GH-Gs
+    url: 'https://youtu.be/ktlNa1GH-Gs'
     title: Session 1: From JavaScript, to Ruby, to Elixir
   - type: video
-    url: https://youtu.be/BXij7iojRkI
+    url: 'https://youtu.be/BXij7iojRkI'
     title: Session 2: Concurrency in Elixir
 ---
 # Elixir Casually - The 1st Elixir Language Meetup in Thailand
