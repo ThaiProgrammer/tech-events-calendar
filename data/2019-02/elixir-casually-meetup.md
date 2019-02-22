@@ -15,15 +15,15 @@ links:
     title: Eventpop
     price: Free
   - type: rsvp
-    url: 'https://www.facebook.com/events/324285348213492/'
+    url: https://www.facebook.com/events/324285348213492/
     title: Facebook Event
 resources:
   - type: video
-    url: 'https://youtu.be/ktlNa1GH-Gs'
-    title: Session 1: From JavaScript, to Ruby, to Elixir
+    url: https://youtu.be/ktlNa1GH-Gs
+    title: 'Session 1: From JavaScript, to Ruby, to Elixir'
   - type: video
-    url: 'https://youtu.be/BXij7iojRkI'
-    title: Session 2: Concurrency in Elixir
+    url: https://youtu.be/BXij7iojRkI
+    title: 'Session 2: Concurrency in Elixir'
 ---
 # Elixir Casually - The 1st Elixir Language Meetup in Thailand
 
