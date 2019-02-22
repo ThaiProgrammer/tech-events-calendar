@@ -1,5 +1,5 @@
 ---
-id: elixir-casually-meetup
+id: elixir-casually-meetup-feb-2019
 date: '2019-02-21'
 location:
   title: Monstar Hub
