@@ -1,3 +1,7 @@
+**⚠️ This project is no longer maintained. See the latest Thai tech event calendar at https://th.techcal.dev. ⚠️**
+
+---
+
 # calendar.thaiprogrammer.org
 
 Curated list of tech events relevant to tech people in Thailand.

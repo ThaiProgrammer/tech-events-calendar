@@ -1,3 +1,7 @@
+**⚠️ โปรเจกต์นี้ได้หยุดการพัฒนาแล้ว คุณสามารถติดตาม Tech event ในประเทศไทยได้จาก https://th.techcal.dev. ⚠️**
+
+---
+
 <p align="right"><strong>Thai</strong> &middot; <a href="README.en.md">English</a></p>
 
 # ThaiProgrammer/tech-events-calendar
